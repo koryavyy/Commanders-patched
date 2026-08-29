@@ -1,0 +1,296 @@
+bookmarks = {
+	bookmark = {
+		name = "POWDER_KEG"
+		desc = "POWDER_KEG_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_powder_keg"
+		default_country = "ALI"
+		
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			set_global_flag=FiveVpMap
+			set_global_flag = game_powder_keg
+			set_victory_points = {
+				province = 11666
+				value = 50
+			}
+			set_victory_points = {
+				province = 11899
+				value = 50
+			}
+			set_victory_points = {
+				province = 6889
+				value = 50
+			}
+			AXI={
+				set_capital = {state = 4}
+				set_oob = "AXI_powder_keg"
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALI = {
+				set_capital = {state = 46}
+				set_oob = "ALI_powder_keg"
+			}
+			every_state = {
+				limit={ is_powder_keg_allied_state = yes }
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_manpower = 1857142
+				add_manpower = 1000000
+				set_state_category = megalopolis
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={ is_powder_keg_neutral_state = yes }
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 300000
+			}
+			every_state = {
+				limit={ is_powder_keg_axis_state = yes }
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_state_category = megalopolis
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={ OR = {state = 46 state = 211 state = 212 state = 731 state = 4 state=152 state = 160 state = 853} }
+				add_small_resources_to_state=yes
+			}
+			every_state = {
+				limit={ OR = {state = 39 state = 801} }
+				add_tiny_resources_to_state=yes
+			}
+			every_state = {
+				limit={ OR = {state = 4 state = 46} }
+				
+				add_resource = {
+					type = steel
+					amount = 40
+				}
+			}
+			every_state = {
+				limit={ OR = {state = 43 state = 83 state = 107 state = 104 state=103 } }
+				add_large_resources_to_state=yes
+			}
+			
+			# AXIS
+			4 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			39 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			152 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			102 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			153 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			39 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			850 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			852 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			# ALLIES
+			184 = { # Thrace
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			211 = { # Burgas
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			212 = { # Plovdiv
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			46 = { # Romania
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			731 = { # Central Macedonia
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			77 = { # Dobrogea
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			801 = { # Moesia
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+defined_text = { # global
+	name = GetDaysuntilWin
+
+	text = {
+		trigger = {
+			check_variable={Global.axis_score>Global.allied_score }
+		}
+		localization_key = game_end_txt_axis
+	}
+	text = {
+		trigger = {
+			check_variable={Global.axis_score<Global.allied_score }
+		}
+		localization_key = game_end_txt_allies
+	}
+	text = {
+		trigger = {
+		}
+		localization_key = game_end_txt_none
+	}
+}

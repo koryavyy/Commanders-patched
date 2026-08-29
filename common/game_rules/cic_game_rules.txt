@@ -1,0 +1,52 @@
+cic_alt_vp = {
+	name = "Use New Victory Condition System"
+	group = "Commanders Rules"
+	icon = "GFX_volunteers"
+
+	default ={
+		name = yes
+		text = "Yes"
+		desc = ""
+	}
+	option = {
+		name = no
+		text = "No"
+		desc = ""
+	}
+}
+cic_ban_system = {
+	name = "Enable Faction Ban System"
+	group = "Commanders Rules"
+	icon = "GFX_volunteers"
+
+	default ={
+		name = disabled
+		text = "Disabled"
+		desc = ""
+	}
+	option = {
+		name = ban1
+		text = "One Ban Each"
+		desc = ""
+	}
+	option = {
+		name = ban2
+		text = "Two Bans Each"
+		desc = ""
+	}
+	option = {
+		name = ban3
+		text = "Three Bans Each"
+		desc = ""
+	}
+	option = {
+		name = ban4
+		text = "Four Bans Each"
+		desc = ""
+	}
+	option = {
+		name = ban5
+		text = "Five Bans Each"
+		desc = ""
+	}
+}

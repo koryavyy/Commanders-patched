@@ -1,0 +1,17 @@
+spriteTypes = { ##### THIS FILE DEFINES THE PICTURE FOR EACH SUPER EVENT
+	spriteType = {
+		name = "GFX_superevent_custom_axis"
+		textureFile = "gfx//superevent_pictures//axis.tga"
+	}
+	spriteType = {
+		name = "GFX_superevent_custom_allies"
+		textureFile = "gfx//superevent_pictures//allies.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_select_date_bg_top"
+		texturefile = "gfx/interface/select_date_bg_top.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+}

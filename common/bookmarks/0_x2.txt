@@ -1,0 +1,584 @@
+bookmarks = {
+	bookmark = {
+		name = "0_x2"
+		desc = "BARBAROSSA3v3_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_across_the_rhine"
+		default_country = "ALI"
+		
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ALJ"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ALK"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXJ"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXK"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			
+			ALI={set_cosmetic_tag=ALI_SOUTH}
+			ALJ={set_cosmetic_tag=ALI_CENTER}
+			ALK={set_cosmetic_tag=ALI_NORTH}
+			AXI={set_cosmetic_tag=AXI_SOUTH}
+			AXJ={set_cosmetic_tag=AXI_CENTER}
+			AXK={set_cosmetic_tag=AXI_NORTH}
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_barbarossa3v3
+			set_global_flag=FiveVpMap
+			set_global_flag = mode3v3
+			set_victory_points = {
+				province = 3529
+				value = 50
+			}
+			set_victory_points = {
+				province = 11476
+				value = 50
+			}
+			set_victory_points = {
+				province = 6380
+				value = 50
+			}
+			set_victory_points = {
+				province = 11351
+				value = 50
+			}
+			set_victory_points = {
+				province = 11437
+				value = 25
+			}
+			set_victory_points = {
+				province = 9098
+				value = 10
+			}
+			set_victory_points = {
+				province = 3338
+				value = 50
+			}
+			set_victory_points = {
+				province = 138
+				value = 20
+			}
+			set_victory_points = {
+				province = 11061
+				value = 20
+			}
+			set_victory_points = {
+				province = 108
+				value = 10
+			}
+			set_victory_points = {
+				province = 105
+				value = 10
+			}
+			set_victory_points = {
+				province = 9144
+				value = 1
+			}
+			set_victory_points = {
+				province = 6316
+				value = 1
+			}
+			set_victory_points = {
+				province = 117
+				value = 10
+			}
+			set_victory_points = {
+				province = 11476
+				value = 10
+			}
+			
+			set_victory_points = {
+				province = 418
+				value = 50
+			}
+			set_victory_points = {
+				province = 3580
+				value = 25
+			}
+			
+			set_victory_points = {
+				province = 9258
+				value = 25
+			}
+			set_victory_points = {
+				province = 11225
+				value = 50
+			}
+			set_victory_points = {
+				province = 11537
+				value = 25
+			}
+			
+			set_victory_points = {
+				province = 10256
+				value = 15
+			}
+			set_victory_points = {
+				province = 9422
+				value = 10
+			}
+			set_victory_points = {
+				province = 11241
+				value = 50
+			}
+			set_victory_points = {
+				province = 9288
+				value = 50
+			}
+			set_victory_points = {
+				province = 11437
+				value = 50
+			}
+			set_victory_points = {
+				province = 6338
+				value = 50
+			}
+			set_victory_points = {
+				province = 6124
+				value = 15
+			}
+			set_victory_points = {
+				province = 11349
+				value = 10
+			}
+			set_victory_points = {
+				province = 6245
+				value = 10
+			}
+			set_victory_points = {
+				province = 11234
+				value = 10
+			}
+			set_victory_points = {
+				province = 3320
+				value = 10
+			}
+			set_victory_points = {
+				province = 310
+				value = 10
+			}
+			set_victory_points = {
+				province = 3152
+				value = 10
+			}
+			AXI={
+				set_capital = {state = 226}
+				set_oob = AXI_barbarossa3v3
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			AXJ={
+				set_capital = {state = 241}
+				set_oob = AXJ_barbarossa3v3
+				AXJ_high_command = {
+					set_character_name = AXJ_high_command_ger
+				}
+			}
+			AXK={
+				set_capital = {state = 808}
+				set_oob = AXK_barbarossa3v3
+				AXK_high_command = {
+					set_character_name = AXK_high_command_ger
+				}
+			}
+			ALI={
+				set_capital = {state = 251}
+				set_oob = ALI_barbarossa3v3
+			}
+			ALJ={
+				set_capital = {state = 249}
+				set_oob = ALJ_barbarossa3v3
+			}
+			ALK={
+				set_capital = {state = 351}
+				set_oob = ALK_barbarossa3v3
+			}
+			249 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			251 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			815 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			825 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			581 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			809 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			207 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			226 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=251 state = 652 state=651 state = 401  state=406 state = 407 state = 582 state = 402 }}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = large_city
+				
+			}
+
+
+			every_state = {
+				limit={OR={state=210 state=208 state=209 state=246 state=264 state=263 state=244 state=195 state=242 state=217 state=240 state=222 state=254 state = 248 state=247 state =222 state=220 state=219 state=223 state=205 state=253 state=245 state=265 state=260 state=257 state=258 state=238 state=237 state=236 state=829 state=228 state=916 state=239 state=218 state=228}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 100000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state = 203 state = 197 state=200 state=227 state=221 state=234  state=137 state=196  state=226 state=259}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 400000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = large_city
+				
+			}
+			every_state = {
+				limit={OR={ state=224 state=243 state=225 state = 193 state=241 state = 194 state=204 state=206 state =207 state= 202 }}
+				AXJ={transfer_state=PREV}
+				add_core_of =AXJ
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 400000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = large_city
+				
+			}
+			every_state = {
+				limit={OR={state=256 state=399 state=833 state=252 state=400 state=249 state=250 state=255}}
+				ALJ={transfer_state=PREV}
+				add_core_of =ALJ
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = large_city
+				
+			}
+			every_state = {
+				limit={OR={ state=808 state=12 state=13 state=813 state =810  state=191 state=812 state=809 state = 96 state=784 state = 815}}
+				AXK={transfer_state=PREV}
+				add_core_of =AXK
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 181818
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = large_city
+				
+			}
+			every_state = {
+				limit={OR={state=351 state= 879 state=880 state=214 state=397 state=262 state=825 state = 581}}
+				ALK={transfer_state=PREV}
+				add_core_of =ALK
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = large_city
+				
+			}
+			every_state = {
+				limit={OR={state=240 state = 227 state=234 state = 407 state=401 state=255 state=829 state = 257 state = 265 state = 245 state =260 state =217 state =228}}
+				add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+				}
+			}
+			
+			#resources
+			every_state = {
+				limit={OR={state=217 state = 195 state=220 state = 257 state=219 }}
+				add_resource = {
+					type = oil
+					amount = 25
+				}
+				add_resource = {
+					type = aluminium
+					amount = 25
+				}
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+				add_resource = {
+					type = rubber
+					amount = 25
+				}
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+				add_resource = {
+					type = chromium
+					amount = 25
+				}
+			}
+			every_state = {
+				limit={OR={
+						state=226  #axi	
+						state=203
+						state=197
+						state=221
+						state=200
+						state=196
+						state=207 #axj
+						state=206
+						state=204
+						state=241
+						state=194
+						state=224
+						state=13 #axk
+						state=812
+						state=808
+						state=810
+						state=784
+						state=191
+						state=249 #alj
+						state=833
+						state=252
+						state=399
+						state=250
+						state=256
+						state=251 #ali
+						state=401
+						state=652
+						state=582
+						state=651
+						state=406
+						state=879 #alk
+						state=351
+						state=880
+						state=397
+						state=262
+						state=214
+
+
+				 }}
+				add_resource = {
+					type = oil
+					amount = 7
+				}
+				add_resource = {
+					type = aluminium
+					amount = 9
+				}
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+				add_resource = {
+					type = rubber
+					amount = 7
+				}
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=226  state=207 state=249 state=251}}
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			ALI = {
+				add_to_faction = ALJ
+				add_to_faction = ALK
+			}
+			AXI = {
+				add_to_faction = AXJ
+				add_to_faction = AXK
+			}	
+		}
+	}
+}

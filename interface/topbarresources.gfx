@@ -1,0 +1,27 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_vps"
+		texturefile = "gfx//interface//vps.dds"
+		noOfFrames = 4
+	}
+	SpriteType = {
+		name = "GFX_bans"
+		texturefile = "gfx//interface//bans.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_transparent"
+		texturefile = "gfx//interface//transparent_topbar.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_select_date_bg2"
+		texturefile = "gfx/interface/select_date_bg2.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+	
+	}
+

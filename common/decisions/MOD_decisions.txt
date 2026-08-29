@@ -1,0 +1,568 @@
+MOD_countdown_to_war = {
+	MOD_countdown_to_war_mission = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 275
+
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_war_mission_tt
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+	MOD_countdown_to_war_mission_hidden = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 275
+
+		fire_only_once = yes
+
+		activation = {
+			original_tag = NEU
+		}
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+			every_country = {
+				remove_ideas=fast_buildup
+			}
+			hidden_effect={
+			ALI={
+				if={limit={is_ai=yes}
+					remove_ideas = ALI_semyon_timoshenko
+					add_ideas = ALI_dwight_eisenhower
+					add_political_power = -25
+					
+				}
+			
+			}
+			ALJ={
+				if={limit={is_ai=yes}
+					remove_ideas = ALJ_semyon_timoshenko
+					add_ideas = ALJ_dwight_eisenhower
+					add_political_power = -25
+					
+				}
+			
+			}
+			AXI={
+				if={limit={is_ai=yes}
+					remove_ideas = hajime_sugiyama
+					add_ideas = franz_halder
+					add_political_power = -25
+					
+				}
+			
+			}
+			AXJ={
+				if={limit={is_ai=yes}
+					remove_ideas = hajime_sugiyama
+					add_ideas = franz_halder
+					add_political_power = -25
+					
+				}
+			}
+				country_event = {
+					id = paradrop.1
+					hours = 36
+					}
+
+			}
+			AXI = {
+				declare_war_on = {
+					target = NEU
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALI
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALJ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALK
+					type = annex_everything
+				}
+				if = {
+					limit = {
+						ALJ ={exists=yes}
+					}
+					AXJ = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALK ={exists=yes}
+					}
+					AXK = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
+			}
+			ALI = {
+				declare_war_on = {
+					target = NEU
+					type = annex_everything
+				}
+			}
+			
+				if = {
+					limit = {
+						ALJ ={exists=yes}
+					}
+					ALJ = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALK ={exists=yes}
+					}
+					ALK = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+}
+
+MOD_countdown_to_victory_cat = {
+	MOD_countdown_to_victory_mission = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 456
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+			has_game_rule = { rule = cic_alt_vp option = no }
+			has_war = yes
+			NOT = {
+				has_global_flag = FiveVpMap
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = FiveVpMap
+			}
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_victory_mission_tt
+			if = {
+				limit = {
+					check_variable = {
+						global.allied_score > global.axis_score
+					}
+				}
+				news_event = { id = cic_news.2 }
+				set_variable = { Global.super_event = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.axis_score > global.allied_score
+					}
+				}
+				news_event = { id = cic_news.1 }
+				set_variable = { Global.super_event = 1 }
+			}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+	Surrender = {
+ 		icon = generic_naval
+ 		fire_only_once = no
+ 		allowed = { OR={original_tag = AXI original_tag = ALI original_tag = AXJ original_tag = ALJ original_tag = AXK original_tag = ALK} }
+ 		
+ 		cost = 0
+ 		complete_effect = {
+			
+	set_variable={Global.end_date=Global.date}
+ 	if={limit={original_tag=AXI}
+		set_variable={Global.super_event=2}
+	}
+	else={set_variable={Global.super_event=1}}
+ 		}
+ 	}
+}
+
+MOD_leader_school_cat = {
+
+	MOD_leader_school_commando = {
+	allowed={
+			OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+		}
+ target_root_trigger = {
+        has_completed_focus = INDUSTRY_covert_warfare_school
+		
+    }
+	visible={NOT={has_country_flag=commando}}
+    on_map_mode = decision_view_only
+
+	ai_will_do = {
+		base = 0.2
+	}
+
+    target_trigger = {
+        FROM = {
+		
+			meta_trigger = {
+			text = {
+			check_variable = {
+				var = Root.army_leaders^num
+				value = [A]
+				compare = greater_than_or_equals
+			}
+			#check_variable={Root.army_leaders^num>[A]}
+			}
+			A = "[?This.GetID]"
+}
+        }
+    }
+	fire_only_once=yes
+	target_non_existing = yes
+    targets ={1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20}
+	state_target=yes
+    complete_effect = {
+		hidden_effect={ROOT={set_country_flag=commando}}
+		meta_effect = { 
+			text = {
+				set_temp_variable={a=[B]}
+				add_to_temp_variable={a=-1}
+				var:Root.army_leaders^a={add_unit_leader_trait = commando}
+			}
+			B = "[?From.GetID]" 
+		}
+				
+    }
+    
+}
+	MOD_leader_school_adaptable = {
+    allowed={
+    OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+			}
+ 	target_root_trigger = {
+        has_completed_focus = INDUSTRY_advanced_warfare
+		
+    }
+	visible={NOT={has_country_flag=adaptable}}
+    on_map_mode = decision_view_only
+
+	ai_will_do = {
+		base = 0.2
+	}
+
+    target_trigger = {
+        FROM = {
+		
+			meta_trigger = {
+			text = {
+			check_variable = {
+				var = Root.army_leaders^num
+				value = [A]
+				compare = greater_than_or_equals
+			}
+			}
+			A = "[?This.GetID]"
+}
+        }
+    }
+	fire_only_once=yes
+	target_non_existing = yes
+    targets ={1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20}
+	state_target=yes
+    complete_effect = {
+		hidden_effect={ROOT={set_country_flag=adaptable}}
+		meta_effect = { 
+    text = {
+		set_temp_variable={a=[B]}
+		add_to_temp_variable={a=-1}
+	   var:Root.army_leaders^a={add_unit_leader_trait = adaptable}
+    }
+	B = "[?From.GetID]" 
+	}
+        
+    }
+    
+}
+MOD_leader_school_fortress_buster = {
+    allowed={
+    OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+			}
+ target_root_trigger = {
+        has_completed_focus = INDUSTRY_siege_warfare_school
+    }
+	visible={NOT={has_country_flag=fortress}}
+    on_map_mode = decision_view_only
+
+	ai_will_do = {
+		base = 0.2
+	}
+
+    target_trigger = {
+        FROM = {
+		
+			meta_trigger = {
+			text = {
+			check_variable = {
+				var = Root.army_leaders^num
+				value = [A]
+				compare = greater_than_or_equals
+			}
+			}
+			A = "[?This.GetID]"
+}
+        }
+    }
+	fire_only_once=yes
+	target_non_existing = yes
+    targets ={1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20}
+	state_target=yes
+    complete_effect = {
+		hidden_effect={ROOT={set_country_flag=fortress}}
+		meta_effect = { 
+    text = {
+		set_temp_variable={a=[B]}
+		add_to_temp_variable={a=-1}
+	   var:Root.army_leaders^a={add_unit_leader_trait = trait_engineer}
+    }
+	B = "[?From.GetID]" 
+	}
+        
+    }
+    
+}
+}
+MOD_countdown_to_victory_5vp_cat = {
+	
+	Surrender2 = {
+ 		icon = generic_naval
+ 		fire_only_once = no
+ 		allowed = { OR={original_tag = AXI original_tag = ALI original_tag = AXJ original_tag = ALJ original_tag = AXK original_tag = ALK} }
+ 		
+ 		cost = 0
+ 		complete_effect = {
+			
+	set_variable={Global.end_date=Global.date}
+ 			if={limit={original_tag=AXI}
+	set_variable={Global.super_event=2}
+	}
+	else={set_variable={Global.super_event=1}}
+ 		}
+ 	}
+	MOD_countdown_to_victory_mission_5vp = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 456
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+			has_game_rule = { rule = cic_alt_vp option = no }
+			has_war = yes
+			has_global_flag = FiveVpMap
+		}
+
+		visible = {
+			has_global_flag = FiveVpMap
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_victory_mission_tt
+			if = {
+				limit = {
+					check_variable = {
+						global.allied_score > global.axis_score
+					}
+				}
+				news_event = { id = cic_news.2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.axis_score > global.allied_score
+					}
+				}
+				news_event = { id = cic_news.1 }
+			}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+}
+MOD_hide_other_focuses = {
+	MOD_hide_focuses_not_needed = {
+		allowed={
+			OR = {
+				original_tag = AXI
+				original_tag = ALI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = AAA_hide_focus_tree
+			}
+		}
+		icon = GFX_decision_generic_political_discourse
+		complete_effect = {
+			set_country_flag = AAA_hide_focus_tree
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = AAA_hidden_trees
+			
+		
+		}
+	}
+	MOD_show_focuses_not_needed = {
+		allowed={
+			OR = {
+				original_tag = AXI
+				original_tag = ALI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = AXK
+				original_tag = ALK
+			}
+		}
+		visible = {
+			has_country_flag = AAA_hide_focus_tree
+		}
+		icon = GFX_decision_generic_political_discourse
+		complete_effect = {
+			clr_country_flag = AAA_hide_focus_tree
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = AAA_visible_trees
+		}
+	}
+}

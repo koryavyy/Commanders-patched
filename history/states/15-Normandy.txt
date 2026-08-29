@@ -1,0 +1,56 @@
+
+state={
+	id=15
+	name="STATE_15"
+	manpower = 2142858
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 20
+		chromium = 5
+	}
+
+	state_category = megalopolis
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = {
+			9434 25
+		}
+		victory_points = {
+			6449 1
+		}
+		victory_points = {
+			11563 1
+		}
+		victory_points = {
+			485 1
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 6
+			industrial_complex = 5
+			dockyard = 3
+			6449 = {
+				naval_base = 3
+			}
+			9434 = {
+				naval_base = 5
+			}
+			485= {
+				naval_base = 1
+			}
+		}
+
+	}
+
+	provinces={
+		485 539 553 3534 3549 3579 6449 6569 6599 9434 9550 9578 11521 11535 11563
+	}
+
+	local_supplies=0.0
+}

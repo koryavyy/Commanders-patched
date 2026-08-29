@@ -1,0 +1,38 @@
+state = {
+	id = 160
+	name = "STATE_160"
+	
+
+	state_category = megalopolis
+
+	history = {
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = { #Venezia
+			11584 25
+		}
+		victory_points = { #Padova
+			3604 1
+		}
+		victory_points = { #Verona
+			603 1
+		}
+
+		buildings = {
+			infrastructure = 4 #was: 6
+			air_base = 10
+			11584 = {
+				naval_base = 10
+			}
+		}
+	}
+
+	provinces = {
+		603 628 3604 3657 6656 9582 9613 11584
+	}
+	manpower = 1
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 5.0
+}

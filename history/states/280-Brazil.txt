@@ -1,0 +1,30 @@
+
+state={
+	id=280
+	name="STATE_280"
+
+	state_category = pastoral
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			2111 1 
+		}
+
+
+	}
+
+	provinces={
+		2111 2142 2181 8189 10959
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0
+}

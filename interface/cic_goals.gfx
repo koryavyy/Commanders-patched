@@ -1,0 +1,194 @@
+spriteTypes = {
+	SpriteType = { 
+		name = "GFX_focus_CIC_4th_army"
+		texturefile = "gfx/interface/goals/focus_CIC_4th_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_finland"
+		texturefile = "gfx/interface/goals/focus_CIC_finland.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_last_of_the_luftwaffe"
+		texturefile = "gfx/interface/goals/focus_CIC_last_of_the_luftwaffe.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_molotov_cocktail"
+		texturefile = "gfx/interface/goals/focus_CIC_molotov_cocktail.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_mp40"
+		texturefile = "gfx/interface/goals/focus_CIC_mp40.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_the_white_death"
+		texturefile = "gfx/interface/goals/focus_CIC_the_white_death.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_wehrmacht"
+		texturefile = "gfx/interface/goals/focus_CIC_wehrmacht.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_canadian_1st_army"
+		texturefile = "gfx/interface/goals/focus_CIC_canadian_1st_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_bren_guns"
+		texturefile = "gfx/interface/goals/focus_CIC_bren_guns.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_british_commandos"
+		texturefile = "gfx/interface/goals/focus_CIC_british_commandos.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_amphibious_warfare"
+		texturefile = "gfx/interface/goals/focus_CIC_amphibious_warfare.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_stalins_organ"
+		texturefile = "gfx/interface/goals/focus_CIC_stalins_organ.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_school_of_attack"
+		texturefile = "gfx/interface/goals/focus_CIC_school_of_attack.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_siege_warfare"
+		texturefile = "gfx/interface/goals/focus_CIC_siege_warfare.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_covert_warfare"
+		texturefile = "gfx/interface/goals/focus_CIC_covert_warfare.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_school_of_defence"
+		texturefile = "gfx/interface/goals/focus_CIC_school_of_defence.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_commonwealth_8th"
+		texturefile = "gfx/interface/goals/focus_CIC_commonwealth_8th.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_USMC"
+		texturefile = "gfx/interface/goals/focus_CIC_USMC.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_3rd_shock"
+		texturefile = "gfx/interface/goals/focus_CIC_3rd_shock.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_5th_guards"
+		texturefile = "gfx/interface/goals/focus_CIC_5th_guards.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_army_of_isthmus"
+		texturefile = "gfx/interface/goals/focus_CIC_army_of_isthmus.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_IJA"
+		texturefile = "gfx/interface/goals/focus_CIC_IJA.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_IJN"
+		texturefile = "gfx/interface/goals/focus_CIC_IJN.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_NFG"
+		texturefile = "gfx/interface/goals/focus_CIC_NFG.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_panzer_west"
+		texturefile = "gfx/interface/goals/focus_CIC_panzer_west.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_US_12th"
+		texturefile = "gfx/interface/goals/focus_CIC_US_12th.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_big_red_one"
+		texturefile = "gfx/interface/goals/focus_CIC_big_red_one.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_haeren"
+		texturefile = "gfx/interface/goals/focus_CIC_haeren.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_cib_theater"
+		texturefile = "gfx/interface/goals/focus_CIC_cib_theater.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_1st_marines"
+		texturefile = "gfx/interface/goals/focus_CIC_1st_marines.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_chinese_army"
+		texturefile = "gfx/interface/goals/focus_CIC_chinese_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_eighth_route_army"
+		texturefile = "gfx/interface/goals/focus_CIC_eighth_route_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_flying_tigers"
+		texturefile = "gfx/interface/goals/focus_CIC_flying_tigers.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_free_france"
+		texturefile = "gfx/interface/goals/focus_CIC_free_france.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_mobilize_the_people"
+		texturefile = "gfx/interface/goals/focus_CIC_mobilize_the_people.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_hungary_romania"
+		texturefile = "gfx/interface/goals/focus_CIC_hungary_romania.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_gurilla_warfare"
+		texturefile = "gfx/interface/goals/focus_CIC_gurilla_warfare.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_royal_hungarian_army"
+		texturefile = "gfx/interface/goals/focus_CIC_royal_hungarian_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_romanian_land_forces"
+		texturefile = "gfx/interface/goals/focus_CIC_romanian_land_forces.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_the_hump"
+		texturefile = "gfx/interface/goals/focus_CIC_the_hump.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_shaef"
+		texturefile = "gfx/interface/goals/focus_CIC_shaef.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_united_front"
+		texturefile = "gfx/interface/goals/focus_CIC_united_front.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_1st_army"
+		texturefile = "gfx/interface/goals/focus_CIC_1st_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_army_po"
+		texturefile = "gfx/interface/goals/focus_CIC_army_po.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_9th_army"
+		texturefile = "gfx/interface/goals/focus_CIC_9th_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_luftwaffe"
+		texturefile = "gfx/interface/goals/focus_CIC_luftwaffe.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_maginot"
+		texturefile = "gfx/interface/goals/focus_CIC_maginot.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_CIC_communist_forces"
+		texturefile = "gfx/interface/goals/focus_CIC_communist_forces.dds"
+	}
+}

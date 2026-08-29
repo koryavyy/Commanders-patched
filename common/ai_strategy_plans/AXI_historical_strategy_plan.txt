@@ -1,0 +1,67 @@
+AXI_plan1 = {
+	name = "AXI_plan1"
+	desc = ""
+
+	allowed = {
+		original_tag = AXI
+	}
+	enable = {
+		is_historical_focus_on = yes
+				
+			
+		
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		INDUSTRY_start_rapid_industralisation
+		INDUSTRY_expand_the_arms_industry
+		INDUSTRY_continue_expanding_the_arms_industry
+		INDUSTRY_final_expansion_of_the_arms_industry
+		AXI_IJA
+		AXI_IJ_army
+		AXI_arisaka
+		AXI_carriers_through_the_staits
+		AXI_bicycle_messengers
+		AXI_warrior_spirit
+		AXI_spiritual_mobilization
+		AXI_18th_chrysanthemum_division
+		AXI_62nd_stone_division
+		AXI_terauchi_supreme
+		AXI_samurai_of_the_sands
+		INDUSTRY_advanced_warfare
+		INDUSTRY_school_of_attack
+		INDUSTRY_expand_the_industral_sector
+		INDUSTRY_continue_expanding_the_industral_sector
+		INDUSTRY_final_expansion_of_the_industral_sector
+		INDUSTRY_advanced_warfare
+		INDUSTRY_school_of_attack
+		
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

@@ -1,0 +1,10 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_transparent_bg"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//transparent_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

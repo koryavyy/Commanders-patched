@@ -1,0 +1,38 @@
+
+state={
+	id=506
+	name="STATE_506" # Antofagasta
+	manpower = 1
+
+	state_category = rural
+
+	history={
+
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			12994 = {
+				naval_base = 1
+			}
+			5228 = {
+				naval_base = 2
+			}
+		}
+
+		victory_points = {
+			12994 1
+		}
+		victory_points = {
+			5228 1
+		}
+
+	}
+
+	provinces={
+		5146 5171 5192 5228 11000 12914 12994 13322 13323 13324
+	}
+
+	local_supplies=0.0
+}

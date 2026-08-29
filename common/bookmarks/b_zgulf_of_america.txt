@@ -1,0 +1,280 @@
+bookmarks = {
+	bookmark = {
+		name = "GULF_OF_MEXICO"
+		desc = "GULF_OF_MEXICO_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_gulf_of_mexico"
+		default_country = "ALI"
+		
+		"ALI" = {
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI" = {
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345			# <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_gulf_of_mexico
+			set_global_flag=FiveVpMap
+			AXI = {
+				set_capital = {
+					state = 277
+				}
+				set_oob = "AXI_gulf_of_mexico"
+			}
+			ALI = {
+				set_capital = {
+					state = 365
+				}
+				set_oob = "ALI_gulf_of_mexico"
+			}
+			every_state = {
+				limit = {
+					OR = { state = 365 state = 363 state = 364 state = 367 state = 368 state = 362}
+				}
+				ALI = {
+					transfer_state = PREV
+				}
+				set_state_category = megalopolis
+				add_core_of = ALI
+				remove_core_of = NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+					type = infrastructure
+					level = 0
+					instant_build = yes
+				}
+
+				set_building_level = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				
+				limit = {
+					OR = { state = 315 state = 912 state = 913 state = 474 state = 311 state = 914 state = 915 state = 475 state = 313 state = 375 state = 371 state = 372 state = 374 state = 366 state = 370 }
+				}
+				NEU = {
+					transfer_state = PREV
+				}
+				add_core_of = NEU
+				remove_core_of = NOO
+				add_manpower = 300000
+				set_building_level = {
+					type = infrastructure
+					level = 0
+				}
+				
+				set_building_level = {
+					type = infrastructure
+					level = 3
+				}
+			}
+			every_state = {
+				
+				limit = {
+					OR = { state = 277 state = 477 state = 479 state = 480 state = 482 state = 476}
+				}
+				AXI = {
+					transfer_state = PREV
+				}
+				add_core_of = AXI
+				remove_core_of = NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_state_category = megalopolis
+				set_building_level = {
+					type = infrastructure
+					level = 0
+				}
+
+				set_building_level = {
+					type = infrastructure
+					level = 4
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_victory_points = {
+				province = 12715
+				value = 50
+			}
+			set_victory_points = {
+				province = 7622 
+				value = 50
+			}
+			set_victory_points = {
+				province = 1843 
+				value = 50
+			}
+			set_victory_points = {
+				province = 7552 
+				value = 50
+			}
+			set_victory_points = {
+				province = 3960 
+				value = 50
+			}
+
+			set_victory_points = {
+				province = 1965
+				value = 50
+			}
+			#
+			
+			set_victory_points = {
+				province = 10830
+				value = 10
+			}
+			set_victory_points = {
+				province = 12835
+				value = 10
+			}
+			set_victory_points = {
+				province = 4956
+				value = 10
+			}
+			set_victory_points = {
+				province = 5015
+				value = 5
+			}
+			479 = {
+				add_building_construction= {
+					type = naval_base
+					level = 2
+					province = 5015
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 474
+						state = 315
+						state = 366
+						state = 371
+						state = 375
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 5
+				}
+				add_vp_resources = yes
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 277
+						state = 365
+					}
+				}
+				add_capital_resources = yes
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 477
+						state = 365
+					}
+				}				
+				add_building_construction= {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 479
+						state = 367
+					}
+				}				
+				add_building_construction= {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 368
+						state = 476
+					}
+				}
+				add_major_resources = yes
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 479
+						state = 482
+						state = 362
+						state = 363
+					}
+				}
+				add_minor_resources = yes
+			}
+		}
+	}
+}

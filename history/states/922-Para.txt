@@ -1,0 +1,29 @@
+
+state={
+	id=922
+	name="STATE_922"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			infrastructure = 1
+			12853 = {
+				naval_base = 2
+			}
+
+		}
+		victory_points = {
+			12853 1
+		}
+
+	}
+
+	provinces={
+		2035 2214 10874 10956 12853 12999 8172 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

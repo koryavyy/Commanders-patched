@@ -1,0 +1,205 @@
+bookmarks = {
+	bookmark = {
+		name = "SONNENBLUME"
+		desc = "SONNENBLUME_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_sonnenblum"
+		default_country = "ALI"
+		
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			116 = {
+			
+				add_resource = {
+					type = oil
+					amount = 30
+				}
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+			}
+			665 = {
+				
+				add_resource = {
+					type = aluminium
+					amount = 25
+				}
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+				add_resource = {
+					type = oil
+					amount = 30
+				}
+			}
+			456 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			457 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+			}
+			446 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			783 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag=FiveVpMap
+			set_global_flag = game_sonnenblum
+			AXI={
+				set_capital = {state = 461}
+				set_oob = "AXI_1936"
+			}
+			ALI = {
+				set_capital = {state = 907}
+				set_oob = "ALI_1936"
+			}
+			every_state = {
+				limit={OR={state=446 state=447 state=452 state=453 state=456 state=457 state=907}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_manpower = 1228571
+				add_manpower = 1000000
+			}
+
+
+			every_state = {
+				limit={OR={state=116 state=448 state=449 state=450 state=451 state=458 state=460 state=513 state=661 state=662 state=663 state=665 state=910}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 100000
+			}
+			every_state = {
+				limit={OR={state=459 state=290 state=461 state=462 state=783 state=909}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_manpower = 600000
+				add_manpower = 1000000
+				add_manpower = 1000000
+			}
+		}
+	}
+}

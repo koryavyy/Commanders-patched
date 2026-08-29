@@ -1,0 +1,45 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_tech_light_infantry3_medium"
+		texturefile = "gfx/interface/technologies/ranger3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_light_infantry2_medium"
+		texturefile = "gfx/interface/technologies/ranger2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_tech_light_infantry_medium"
+		texturefile = "gfx/interface/technologies/ranger.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_special_forces_jagers_medium"
+		texturefile = "gfx/interface/technologies/special_forces_jagers.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_jungle_jagers_medium"
+		texturefile = "gfx/interface/technologies/jungle_jagers.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_marsh_jagers_medium"
+		texturefile = "gfx/interface/technologies/marsh_jagers.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_extreme_weather_training_jagers_medium"
+		texturefile = "gfx/interface/technologies/extreme_weather_training_jagers.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_jagers_bg"
+		textureFile = "gfx/interface/technologies/doctrine_special_forces_cavalry_bg.dds"
+		alwaystransparent = yes		
+	}
+
+}

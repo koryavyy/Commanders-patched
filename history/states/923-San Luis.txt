@@ -1,0 +1,28 @@
+state = {
+	id = 923
+	name = "STATE_923"
+	manpower = 1
+	
+	state_category = rural
+
+	history = {
+
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			infrastructure = 2
+		}
+		
+		victory_points = {
+			12942 25
+		}
+
+	}
+
+	provinces = {
+		2158 5152 5184 5219 7550 11021 11022 12942 12970
+	}
+
+	local_supplies = 0.0 
+}

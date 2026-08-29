@@ -1,0 +1,26 @@
+
+state={
+	id=664
+	name="STATE_664"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			6573 1 
+		}
+
+	}
+
+	provinces={
+		3565 6561 6573 9537 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=3.000
+}

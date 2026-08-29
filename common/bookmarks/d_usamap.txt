@@ -1,0 +1,376 @@
+bookmarks = {
+	bookmark = {
+		name = "USAMAP"
+		desc = "USAMAP_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_big_muddy"
+		default_country = "ALI"
+		
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ALJ"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXJ"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			
+			ALI={set_cosmetic_tag=ALI_WEST}
+			ALJ={set_cosmetic_tag=ALI_EAST}
+			AXI={set_cosmetic_tag=AXI_WEST}
+			AXJ={set_cosmetic_tag=AXI_EAST}
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			set_global_flag = game_usa_2v2
+			set_global_flag=FiveVpMap
+			set_global_flag = mode2v2
+
+
+			AXI={
+				set_capital = {state = 365 }
+				set_oob = AXI_usa2v2
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALI={
+				set_capital = {state = 393 }
+				set_oob = ALI_usa2v2
+			}
+			AXJ={
+				set_capital = {state = 375 }
+				set_oob = AXJ_usa2v2
+				AXJ_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALJ={
+				set_capital = {state = 365 }
+				set_oob = ALJ_usa2v2
+			}
+			
+			set_victory_points = {
+				province = 10337
+				value = 50
+			}
+			set_victory_points = {
+				province = 4569 
+				value = 50
+			}
+			set_victory_points = {
+				province = 10717
+				value = 10
+			}
+			set_victory_points = {
+				province = 9450
+				value = 15
+			}
+			set_victory_points = {
+				province = 1595
+				value = 50
+			}
+			set_victory_points = {
+				province = 10412
+				value = 50
+			}
+			set_victory_points = {
+				province = 6890
+				value = 10
+			}
+			set_victory_points = {
+				province = 3957
+				value = 50
+			}
+			set_victory_points = {
+				province = 9727
+				value = 50
+			}
+			set_victory_points = {
+				province = 6845
+				value = 15
+			}
+
+			#ALLIES
+			set_victory_points = {
+				province = 6710
+				value = 50
+			}
+			set_victory_points = {
+				province = 3775
+				value = 25
+			}
+			set_victory_points = {
+				province = 3778
+				value = 25
+			}
+			set_victory_points = {
+				province = 3878
+				value = 50
+			}
+			set_victory_points = {
+				province = 6732
+				value = 25
+			}
+			set_victory_points = {
+				province = 4345
+				value = 25
+			}
+
+			#AXIS
+			set_victory_points = {
+				province = 1843
+				value = 25
+			}
+			set_victory_points = {
+				province = 12489
+				value = 25
+			}
+
+			every_state = {
+				limit={OR={state=373 state = 395 state=369 state = 261 state=361 state=362 state=363 state = 372 state = 367 state = 394 state = 357}}
+				add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=805 state = 365 state=393 state = 358}}
+				add_building_construction = {
+				type = air_base
+				level = 10
+				instant_build = yes
+				}
+			}
+
+			every_state = {
+				limit={OR={state=375 state=374 state=372 state=371}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+			}
+			every_state = {
+				limit={OR={state=370 state=367 state=365 state=366}}
+				AXJ={transfer_state=PREV}
+				add_core_of =AXJ
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+			}
+
+			every_state = {
+				limit={OR={state=364 state=360 state=361 state=362 state=363 state=368 state=369 state=816 state=261 state=396 state=395 state=373 state=392 state=383 state=359 state = 384 state = 390}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 200000
+				set_building_level = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=394 state=393 state=276 state=391}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				
+			}
+			every_state = {
+				limit={OR={state=358 state=357 state=465 state=468}}
+				ALJ={transfer_state=PREV}
+				add_core_of =ALJ
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+			}
+			
+			every_state = { # all player states
+				limit={OR={state=375 state = 374 state=372 state = 371 state = 370 state = 367 state=365 state=366 state=394 state=393 state=276 state=391 state=358 state=357 state=465 state=468}}
+				
+				set_building_level = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				set_state_category = megalopolis
+
+				add_resource = {
+					type = oil
+					amount = 7
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = { # vp states
+				limit={OR={state=362 state=369 state=396 state=361 state=373}}
+				
+				add_vp_resources = yes
+			}
+			every_state = { # all capital states
+				limit={OR={state=375 state=365 state=358 }} #state 393 detroit needs, but no ocean access
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			393 = { # temporary
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province=6710
+					level = 5
+					instant_build = yes
+				}
+				
+			}
+			394 = { # temporary
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province=12357
+					level = 5
+					instant_build = yes
+				}
+				
+			}
+			391 = { # temporary
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				
+			}
+			every_state = { # "secondary" states
+				limit={OR={state=372 state=367 state=276 state = 468 }}
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = { # coastal states
+				limit={OR={state=371 state=366 state=357}} # state 394 but no ocean access
+				
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			ALI = {
+				add_to_faction = ALJ
+			}
+			AXI = {
+				add_to_faction = AXJ
+			}
+		}
+	}
+}

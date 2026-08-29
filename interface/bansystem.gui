@@ -1,0 +1,912 @@
+
+guiTypes = {
+	containerWindowType = {
+		name = "bansystem_container"
+		position = { x= -832 y = -200}
+		clipping = no
+		size = { width=1664 height=580 }
+		moveable = yes
+		#fullScreen = yes
+		Orientation = CENTER
+		background = {
+				name = "topbar_resources_bg"
+				quadTextureSprite ="GFX_mini_tooltip"
+			}
+		containerWindowType = {
+		name = "horsttool_open_container"
+		position = { x = 300 y = -225 }
+		Orientation = CENTER
+		buttonType = {
+			name = "reset"
+			#quadTextureSprite = "GFX_generic_bg"
+			quadTextureSprite = "GFX_generic_box_96"
+			position = { x = -170 y = 476 }
+			#scale=0.5
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		
+		instantTextboxType = {
+			name = "title"
+			#position = {x=22 y=5}
+			position = {x=-162 y=480}
+			font = "hoi_18mbs"
+			text = "[reset_TOOLTIP]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+		buttonType = {
+			name = "ready"
+			#quadTextureSprite = "GFX_generic_bg"
+			quadTextureSprite = "GFX_generic_box_96"
+			position = { x = -520 y = 476 }
+			#scale=0.5
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		
+		instantTextboxType = {
+			name = "title2"
+			#position = {x=22 y=5}
+			position = {x=-512 y=480}
+			font = "hoi_18mbs"
+			text = "[ready_TOOLTIP]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+		buttonType = {
+			name = "Option"
+			text =  "START"
+			shortcut = "ESCAPE"
+			position = { x = -410 y = 472 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_30header"
+			Orientation = center
+		}
+		
+	}	
+		containerWindowType = {
+		name = "topbar_resource_container2"
+		position = { x= -815 y = -5}
+		clipping = no
+		size = { width=320 height=40 }
+		moveable = no
+		Orientation = CENTER
+		background = {
+				name = "topbar_resources_bg"
+				quadTextureSprite ="GFX_mini_tooltip"
+			}
+
+			
+			instantTextBoxType = {
+				name ="points_allies"
+				position = { x= 7 y = 10 }
+				#font = "hoi_24mbs"
+				font = "hoi_18mbs"
+				#text = Points_ALI
+				text ="Banned Axis Factions"
+				format = left
+				maxWidth = 150
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			containerWindowType = {
+			name = "another_sub_container"
+			position = { x= 95 y = 2}
+			iconType = {
+				name ="vp1"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6
+				position = { x= 65 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp2"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6
+				position = { x= 95 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp3"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6  
+				position = { x= 125 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp4"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6  
+				position = { x= 155 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp5"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6  
+				position = { x= 185 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			}
+		}
+		
+		containerWindowType = {
+		name = "topbar_resource_container3"
+		position = { x= -815 y = -280}
+		clipping = no
+		size = { width=320 height=40 }
+		moveable = no
+		Orientation = CENTER
+		background = {
+				name = "topbar_resources_bg"
+				quadTextureSprite ="GFX_mini_tooltip"
+			}
+
+			
+			instantTextBoxType = {
+				name ="points_allies2"
+				position = { x= 7 y = 10 }
+				#font = "hoi_24mbs"
+				font = "hoi_18mbs"
+				#text = Points_ALI
+				text ="Banned Allies Factions"
+				format = left
+				maxWidth = 150
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			containerWindowType = {
+			name = "another_sub_container2"
+			position = { x= 95 y = 2}
+			
+			iconType = {
+				name ="vp6"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6
+				position = { x= 65 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp7"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6
+				position = { x= 95 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp8"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6  
+				position = { x= 125 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp9"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6  
+				position = { x= 155 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name ="vp10"
+				spriteType = "GFX_vps"
+				frame=3
+				scale=0.6  
+				position = { x= 185 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			}
+		}
+		containerWindowType = {
+		name = "bansystem_sub_container"
+		position = { x= 0 y = 30}
+			buttonType = {
+				name ="allies1"
+				quadTextureSprite = "GFX_portrait_ALI_haakon_vii_leader"
+				scale=0.75
+				position = { x= 20 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies1_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 20 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies1text"
+				position = { x= 20 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_spirit_of_oscarsborg
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			
+			buttonType = {
+				name ="allies2"
+				quadTextureSprite = "GFX_portrait_ALI_mountbatten_leader"
+				scale=0.75
+				position = { x= 157 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			
+			iconType = {
+				name ="allies2_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 157 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies2text"
+				position = { x= 157 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_royal_commandos
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies3"
+				quadTextureSprite = "GFX_portrait_ALI_bernard_montgomery_leader"
+				scale=0.75
+				position = { x= 294 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies3_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 294 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies3text"
+				position = { x= 294 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_commonwealth_8th_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies4"
+				quadTextureSprite = "GFX_portrait_ALI_guy_simonds_leader"
+				scale=0.75
+				position = { x= 431 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies4_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 431 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies4text"
+				position = { x= 431 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_canadian_1st_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies5"
+				quadTextureSprite = "GFX_portrait_ALI_charles_de_gaulle_leader"
+				scale=0.75
+				position = { x= 568 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies5_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 568 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies5text"
+				position = { x= 568 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_french_liberation_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies6"
+				quadTextureSprite = "GFX_portrait_ALI_jaque_gardien_leader"
+				scale=0.75
+				position = { x= 705 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies6_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 705 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies6text"
+				position = { x= 705 y = 190 }
+				font = "hoi_18mbs"
+				text = ALI_army_of_the_maginot
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies7"
+				quadTextureSprite = "GFX_portrait_ALI_dwight_d_eisenhower_leader"
+				scale=0.75
+				position = { x= 842 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies7_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 842 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies7text"
+				position = { x= 842 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_US_12th_army_group 
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies8"
+				quadTextureSprite = "GFX_portrait_ALI_douglas_macarthur_leader"
+				scale=0.75
+				position = { x= 979 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies8_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 979 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies8text"
+				position = { x= 979 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_USMC
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies9"
+				quadTextureSprite = "GFX_portrait_ALI_chiang_kaishek_leader"
+				scale=0.75
+				position = { x= 1116 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies9_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1116 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies9text"
+				position = { x= 1116 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_national_revolutionary_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies10"
+				quadTextureSprite = "GFX_portrait_ALI_hao_lingdao_leader"
+				scale=0.75
+				position = { x= 1253 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies10_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1253 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies10text"
+				position = { x= 1253 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_communist_forces
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies11"
+				quadTextureSprite = "GFX_portrait_ALI_konstantin_rokossovsky_leader"
+				scale=0.75
+				position = { x= 1390 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies11_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1390 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies11text"
+				position = { x= 1390 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_5th_guards_tank_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="allies12"
+				quadTextureSprite = "GFX_portrait_ALI_georgy_zhukov_leader"
+				scale=0.75
+				position = { x= 1527 y = 20 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="allies12_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1527 y = 20 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="allies12text"
+				position = { x= 1527 y = 190 }
+				font = "hoi_18mbs"
+				text =ALI_3rd_shock_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			containerWindowType = {
+			name = "another_sub_container3"
+			position = { x= 0 y = 50}
+			buttonType = {
+				name ="axis1"
+				quadTextureSprite = "GFX_portrait_AXI_motti_matti_leader"
+				scale=0.75
+				position = { x= 20 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis1_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 20 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis1text"
+				position = { x= 20 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_from_abroad
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			
+			buttonType = {
+				name ="axis2"
+				quadTextureSprite = "GFX_portrait_AXI_carl_mannerheim_leader"
+				scale=0.75
+				position = { x= 157 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis2_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 157 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			
+			instantTextBoxType = {
+				name ="axis2text"
+				position = { x= 157 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_from_within
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis3"
+				quadTextureSprite = "GFX_portrait_AXI_miklos_horthy_leader"
+				scale=0.75
+				position = { x= 294 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis3_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 294 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis3text"
+				position = { x= 294 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_hungary
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis4"
+				quadTextureSprite = "GFX_portrait_AXI_ion_antonescu_leader"
+				scale=0.75
+				position = { x= 431 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis4_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 431 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis4text"
+				position = { x= 431 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_romania
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis5"
+				quadTextureSprite = "GFX_portrait_AXI_erwin_rommel_leader"
+				scale=0.75
+				position = { x= 568 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis5_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 568 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis5text"
+				position = { x= 568 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_afrika_korps
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis6"
+				quadTextureSprite = "GFX_portrait_AXI_gunther_von_kluge_leader"
+				scale=0.75
+				position = { x= 705 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis6_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 705 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis6text"
+				position = { x= 705 y = 420 }
+				font = "hoi_18mbs"
+				text = AXI_wehrmacht_4th_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis7"
+				quadTextureSprite = "GFX_portrait_AXI_august_schulleiter_leader"
+				scale=0.75
+				position = { x= 842 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis7_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 842 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis7text"
+				position = { x= 842 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_luftwaffe_ground_forces
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis8"
+				quadTextureSprite = "GFX_portrait_AXI_rolf_huber_leader"
+				scale=0.75
+				position = { x= 979 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis8_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 979 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis8text"
+				position = { x= 979 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_9th_army_wehrmacht
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis9"
+				quadTextureSprite = "GFX_portrait_AXI_giovanni_messe_leader"
+				scale=0.75
+				position = { x= 1116 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis9_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1116 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis9text"
+				position = { x= 1116 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_army_of_north_africa
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis10"
+				quadTextureSprite = "GFX_portrait_AXI_rodolfo_graziani_leader"
+				scale=0.75
+				position = { x= 1253 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis10_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1253 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis10text"
+				position = { x= 1253 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_army_of_the_po
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis11"
+				quadTextureSprite = "GFX_portrait_AXI_isoroku_yamamoto_leader"
+				scale=0.75
+				position = { x= 1390 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis11_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1390 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis11text"
+				position = { x= 1390 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_imperial_japanese_navy
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			buttonType = {
+				name ="axis12"
+				quadTextureSprite = "GFX_portrait_AXI_hisaichi_terauchi_leader"
+				scale=0.75
+				position = { x= 1527 y = 250 }
+				Orientation = "UPPER_LEFT"
+				
+			}
+			iconType = {
+				name ="axis12_ban"
+				spriteType = "GFX_bans"
+				frame=1
+				position = { x= 1527 y = 250 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent=yes
+				
+			}
+			instantTextBoxType = {
+				name ="axis12text"
+				position = { x= 1527 y = 420 }
+				font = "hoi_18mbs"
+				text =AXI_IJ_army
+				format = centre
+				maxWidth = 117
+				maxHeight = 100
+				fixedsize = yes
+				
+			}
+			}
+		}
+	}
+	}
+	
+	
+

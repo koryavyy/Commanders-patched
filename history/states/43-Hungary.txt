@@ -1,0 +1,29 @@
+
+state={
+	id=43
+	name="STATE_43" # Northern Hungary
+	manpower = 1
+	
+
+	state_category = large_city
+
+	history={
+
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+		}
+		victory_points = {
+			9660 50
+		}
+
+	}
+
+	provinces={
+		684 716 3713 3731 6716 6751 9660 9690 11520
+	}
+
+	local_supplies=0.0
+}

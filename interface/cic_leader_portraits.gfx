@@ -1,0 +1,196 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_CAN_harry_crerar"
+		texturefile = "gfx/leaders/ALI/CAN_harry_crerar.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_harry_wickwire_foster"
+		texturefile = "gfx/leaders/ALI/CAN_harry_wickwire_foster.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_harry_wickwire_foster_small"
+		texturefile = "gfx/interface/ideas/idea_CAN_harry_wickwire_foster.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_frederic_franklin_worthington"
+		texturefile = "gfx/leaders/ALI/CAN_frederic_franklin_worthington.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_frederic_franklin_worthington_small"
+		texturefile = "gfx/interface/ideas/idea_CAN_frederic_franklin_worthington.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_haakon_vii"
+		texturefile = "gfx/leaders/ALI/ALI_Haakon_Portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_mountbatten"
+		texturefile = "gfx/leaders/ALI/ALI_Mountbatten_2.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_guy_simonds"
+		texturefile = "gfx/leaders/ALI/ALI_guy_simonds.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_jaque_gardien"
+		texturefile = "gfx/leaders/ALI/ALI_jaque_gardien.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_hao_lingdao"
+		texturefile = "gfx/leaders/ALI/ALI_hao_lingdao.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_motti_matti"
+		texturefile = "gfx/leaders/AXI/axi_motti_matti.tga"
+	}
+	### LEADER VARIANT
+	# ALI
+	spriteType = {
+		name = "GFX_portrait_ALI_haakon_vii_leader"
+		texturefile = "gfx/leaders/ALI/ALI_Haakon_Portrait_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_mountbatten_leader"
+		texturefile = "gfx/leaders/ALI/ALI_Mountbatten_2_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_guy_simonds_leader"
+		texturefile = "gfx/leaders/ALI/ALI_guy_simonds_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_bernard_montgomery_leader"
+		texturefile = "gfx/leaders/ALI/ALI_bernard_montgomery_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_charles_de_gaulle_leader"
+		texturefile = "gfx/leaders/ALI/ALI_charles_de_gaulle_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_jaque_gardien_leader"
+		texturefile = "gfx/leaders/ALI/Maginot/ALI_MAG_jaque_gardien_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_dwight_d_eisenhower_leader"
+		texturefile = "gfx/leaders/ALI/ALI_dwight_d_eisenhower_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_douglas_macarthur_leader"
+		texturefile = "gfx/leaders/ALI/ALI_douglas_macarthur_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_chiang_kaishek_leader"
+		texturefile = "gfx/leaders/ALI/ALI_chiang_kaishek_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_hao_lingdao_leader"
+		texturefile = "gfx/leaders/ALI/CommunistChina/ALI_CCP_hao_lingdao_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_konstantin_rokossovsky_leader"
+		texturefile = "gfx/leaders/ALI/ALI_konstantin_rokossovsky_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALI_georgy_zhukov_leader"
+		texturefile = "gfx/leaders/ALI/ALI_georgy_zhukov_leader.tga"
+	}
+	#Axis
+	spriteType = {
+		name = "GFX_portrait_AXI_carl_mannerheim_leader"
+		texturefile = "gfx/leaders/AXI/AXI_carl_mannerheim_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_motti_matti_leader"
+		texturefile = "gfx/leaders/AXI/AXI_motti_matti_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_miklos_horthy_leader"
+		texturefile = "gfx/leaders/AXI/AXI_miklos_horthy_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_ion_antonescu_leader"
+		texturefile = "gfx/leaders/AXI/AXI_ion_antonescu_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_erwin_rommel_leader"
+		texturefile = "gfx/leaders/AXI/AXI_erwin_rommel_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_gunther_von_kluge_leader"
+		texturefile = "gfx/leaders/AXI/AXI_gunther_von_kluge_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_august_schulleiter_leader"
+		texturefile = "gfx/leaders/AXI/AXI_august_schulleiter_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_rolf_huber_leader"
+		texturefile = "gfx/leaders/AXI/AXI_rolf_huber_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_giovanni_messe_leader"
+		texturefile = "gfx/leaders/AXI/AXI_giovanni_messe_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_rodolfo_graziani_leader"
+		texturefile = "gfx/leaders/AXI/AXI_rodolfo_graziani_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_isoroku_yamamoto_leader"
+		texturefile = "gfx/leaders/AXI/AXI_isoroku_yamamoto_leader.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_hisaichi_terauchi_leader"
+		texturefile = "gfx/leaders/AXI/AXI_hisaichi_terauchi_leader.tga"
+	}
+
+	### German Commanders
+	spriteType = {
+		name = "GFX_portrait_AXI_august_schulleiter"
+		texturefile = "gfx/leaders/AXI/AXI_august_schulleiter.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_alfred_von_witten"
+		texturefile = "gfx/leaders/AXI/AXI_alfred_von_witten.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_kurt_schulze"
+		texturefile = "gfx/leaders/AXI/AXI_kurt_schulze.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_herbert_weber"
+		texturefile = "gfx/leaders/AXI/AXI_herbert_weber.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_hans_neumann"
+		texturefile = "gfx/leaders/AXI/AXI_hans_neumann.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_franz_richter"
+		texturefile = "gfx/leaders/AXI/AXI_franz_richter.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_rolf_huber"
+		texturefile = "gfx/leaders/AXI/AXI_rolf_huber.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_wilhelm_bauer"
+		texturefile = "gfx/leaders/AXI/AXI_wilhelm_bauer.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_fritz_werner"
+		texturefile = "gfx/leaders/AXI/AXI_fritz_werner.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_max_lehmann"
+		texturefile = "gfx/leaders/AXI/AXI_max_lehmann.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_erich_lang"
+		texturefile = "gfx/leaders/AXI/AXI_erich_lang.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_AXI_karl_fuchs"
+		texturefile = "gfx/leaders/AXI/AXI_karl_fuchs.tga"
+	}
+}

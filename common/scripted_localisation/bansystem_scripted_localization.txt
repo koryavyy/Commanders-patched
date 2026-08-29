@@ -1,0 +1,26 @@
+defined_text = { # global
+	name = reset_TOOLTIP
+
+	text = {
+		trigger = {
+			has_country_flag = reset_enabled
+		}
+		localization_key = reset_on
+	}
+	text = {
+		localization_key = reset_off
+	}
+}
+defined_text = { # global
+	name = ready_TOOLTIP
+
+	text = {
+		trigger = {
+			has_country_flag = ready_enabled
+		}
+		localization_key = ready_on
+	}
+	text = {
+		localization_key = ready_off
+	}
+}

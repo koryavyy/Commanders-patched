@@ -1,0 +1,48 @@
+
+state={
+	id=279
+	name="STATE_279" # Santiago
+	manpower = 1
+
+	state_category = large_city
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 3
+			8222 = {
+				naval_base = 10
+			}
+		}
+
+		victory_points = {
+			650 13
+		}
+
+		victory_points = {
+			8194 1
+		}
+
+		victory_points = {
+			8222 1
+		}
+
+		victory_points = {
+			12984 1
+		}
+
+		victory_points = {
+			8251 1
+		}
+
+	}
+
+	provinces={
+		650 5191 8194 8222 8229 8251 12984 
+	}
+
+	local_supplies=0.0
+}

@@ -1,0 +1,134 @@
+bookmarks = {
+	bookmark = {
+		name = "INDIAN_SUNRISE"
+		desc = "INDIAN_SUNRISE_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_indian_sunrise"
+		default_country = "ALI"
+		
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_indian_sunrise
+			AXI={
+				set_capital = {state = 430}
+				set_oob = AXI_indian_sunrise
+				AXI_high_command = {
+					set_character_name = AXI_high_command_jap
+				}
+			}
+			ALI={
+				set_capital = {state = 439}
+				set_oob = ALI_indian_sunrise
+			}
+			430 = {
+			add_building_construction = {
+			    type = arms_factory
+    			level = 2
+    			instant_build = yes
+			}
+			add_building_construction = {
+			    type = industrial_complex
+    			level = 2
+    			instant_build = yes
+			}
+			}
+			439 = {
+			add_building_construction = {
+			    type = arms_factory
+    			level = 2
+    			instant_build = yes
+			}
+			add_building_construction = {
+			    type = industrial_complex
+    			level = 2
+    			instant_build = yes
+			}
+			}
+			445 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			432 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=433 state = 445 state=439 state=440 state=443 state=428}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				
+			}
+
+
+			every_state = {
+				limit={OR={state=431 state=323 state=438 state=436 state=437 state=435 state=426}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+			}
+			every_state = {
+				limit={OR={state=430 state=324 state=434 state=640 state=288 state=432}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				
+			}
+			every_state = { # main and secondary states in ALI and AXI, resource buff
+				limit={OR={state=439 state=440 state=430 state=640}}
+				add_resource = {
+					type = oil
+					amount = 3
+				}
+				add_resource = {
+					type = aluminium
+					amount = 3
+				}
+				add_resource = {
+					type = tungsten
+					amount = 3
+				}
+				add_resource = {
+					type = rubber
+					amount = 3
+				}
+				add_resource = {
+					type = steel
+					amount = 11
+				}
+				add_resource = {
+					type = chromium
+					amount = 3
+				}
+			}
+		}
+	}
+}

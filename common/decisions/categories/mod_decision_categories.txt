@@ -1,0 +1,101 @@
+MOD_countdown_to_war = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+			original_tag = NEU
+		}
+
+	}
+}
+MOD_countdown_to_victory_cat = {
+
+	icon = border_conflicts
+
+	priority = 95
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+	visible = {
+		NOT = {
+			has_global_flag = FiveVpMap
+		}
+	}
+}
+MOD_countdown_to_victory_5vp_cat = {
+
+	icon = border_conflicts
+
+	priority = 95
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+	visible = {
+		has_global_flag = FiveVpMap
+	}
+}
+
+MOD_leader_school_cat = {
+
+	icon = border_conflicts
+
+	priority = 95
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+	visible = {
+		OR={
+			has_completed_focus=INDUSTRY_siege_warfare_school
+			has_completed_focus=INDUSTRY_covert_warfare_school
+			has_completed_focus=INDUSTRY_advanced_warfare
+
+
+		}
+	}
+}
+MOD_hide_other_focuses = {
+	icon = GFX_decision_generic_decision
+	allowed={
+		OR = {
+			original_tag = AXI
+			original_tag = ALI
+			original_tag = AXJ
+			original_tag = ALJ
+			original_tag = AXK
+			original_tag = ALK
+		}
+	}
+}

@@ -1,0 +1,15 @@
+bitmapfonts = {
+
+	# Global text colors used in the entire game, for use in loc files ex: "§G Text Text§!"
+
+	bitmapfont = {
+		name = "trimposter30"
+		path = "gfx/fonts/trimposter30"
+		color = 0xffffffff
+		textcolors = {
+			W = { 255 255 255 }
+			b = { 0 0 0 }
+		}
+	}
+
+}

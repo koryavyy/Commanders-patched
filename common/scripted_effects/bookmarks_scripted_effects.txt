@@ -1,0 +1,80 @@
+add_tiny_resources_to_state={
+add_resource = {
+    		type = oil
+    		amount = 5
+		}
+		add_resource = {
+    		type = aluminium
+    		amount = 5
+		}
+		add_resource = {
+    		type = tungsten
+    		amount = 5
+		}
+		add_resource = {
+    		type = rubber
+    		amount = 5
+		}
+		add_resource = {
+    		type = steel
+    		amount = 5
+		}
+		add_resource = {
+    		type = chromium
+    		amount = 5
+		}
+}
+
+add_small_resources_to_state={
+add_resource = {
+    		type = oil
+    		amount = 10
+		}
+		add_resource = {
+    		type = aluminium
+    		amount = 10
+		}
+		add_resource = {
+    		type = tungsten
+    		amount = 10
+		}
+		add_resource = {
+    		type = rubber
+    		amount = 10
+		}
+		add_resource = {
+    		type = steel
+    		amount = 10
+		}
+		add_resource = {
+    		type = chromium
+    		amount = 10
+		}
+}
+
+add_large_resources_to_state={
+add_resource = {
+    		type = oil
+    		amount = 25
+		}
+		add_resource = {
+    		type = aluminium
+    		amount = 25
+		}
+		add_resource = {
+    		type = tungsten
+    		amount = 25
+		}
+		add_resource = {
+    		type = rubber
+    		amount = 25
+		}
+		add_resource = {
+    		type = steel
+    		amount = 25
+		}
+		add_resource = {
+    		type = chromium
+    		amount = 25
+		}
+}

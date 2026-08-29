@@ -1,0 +1,175 @@
+bookmarks = {
+	bookmark = {
+		name = "ACROSS_THE_RHINE"
+		desc = "ACROSS_THE_RHINE_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_across_the_rhine"
+		default_country = "ALI"
+		default = yes
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_across_the_rhine
+			AXI={
+				set_capital = {state =  16}
+				set_oob = AXI_across_the_rhine
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALI={
+				set_capital = {state =  64}
+				set_oob = ALI_across_the_rhine
+			}
+			
+			16 = {
+			add_building_construction = {
+			    type = arms_factory
+    			level = 2
+    			instant_build = yes
+			}
+			add_building_construction = {
+			    type = industrial_complex
+    			level = 2
+    			instant_build = yes
+			}
+			}
+			785 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			every_state = { # Allies
+				limit={OR={state=16 state=18 state=785 state=15 state=17 state=27 state=29}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+			}
+
+
+			every_state = { # Neutrality
+				limit={OR={state=6 state=7 state=28 state=34 state=35 state=36 state=42 state=50 state=54 state=55 state=56 state=57 state=51 state=8}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 300000
+			}
+			every_state = { # Axis
+				limit={OR={state=60 state=65 state=64 state=62 state=61 state=58 state=59}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_manpower = 2142858
+			}
+			every_state = { # VPs
+				limit={OR={state=7 state=51 state=55}}
+				add_vp_resources = yes
+			}
+			every_state = { # Axis 
+				limit={OR={state=60 state=61 state=65}}
+				add_minor_resources = yes
+			}
+			every_state = { # Capital VPs
+				limit={OR={state=64}} #state=16
+				add_capital_resources = yes
+			}
+			every_state = { # Major VPs
+				limit={OR={state=59}} #state=15
+				add_major_resources = yes
+			}
+
+			### Axis
+			64 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 7
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_resource = {
+					type=steel
+					amount=10
+				}
+				add_manpower = 2142858
+			}
+			61 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			62 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			65 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			59 = {
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			58 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+
+
+
+			### Allies
+		}
+	}
+}

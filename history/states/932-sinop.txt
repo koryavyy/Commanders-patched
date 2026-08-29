@@ -1,0 +1,25 @@
+
+state={
+	id=932
+	name="STATE_932"
+
+	state_category = pastoral
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+
+	provinces={
+		11010 8175 2204
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0
+}

@@ -1,0 +1,517 @@
+bookmarks = {
+	bookmark = {
+		name = "VALHALLA"
+		desc = "VALHALLA_DESC"
+		date = 1940.4.1.12
+		picture = "GFX_select_date_valhalla"
+		default_country = "ALI"
+		
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ALJ"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXJ"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			ALI={set_cosmetic_tag=ALI_NORTH}
+			ALJ={set_cosmetic_tag=ALI_SOUTH}
+			AXI={set_cosmetic_tag=AXI_NORTH}
+			AXJ={set_cosmetic_tag=AXI_SOUTH}
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_valhalla
+			set_global_flag = FiveVpMap
+			set_global_flag = mode2v2
+			AXI={
+				set_capital = {state = 111 }
+				set_oob = AXI_scandinavia
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALI={
+				set_capital = {state = 110 }
+				set_oob = ALI_scandinavia
+			}
+			AXJ={
+				set_capital = {state = 195 }
+				set_oob = AXJ_valhalla
+				AXJ_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALJ={
+				set_capital = {state = 64 }
+				set_oob = ALJ_valhalla
+			}
+			195 = {
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_building_construction = {
+					type = arms_factory
+					level = 9
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				
+				set_building_level = {
+					type = infrastructure
+					level = 2
+				}
+				set_building_level = {
+					type = infrastructure
+					level = 5
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+			}
+			110 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			111 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			every_state = {
+				limit={ is_valhalla_neutral_state = yes }
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+			}
+			every_state = {
+				limit={ is_valhalla_allied_state = yes }
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+			}
+			every_state = {
+				limit={ is_valhalla_allied_2_state = yes }
+				ALJ={transfer_state=PREV}
+				add_core_of =ALJ
+				remove_core_of =NOO
+				add_manpower = 1875000
+			}
+			every_state = {
+				limit={ is_valhalla_axis_state = yes }
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+			}
+			every_state = {
+				limit={ is_valhalla_axis_2_state = yes }
+				AXJ={transfer_state=PREV}
+				add_core_of =AXJ
+				remove_core_of =NOO
+				
+			}
+
+			ALI = {
+				add_to_faction = ALJ
+			}
+			AXI = {
+				add_to_faction = AXJ
+			}
+
+			set_victory_points = {
+				province = 321
+				value = 13
+			}
+
+			### Allies South
+			every_state = { # states 
+				limit={OR={state=58 state=59 state=61}}
+				add_minor_resources = yes
+			}
+			every_state = { # Capital VPs
+				limit={OR={state=64}} #state=16
+				add_major_resources = yes
+			}
+			64 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 7
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			61 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			62 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			65 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			59 = {
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			58 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			808={
+				add_resource = {
+					type = oil
+					amount = 25
+				}
+				add_resource = {
+					type = aluminium
+					amount = 25
+				}
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+				add_resource = {
+					type = rubber
+					amount = 25
+				}
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+				add_resource = {
+					type = chromium
+					amount = 25
+				}
+			}
+			244={
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			99={
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			215 = {
+
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_category = large_city
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			143={
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			37={
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			247={
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			263={
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+			}
+			208={
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+			}
+			244={
+				
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+			}
+			209={
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

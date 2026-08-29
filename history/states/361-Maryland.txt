@@ -1,0 +1,36 @@
+
+state={
+	id=361
+	name="STATE_361"
+	manpower = 1
+
+	state_category = city
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = {
+			6984 3
+		}
+		buildings = {
+			infrastructure = 3 #was: 7
+			6984 = {
+				naval_base = 2
+
+			}
+			3957 = {
+				naval_base = 1
+
+			}
+		}
+
+
+	}
+
+	provinces={
+		3957 6823 6892 6929 6984 9758 9786 11892
+	}
+
+	local_supplies=0.0
+}

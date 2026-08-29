@@ -1,0 +1,868 @@
+scripted_gui = {
+	bansystem= {
+		context_type = player_context
+		window_name = "bansystem_container"
+		visible = {
+		has_global_flag= bansystem_enabled
+		NOT={has_global_flag= banphase_over}
+		}
+		effects = {
+			ready_click={
+				if = {
+					limit = {has_country_flag = ready_enabled}
+					clr_country_flag = ready_enabled
+				}
+				else={
+					set_country_flag = ready_enabled
+				}
+			}
+			Option_click={
+				set_global_flag=banphase_over
+			}
+			reset_click={
+				if = {
+					limit = {has_country_flag = reset_enabled}
+					clr_country_flag = reset_enabled
+				}
+				else={
+					set_country_flag = reset_enabled
+					if = {
+						limit= {any_other_country = { has_country_flag=reset_enabled}}
+						AXI={clr_country_flag = reset_enabled}
+						ALI={clr_country_flag = reset_enabled}
+						set_variable = {AXI.bans=GLOBAL.max_bans}
+						set_variable = {ALI.bans=GLOBAL.max_bans}
+						clr_global_flag = ALI_spirit_of_oscarsborg_banned
+						clr_global_flag = ALI_royal_commandos_banned
+						clr_global_flag = ALI_commonwealth_8th_army_banned
+						clr_global_flag = ALI_canadian_1st_army_banned
+						clr_global_flag = ALI_french_liberation_army_banned
+						clr_global_flag = ALI_army_of_the_maginot_banned
+						clr_global_flag = ALI_US_12th_army_group_banned
+						clr_global_flag = ALI_USMC_banned
+						clr_global_flag = ALI_national_revolutionary_army_banned
+						clr_global_flag = ALI_communist_forces_banned
+						clr_global_flag = ALI_5th_guards_tank_army_banned
+						clr_global_flag = ALI_3rd_shock_army_banned
+						clr_global_flag = AXI_from_abroad_banned
+						clr_global_flag = AXI_from_within_banned
+						clr_global_flag = AXI_hungary_banned
+						clr_global_flag = AXI_romania_banned
+						clr_global_flag = AXI_afrika_korps_banned
+						clr_global_flag = AXI_wehrmacht_4th_army_banned
+						clr_global_flag = AXI_luftwaffe_ground_forces_banned
+						clr_global_flag = AXI_9th_army_wehrmacht_banned
+						clr_global_flag = AXI_army_of_north_africa_banned
+						clr_global_flag = AXI_army_of_the_po_banned
+						clr_global_flag = AXI_imperial_japanese_navy_banned
+						clr_global_flag = AXI_IJ_army_banned
+						clear_variable=Global.allies1_ban
+						clear_variable=Global.allies2_ban
+						clear_variable=Global.allies3_ban
+						clear_variable=Global.allies4_ban
+						clear_variable=Global.allies5_ban
+						clear_variable=Global.allies6_ban
+						clear_variable=Global.allies7_ban
+						clear_variable=Global.allies8_ban
+						clear_variable=Global.allies9_ban
+						clear_variable=Global.allies10_ban
+						clear_variable=Global.allies11_ban
+						clear_variable=Global.allies12_ban
+						clear_variable=Global.axis1_ban
+						clear_variable=Global.axis2_ban
+						clear_variable=Global.axis3_ban
+						clear_variable=Global.axis4_ban
+						clear_variable=Global.axis5_ban
+						clear_variable=Global.axis6_ban
+						clear_variable=Global.axis7_ban
+						clear_variable=Global.axis8_ban
+						clear_variable=Global.axis9_ban
+						clear_variable=Global.axis10_ban
+						clear_variable=Global.axis11_ban
+						clear_variable=Global.axis12_ban
+						clear_array=Global.banarray
+						if={
+								limit= { 
+									has_game_rule = { rule = cic_ban_system option = ban1 } 
+								} 
+								set_variable={GLOBAL.max_bans=1}
+								set_global_flag= bansystem_enabled
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+						}
+						if={
+								limit= { 
+									has_game_rule = { rule = cic_ban_system option = ban2 } 
+								} 
+								set_variable={GLOBAL.max_bans=2}
+								set_global_flag= bansystem_enabled
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+						}
+						if={
+								limit= { 
+									has_game_rule = { rule = cic_ban_system option = ban3 } 
+								} 
+								set_variable={GLOBAL.max_bans=3}
+								set_global_flag= bansystem_enabled
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 4 }
+						}
+						if={
+								limit= { 
+									has_game_rule = { rule = cic_ban_system option = ban4 } 
+								} 
+								set_variable={GLOBAL.max_bans=4}
+								set_global_flag= bansystem_enabled
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 4 }
+						}
+						if={
+								limit= { 
+									has_game_rule = { rule = cic_ban_system option = ban5 } 
+								} 
+								set_variable={GLOBAL.max_bans=5}
+								set_global_flag= bansystem_enabled
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+								add_to_array = {Global.banarray = 3 }
+						}
+					}
+				}
+			}
+			
+			allies1_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_spirit_of_oscarsborg_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies1_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies2_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_royal_commandos_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies2_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				
+			}
+			}
+			allies3_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_commonwealth_8th_army_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies3_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+			}
+			}
+			allies4_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_canadian_1st_army_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies4_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+			}
+			}
+			allies5_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_french_liberation_army_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies5_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies6_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_army_of_the_maginot_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies6_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies7_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_US_12th_army_group_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies7_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies8_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_USMC_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies8_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies9_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_national_revolutionary_army_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies9_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies10_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_communist_forces_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies10_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies11_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_5th_guards_tank_army_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies11_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			allies12_click = {
+				if = { 
+				limit={check_variable={AXI.bans>0} tag = AXI}
+				set_global_flag = ALI_3rd_shock_army_banned
+				add_to_variable={AXI.bans=-1}
+				set_variable={Global.allies12_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i>4}}
+						set_variable={GLOBAL.banarray^i=1}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis1_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_from_abroad_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis1_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis2_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_from_within_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis2_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis3_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_hungary_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis3_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis4_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_romania_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis4_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis5_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_afrika_korps_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis5_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis6_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_wehrmacht_4th_army_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis6_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis7_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_luftwaffe_ground_forces_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis7_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis8_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_9th_army_wehrmacht_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis8_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis9_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_army_of_north_africa_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis9_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis10_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_army_of_the_po_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis10_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis11_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_imperial_japanese_navy_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis11_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+			axis12_click = {
+				if = { 
+				limit={check_variable={ALI.bans>0} tag = ALI}
+				set_global_flag = AXI_IJ_army_banned
+				add_to_variable={ALI.bans=-1}
+				set_variable={Global.axis12_ban=2}
+				for_each_loop = {
+					array = GLOBAL.banarray
+					value = v
+					break = break
+					index= i
+					if={limit={check_variable={v=3} check_variable={i<5}}
+						set_variable={GLOBAL.banarray^i=2}
+						set_temp_variable={break=1}
+					}
+				}
+				}
+			}
+		}
+		triggers = {
+			Option_click_enabled={
+				ALI={has_country_flag = ready_enabled}
+				AXI={has_country_flag = ready_enabled}
+			}
+			allies1_click_enabled = {
+				NOT={has_global_flag= ALI_spirit_of_oscarsborg_banned} 
+				 
+ 				
+			}
+			allies2_click_enabled = {
+				NOT={has_global_flag= ALI_royal_commandos_banned} 
+				 
+ 				
+			}
+			allies3_click_enabled = {
+				NOT={has_global_flag= ALI_commonwealth_8th_army_banned} 
+				 
+ 				
+			}
+			allies4_click_enabled = {
+				NOT={has_global_flag= ALI_canadian_1st_army_banned} 
+				 
+ 				
+			}
+			allies5_click_enabled = {
+				NOT={has_global_flag= ALI_french_liberation_army_banned} 
+				 
+ 				
+			}
+			allies6_click_enabled = {
+				NOT={has_global_flag= ALI_army_of_the_maginot_banned} 
+				 
+ 				
+			}
+			allies7_click_enabled = {
+				NOT={has_global_flag= ALI_US_12th_army_group_banned} 
+				 
+ 				
+			}
+			allies8_click_enabled = {
+				NOT={has_global_flag= ALI_USMC_banned} 
+				 
+ 				
+			}
+			allies9_click_enabled = {
+				NOT={has_global_flag= ALI_national_revolutionary_army_banned} 
+				 
+ 				
+			}
+			allies10_click_enabled = {
+				NOT={has_global_flag= ALI_communist_forces_banned} 
+				 
+ 				
+			}
+			allies11_click_enabled = {
+				NOT={has_global_flag= ALI_5th_guards_tank_army_banned} 
+				 
+ 				
+			}
+			allies12_click_enabled = {
+				NOT={has_global_flag= ALI_3rd_shock_army_banned} 
+				 
+ 				
+			}
+			axis1_click_enabled = {
+				NOT={ has_global_flag = AXI_from_abroad_banned} 
+				 
+ 				
+			}
+			axis2_click_enabled = {
+				NOT={ has_global_flag = AXI_from_within_banned} 
+				 
+ 				
+			}
+			axis3_click_enabled = {
+				NOT={ has_global_flag = AXI_hungary_banned} 
+				 
+ 				
+			}
+			axis4_click_enabled = {
+				NOT={ has_global_flag = AXI_romania_banned} 
+				 
+ 				
+			}
+			axis5_click_enabled = {
+				NOT={ has_global_flag = AXI_afrika_korps_banned} 
+				 
+ 				
+			}
+			axis6_click_enabled = {
+				NOT={ has_global_flag = AXI_wehrmacht_4th_army_banned} 
+				 
+ 				
+			}
+			axis7_click_enabled = {
+				NOT={ has_global_flag = AXI_luftwaffe_ground_forces_banned} 
+				 
+ 				
+			}
+			axis8_click_enabled = {
+				NOT={ has_global_flag = AXI_9th_army_wehrmacht_banned} 
+				 
+ 				
+			}
+			axis9_click_enabled = {
+				NOT={ has_global_flag = AXI_army_of_north_africa_banned} 
+				 
+ 				
+			}
+			axis10_click_enabled = {
+				NOT={ has_global_flag = AXI_army_of_the_po_banned} 
+				 
+ 				
+			}
+			axis11_click_enabled = {
+				NOT={ has_global_flag = AXI_imperial_japanese_navy_banned} 
+				 
+ 				
+			}
+			axis12_click_enabled = {
+				NOT={ has_global_flag = AXI_IJ_army_banned} 
+				 
+ 				
+			}
+		}
+		properties = {
+				allies1_ban={
+					frame = Global.allies1_ban
+				}
+
+				allies2_ban={
+					frame = Global.allies2_ban
+				}
+
+				allies3_ban={
+					frame = Global.allies3_ban
+				}
+
+				allies4_ban={
+					frame = Global.allies4_ban
+				}
+
+				allies5_ban={
+					frame = Global.allies5_ban
+				}
+
+				allies6_ban={
+					frame = Global.allies6_ban
+				}
+
+				allies7_ban={
+					frame = Global.allies7_ban
+				}
+
+				allies8_ban={
+					frame = Global.allies8_ban
+				}
+
+				allies9_ban={
+					frame = Global.allies9_ban
+				}
+
+				allies10_ban={
+					frame = Global.allies10_ban
+				}
+
+				allies11_ban={
+					frame = Global.allies11_ban
+				}
+
+				allies12_ban={
+					frame = Global.allies12_ban
+				}
+				axis1_ban={
+					frame = Global.axis1_ban
+				}
+
+				axis2_ban={
+					frame = Global.axis2_ban
+				}
+
+				axis3_ban={
+					frame = Global.axis3_ban
+				}
+
+				axis4_ban={
+					frame = Global.axis4_ban
+				}
+
+				axis5_ban={
+					frame = Global.axis5_ban
+				}
+
+				axis6_ban={
+					frame = Global.axis6_ban
+				}
+
+				axis7_ban={
+					frame = Global.axis7_ban
+				}
+
+				axis8_ban={
+					frame = Global.axis8_ban
+				}
+
+				axis9_ban={
+					frame = Global.axis9_ban
+				}
+
+				axis10_ban={
+					frame = Global.axis10_ban
+				}
+
+				axis11_ban={
+					frame = Global.axis11_ban
+				}
+
+				axis12_ban={
+					frame = Global.axis12_ban
+				}
+				vp1 = {
+				
+					frame = Global.banarray^0
+				}
+				vp2 = {
+					frame = Global.banarray^1
+				
+				}
+				vp3 = {
+					frame = Global.banarray^2
+				
+				}
+				vp4 = {
+					frame = Global.banarray^3
+				
+				}
+				vp5 = {
+					frame = Global.banarray^4
+				
+				}
+				vp6 = {
+					frame = Global.banarray^5
+				}
+				vp7 = {
+					frame = Global.banarray^6
+				}
+				vp8 = {
+					frame = Global.banarray^7
+				}
+				vp9 = {
+					frame = Global.banarray^8
+				}
+				vp10 = {
+					frame = Global.banarray^9
+				}
+		}
+		
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,31 @@
+state={
+	id=801
+	name="STATE_801"
+	manpower = 1
+
+	state_category=large_city
+	
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = { #Ruse
+			9612 1
+		}
+		victory_points = { #Pleven
+			3796 1
+		}
+		buildings = {
+			infrastructure = 4
+		}
+
+
+	}
+
+	provinces={
+		3796 3819 3952 6842 9610 9612
+	}
+	#	
+
+	local_supplies=0.0
+}

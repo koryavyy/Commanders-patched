@@ -1,0 +1,123 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_select_date_across_the_rhine"
+		texturefile = "gfx/interface/select_date_across_the_rhine.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_nashin_ron"
+		texturefile = "gfx/interface/select_date_nashin_ron.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_sonnenblum"
+		texturefile = "gfx/interface/select_date_sonnenblum.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_indian_sunrise"
+		texturefile = "gfx/interface/select_date_indian_sunrise.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_marco_polo"
+		texturefile = "gfx/interface/select_date_marco_polo.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_scandinavia"
+		texturefile = "gfx/interface/select_date_scandinavia.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_spain"
+		texturefile = "gfx/interface/select_date_spain.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_caribbean"
+		texturefile = "gfx/interface/select_date_caribbean.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_valhalla"
+		texturefile = "gfx/interface/select_date_valhalla.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_red_october2v2"
+		texturefile = "gfx/interface/select_date_red_october2v2.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_red_october"
+		texturefile = "gfx/interface/select_date_red_october.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_powder_keg"
+		texturefile = "gfx/interface/select_date_powder_keg.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_powder_keg2v2"
+		texturefile = "gfx/interface/select_date_powder_keg2v2.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_allegiance"
+		texturefile = "gfx/interface/select_date_allegiance.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_festung"
+		texturefile = "gfx/interface/select_date_festung.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_danzig"
+		texturefile = "gfx/interface/select_date_danzig.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_gulf_of_mexico"
+		texturefile = "gfx/interface/select_date_gulf_of_mexico.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_big_muddy"
+		texturefile = "gfx/interface/select_date_big_muddy.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_fashoda"
+		texturefile = "gfx/interface/select_date_fashoda.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_caspian"
+		texturefile = "gfx/interface/select_date_caspian.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_barbarossa3v3"
+		texturefile = "gfx/interface/select_date_barbarossa3v3.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo"
+		texturefile = "gfx/interface/discord_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo2"
+		texturefile = "gfx/interface/discord_logo2.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo3"
+		texturefile = "gfx/interface/discord_logo3.dds"
+	}
+	spriteType = {
+		name = "GFX_1v1maps"
+		texturefile = "gfx/interface/1v1maps.dds"
+	}
+	spriteType = {
+		name = "GFX_2v2maps"
+		texturefile = "gfx/interface/2v2maps.dds"
+	}
+	spriteType = {
+		name = "GFX_3v3maps"
+		texturefile = "gfx/interface/3v3maps.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_mini_tooltip_dark"
+		size= {x=32 y=32 }
+		texturefile = "gfx/interface/tiles/tiled_mini_dialogdark.dds"
+		borderSize = { x=12 y=12 }
+	}
+	corneredTileSpriteType = {
+		name = "GFX_mini_tooltip_black"
+		size= {x=32 y=32 }
+		texturefile = "gfx/interface/tiles/tiled_mini_dialogblack.dds"
+		borderSize = { x=12 y=12 }
+	}
+	
+}
