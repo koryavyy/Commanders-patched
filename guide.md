@@ -3,16 +3,16 @@
 # Axis
 ## Support
 
->### special forces
+>### Special forces
 >- Japan left
 >- OKH left
 
->### tanks
+>### Tanks
 >- Italy left
 >- Finland left
 ## Mid
 
->### tanks
+>### Tanks
 >- Hungary
 
 >### Mechanized
@@ -32,4 +32,38 @@
 >- Japan right
 >- Romania
 
+
 # Allies
+## Support
+
+>### Special forces
+>- Norway left
+>- China right
+
+>### Tanks
+>- UK left
+
+>### Anti-infantry
+>- Soviet Right
+
+## Mid
+
+>### Tanks
+>- France right
+
+>### Mechanized
+>- USA right
+
+>### Special forces
+>- Norway right
+>- China left
+
+## Carry
+
+>### Tanks
+>- France left
+>- SOV left
+
+>### Anti-tanks
+>- Canada
+>- Usa left
