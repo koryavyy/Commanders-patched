@@ -7,6 +7,7 @@ desktop.ini
 .idea/
 *.suo
 *.user
+*.vsidx
 
 *.tmp
 *.log
