@@ -1,9 +1,7 @@
 focus_tree = {
 	id = axis_focus_tree
-
 	country = {
 		factor = 0
-
 		modifier = {
 			add = 10
 			OR = {
@@ -14,11 +12,14 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 2050 y = 1900 }
+	continuous_focus_position = {
+		x = 2050
+		y = 1900
+	}
 	shared_focus = INDUSTRY_start_rapid_industralisation
-shared_focus = INDUSTRY_fortification_program
-shared_focus = INDUSTRY_supply_infrastructure
-shared_focus = INDUSTRY_air_base_network
+	shared_focus = INDUSTRY_fortification_program
+	shared_focus = INDUSTRY_supply_infrastructure
+	shared_focus = INDUSTRY_air_base_network
 	shared_focus = IND_A_industrial_base
 	shared_focus = IND_A_production_centers
 	shared_focus = IND_A_series_production
@@ -53,23 +54,19 @@ shared_focus = INDUSTRY_air_base_network
 	shared_focus = IND_S_efficiency
 	shared_focus = IND_S_efficiency_core
 	shared_focus = INDUSTRY_total_industrial_mobilisation
-
-	### FINLAND ###
 	focus = {
 		id = AXI_winter_is_coming
 		icon = GFX_focus_CIC_finland
-		
 		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
-
-		x = 2
-		y = 0
+		x = 15
+		y = -31
 		allow_branch = {
 			OR = {
 				NOT = {
-				has_country_flag = AAA_hide_focus_tree
+					has_country_flag = AAA_hide_focus_tree
 				}
 				has_completed_focus = AXI_winter_is_coming
 			}
@@ -94,7 +91,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_CIC_army_of_isthmus
 		cost = 5
 		relative_position_id = AXI_winter_is_coming
-		
 		prerequisite = {
 			focus = AXI_winter_is_coming
 		}
@@ -103,13 +99,13 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		x = -3
 		y = 1
-
 		ai_will_do = {
 			factor = 1.2
 		}
-
 		available = {
-						NOT={has_global_flag = AXI_from_abroad_banned}
+			NOT = {
+				has_global_flag = AXI_from_abroad_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -129,8 +125,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 2 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 2
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -155,11 +152,9 @@ shared_focus = INDUSTRY_air_base_network
 		y = 1
 		cost = 5
 		relative_position_id = AXI_from_abroad
-		
 		prerequisite = {
 			focus = AXI_from_abroad
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -234,7 +229,7 @@ shared_focus = INDUSTRY_air_base_network
 						tank_nsb_armor_upgrade = 9
 					}
 					icon = "GFX_SOV_improved_heavy_tank_medium"
-				}				
+				}
 			}
 			if = {
 				limit = {
@@ -280,37 +275,93 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Panssaridivisioona"
 					division_names_group = FIN_Arm_01
-
 					regiments = {
-						light_sp_artillery_brigade = { x = 0 y = 0 }
-						light_sp_artillery_brigade = { x = 0 y = 1 }
-						light_sp_anti_air_brigade = { x = 0 y = 2 }
-
-						mechanized = { x = 1 y = 0 }
-						mechanized = { x = 1 y = 1 }
-						armored_car = { x = 1 y = 2 }
-						armored_car = { x = 1 y = 3 }
-
-						motorized = { x = 2 y = 0 }
-						motorized = { x = 2 y = 1 }
-						motorized = { x = 2 y = 2 }
-						motorized = { x = 2 y = 3 }
-
-						cavalry = { x = 3 y = 0 }
-						cavalry = { x = 3 y = 1 }
-
-						medium_armor = { x = 4 y = 0 }
-						heavy_armor= { x = 4 y = 1 }
+						light_sp_artillery_brigade = {
+							x = 0
+							y = 0
+						}
+						light_sp_artillery_brigade = {
+							x = 0
+							y = 1
+						}
+						light_sp_anti_air_brigade = {
+							x = 0
+							y = 2
+						}
+						mechanized = {
+							x = 1
+							y = 0
+						}
+						mechanized = {
+							x = 1
+							y = 1
+						}
+						armored_car = {
+							x = 1
+							y = 2
+						}
+						armored_car = {
+							x = 1
+							y = 3
+						}
+						motorized = {
+							x = 2
+							y = 0
+						}
+						motorized = {
+							x = 2
+							y = 1
+						}
+						motorized = {
+							x = 2
+							y = 2
+						}
+						motorized = {
+							x = 2
+							y = 3
+						}
+						cavalry = {
+							x = 3
+							y = 0
+						}
+						cavalry = {
+							x = 3
+							y = 1
+						}
+						medium_armor = {
+							x = 4
+							y = 0
+						}
+						heavy_armor = {
+							x = 4
+							y = 1
+						}
 					}
 					support = {
-						logistics_company = { x = 0 y = 0 }
-						artillery  = { x = 0 y = 1 }
-						maintenance_company = { x = 0 y = 2 }
-						armored_car_recon = { x = 0 y = 3 }
+						logistics_company = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
+						maintenance_company = {
+							x = 0
+							y = 2
+						}
+						armored_car_recon = {
+							x = 0
+							y = 3
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"1. Panssaridivisioona\" division_template = \"Panssaridivisioona\" start_experience_factor = 0.3 start_equipment_factor = 1.1 force_equipment_variants = { light_tank_artillery_chassis_2 = { owner = ROOT version_name = \"BT-42\" } medium_tank_chassis_1 = { owner = ROOT version_name = \"StuG III Ausf. G\" } light_tank_aa_chassis_2 = { owner = ROOT version_name = \"Landsverk L-62\" } heavy_tank_chassis_1 = { owner = ROOT version_name = \"KV-1\" }}"
@@ -326,14 +377,12 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_FIN_utilize_the_sami
 		cost = 5
 		relative_position_id = AXI_the_sturmi
-		
 		prerequisite = {
 			focus = AXI_the_sturmi
 		}
 		x = 0
 		y = 1
 		completion_reward = {
-			
 			custom_effect_tooltip = AXI_sami_rangers_units_tt
 			hidden_effect = {
 				if = {
@@ -343,34 +392,76 @@ shared_focus = INDUSTRY_air_base_network
 						}
 					}
 					set_technology = {
-						tech_light_infantry = 1 
+						tech_light_infantry = 1
 						popup = no
 					}
 				}
 				division_template = {
 					name = "Sami Ranger Division"
 					division_names_group = FIN_INF_01
-
 					regiments = {
-						ranger_battalion = { x = 0 y = 0 }
-						ranger_battalion = { x = 0 y = 1 }
-						ranger_battalion = { x = 0 y = 2 }
-						ranger_battalion = { x = 0 y = 3 }
-						ranger_battalion = { x = 1 y = 0 }
-						ranger_battalion = { x = 1 y = 1 }
-						ranger_battalion = { x = 1 y = 2 }
-						ranger_battalion = { x = 1 y = 3 }
-						ranger_battalion = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
+						ranger_battalion = {
+							x = 0
+							y = 0
+						}
+						ranger_battalion = {
+							x = 0
+							y = 1
+						}
+						ranger_battalion = {
+							x = 0
+							y = 2
+						}
+						ranger_battalion = {
+							x = 0
+							y = 3
+						}
+						ranger_battalion = {
+							x = 1
+							y = 0
+						}
+						ranger_battalion = {
+							x = 1
+							y = 1
+						}
+						ranger_battalion = {
+							x = 1
+							y = 2
+						}
+						ranger_battalion = {
+							x = 1
+							y = 3
+						}
+						ranger_battalion = {
+							x = 2
+							y = 0
+						}
+						artillery_brigade = {
+							x = 2
+							y = 1
+						}
 					}
 					support = {
-						recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
+						recon = {
+							x = 0
+							y = 0
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Sami Ranger Division\" start_experience_factor = 0.75 start_equipment_factor = 1.0"
 						owner = ROOT
@@ -387,11 +478,9 @@ shared_focus = INDUSTRY_air_base_network
 		y = 1
 		cost = 5
 		relative_position_id = AXI_from_abroad
-		
 		prerequisite = {
 			focus = AXI_from_abroad
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -409,7 +498,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_generic_copy_plane_designs
 		cost = 5
 		relative_position_id = AXI_the_old_neighbor
-		
 		prerequisite = {
 			focus = AXI_the_old_neighbor
 		}
@@ -417,9 +505,9 @@ shared_focus = INDUSTRY_air_base_network
 		y = 1
 		completion_reward = {
 			set_variable_to_random = {
-    		var = random_num
-    		max = 999
-    		integer = yes
+				var = random_num
+				max = 999
+				integer = yes
 			}
 			meta_effect = {
 				text = {
@@ -428,22 +516,21 @@ shared_focus = INDUSTRY_air_base_network
 						type = small_plane_airframe_2
 						parent_version = 0
 						modules = {
-						fixed_main_weapon_slot = heavy_mg_2x
-						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-						fixed_auxiliary_weapon_slot_2 = aircraft_cannon_1_2x
-						engine_type_slot = engine_3_1x
-						special_type_slot_1 = armor_plate_small
-						special_type_slot_2 = empty
-						special_type_slot_3 = empty
+							fixed_main_weapon_slot = heavy_mg_2x
+							fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+							fixed_auxiliary_weapon_slot_2 = aircraft_cannon_1_2x
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = armor_plate_small
+							special_type_slot_2 = empty
+							special_type_slot_3 = empty
 						}
-			}
-			
-			add_equipment_to_stockpile = {
-				type = small_plane_airframe_2
-				producer = ROOT
-				amount = 150
-				variant_name = "Focke-Wulf 190-[TAG]"
-			}
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_2
+						producer = ROOT
+						amount = 150
+						variant_name = "Focke-Wulf 190-[TAG]"
+					}
 				}
 				TAG = "[?random_num]"
 			}
@@ -457,11 +544,9 @@ shared_focus = INDUSTRY_air_base_network
 		y = 1
 		cost = 5
 		relative_position_id = AXI_from_abroad
-		
 		prerequisite = {
 			focus = AXI_from_abroad
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -474,7 +559,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_goal_generic_position_armies
 		cost = 5
 		relative_position_id = AXI_fjords_and_fields
-		
 		prerequisite = {
 			focus = AXI_fjords_and_fields
 		}
@@ -490,7 +574,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_appoint_motti_matti
 		icon = GFX_focus_FIN_union_of_finnish_borthers_in_arms
-		
 		cost = 8
 		prerequisite = {
 			focus = AXI_sami_rangers
@@ -504,7 +587,6 @@ shared_focus = INDUSTRY_air_base_network
 		relative_position_id = AXI_the_finland_collection
 		x = -1
 		y = 1
-		
 		completion_reward = {
 			add_mastery = {
 				amount = 50
@@ -514,26 +596,22 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_motti_matti = {
-					promote_leader = yes
-					add_country_leader_role = {
+					[TAG]_motti_matti = {
 						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { motti_matti }
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { motti_matti }
+							}
 						}
 					}
-				}
-				
-
 				}
 				TAG = "[THIS.GetTag]"
 			}
 			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_ismus
-			}
+			hidden_effect = {}
 		}
 	}
 	focus = {
@@ -541,7 +619,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_CIC_NFG
 		cost = 5
 		relative_position_id = AXI_winter_is_coming
-		
 		prerequisite = {
 			focus = AXI_winter_is_coming
 		}
@@ -550,13 +627,13 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		x = 3
 		y = 1
-
 		ai_will_do = {
 			factor = 1.2
 		}
-
 		available = {
-						NOT={has_global_flag = AXI_from_within_banned}
+			NOT = {
+				has_global_flag = AXI_from_within_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -576,8 +653,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 3 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 3
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -598,7 +676,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_finnish_air_defence
 		icon = GFX_goal_generic_army_artillery2
-		
 		cost = 5
 		relative_position_id = AXI_from_within
 		prerequisite = {
@@ -624,7 +701,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_molotov_cocktails
 		icon = GFX_focus_CIC_molotov_cocktail
-		
 		cost = 5
 		relative_position_id = AXI_finnish_air_defence
 		prerequisite = {
@@ -641,12 +717,10 @@ shared_focus = INDUSTRY_air_base_network
 		}
 	}
 	focus = {
-		#Find a better name
 		id = AXI_volunteers_for_the_homeland
 		icon = GFX_focus_FIN_sissi
 		cost = 5
-		relative_position_id = AXI_from_within 
-		
+		relative_position_id = AXI_from_within
 		prerequisite = {
 			focus = AXI_from_within
 		}
@@ -658,28 +732,73 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Jalkaväkidivisioona"
 					division_names_group = FIN_INF_01
-
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 0 y = 4 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 1 y = 3 }
-						artillery_brigade = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 0
+							y = 3
+						}
+						infantry = {
+							x = 0
+							y = 4
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 3
+						}
+						artillery_brigade = {
+							x = 2
+							y = 0
+						}
+						artillery_brigade = {
+							x = 2
+							y = 1
+						}
 					}
 					support = {
-						recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
+						recon = {
+							x = 0
+							y = 0
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Jalkaväkidivisioona\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 						owner = ROOT
@@ -687,7 +806,6 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 			}
-
 		}
 	}
 	focus = {
@@ -695,7 +813,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_generic_anti_tank_guns
 		cost = 5
 		relative_position_id = AXI_volunteers_for_the_homeland
-		
 		prerequisite = {
 			focus = AXI_volunteers_for_the_homeland
 		}
@@ -715,7 +832,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_CIC_the_white_death
 		cost = 5
 		relative_position_id = AXI_from_within
-		
 		prerequisite = {
 			focus = AXI_from_within
 		}
@@ -728,7 +844,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_motti
 		icon = GFX_focus_FIN_the_lone_wolf
-		
 		cost = 5
 		relative_position_id = AXI_spirit_of_the_white_death
 		prerequisite = {
@@ -747,7 +862,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_EST_national_pride_in_finland
 		cost = 8
 		relative_position_id = AXI_molotov_cocktails
-		
 		prerequisite = {
 			focus = AXI_molotov_cocktails
 		}
@@ -768,44 +882,38 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_mannerheim = {
-					promote_leader = yes
-					add_country_leader_role = {
+					[TAG]_mannerheim = {
 						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { marshall_of_finland }
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { marshall_of_finland }
+							}
 						}
 					}
 				}
-
-				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_nfg
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_deeper_cooperation
 		icon = GFX_focus_FIN_weapon_caches
-		
 		cost = 5
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_from_abroad
 			focus = AXI_from_within
 		}
 		relative_position_id = AXI_winter_is_coming
 		x = 0
 		y = 2
-
 		ai_will_do = {
 			factor = 0.8
 		}
-
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -827,19 +935,16 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_ski_infantry
 		icon = GFX_focus_generic_winter_warfare
-		
 		cost = 5
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_deeper_cooperation
 		}
 		relative_position_id = AXI_deeper_cooperation
 		x = 0
 		y = 1
-
 		ai_will_do = {
 			factor = 0.8
 		}
-
 		completion_reward = {
 			custom_effect_tooltip = AXI_ski_infantry_tt
 			hidden_effect = {
@@ -852,19 +957,16 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_hakka_paalle
 		icon = GFX_focus_FIN_strengthen_military_administration
-		
 		cost = 5
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_ski_infantry
 		}
 		relative_position_id = AXI_ski_infantry
 		x = 0
 		y = 1
-
 		ai_will_do = {
 			factor = 0.8
 		}
-
 		completion_reward = {
 			add_ideas = AXI_hakka_paalle
 		}
@@ -874,7 +976,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_FIN_a_cry_for_help_2
 		cost = 10
 		relative_position_id = AXI_winter_is_coming
-		
 		x = 0
 		y = 5
 		prerequisite = {
@@ -884,26 +985,24 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_hakka_paalle
 		}
-		completion_reward = { 
+		completion_reward = {
 			add_ideas = AXI_sisu_idea_2
 		}
 	}
-	### Hungary & Romania ###
 	focus = {
 		id = AXI_hr_start
 		icon = GFX_focus_CIC_hungary_romania
-		
 		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = AXI_winter_is_coming
-		x = -2
-		y = 6
+		relative_position_id = IND_ZALUPA
+		x = -14
+		y = -10
 		allow_branch = {
 			OR = {
 				NOT = {
-				has_country_flag = AAA_hide_focus_tree
+					has_country_flag = AAA_hide_focus_tree
 				}
 				has_completed_focus = AXI_winter_is_coming
 			}
@@ -926,7 +1025,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_hungary
 		icon = GFX_focus_CIC_royal_hungarian_army
-		
 		cost = 5
 		relative_position_id = AXI_hr_start
 		prerequisite = {
@@ -937,13 +1035,13 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		x = -3
 		y = 1
-
 		ai_will_do = {
-			factor = 0.5 # Deprioritized because AI dont make no tanks
+			factor = 0.5
 		}
-
 		available = {
-						NOT={has_global_flag = AXI_hungary_banned}
+			NOT = {
+				has_global_flag = AXI_hungary_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -963,8 +1061,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 1 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 1
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -980,14 +1079,12 @@ shared_focus = INDUSTRY_air_base_network
 			army_experience = 100
 			navy_experience = 100
 			air_experience = 100
-			
 			add_ideas = shared_free_tank_template
 		}
 	}
 	focus = {
 		id = AXI_modern_hussars
 		icon = GFX_goal_generic_army_motorized
-		
 		x = -3
 		y = 1
 		cost = 5
@@ -995,7 +1092,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_hungary
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -1003,58 +1099,115 @@ shared_focus = INDUSTRY_air_base_network
 			set_technology = {
 				bicycle_infantry = 1
 			}
-			
 			custom_effect_tooltip = AXI_modern_hussars_units_tt
-
 			hidden_effect = {
 				division_template = {
 					name = "Bicycle Infantry"
 					division_names_group = HUN_INF_01
-
 					regiments = {
-						bicycle_battalion = { x = 0 y = 0 }
-						bicycle_battalion = { x = 0 y = 1 }
-						bicycle_battalion = { x = 0 y = 2 }
-						bicycle_battalion = { x = 1 y = 0 }
-						bicycle_battalion = { x = 1 y = 1 }
-						bicycle_battalion = { x = 1 y = 2 }
-						bicycle_battalion = { x = 2 y = 0 }
-						bicycle_battalion = { x = 2 y = 1 }
-						bicycle_battalion = { x = 2 y = 2 }
+						bicycle_battalion = {
+							x = 0
+							y = 0
+						}
+						bicycle_battalion = {
+							x = 0
+							y = 1
+						}
+						bicycle_battalion = {
+							x = 0
+							y = 2
+						}
+						bicycle_battalion = {
+							x = 1
+							y = 0
+						}
+						bicycle_battalion = {
+							x = 1
+							y = 1
+						}
+						bicycle_battalion = {
+							x = 1
+							y = 2
+						}
+						bicycle_battalion = {
+							x = 2
+							y = 0
+						}
+						bicycle_battalion = {
+							x = 2
+							y = 1
+						}
+						bicycle_battalion = {
+							x = 2
+							y = 2
+						}
 					}
 					support = {
-						recon = { x = 0 y = 0 }
+						recon = {
+							x = 0
+							y = 0
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64}
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
+					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "division_template = \"Bicycle Infantry\" start_experience_factor = 0.3 start_equipment_factor = 1.0 "
 						owner = ROOT
 						count = 2
 					}
 				}
-				
 				division_template = {
 					name = "Motorized Division"
 					division_names_group = HUN_MOT_01
-
 					regiments = {
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						mot_artillery_brigade = { x = 1 y = 3}
+						motorized = {
+							x = 0
+							y = 0
+						}
+						motorized = {
+							x = 0
+							y = 1
+						}
+						motorized = {
+							x = 0
+							y = 2
+						}
+						motorized = {
+							x = 1
+							y = 0
+						}
+						motorized = {
+							x = 1
+							y = 1
+						}
+						motorized = {
+							x = 1
+							y = 2
+						}
+						mot_artillery_brigade = {
+							x = 1
+							y = 3
+						}
 					}
 					support = {
-						mot_recon = { x = 0 y = 0 }
+						mot_recon = {
+							x = 0
+							y = 0
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "division_template = \"Motorized Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
@@ -1070,7 +1223,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_goal_generic_cavalry
 		cost = 5
 		relative_position_id = AXI_modern_hussars
-		
 		prerequisite = {
 			focus = AXI_modern_hussars
 		}
@@ -1089,7 +1241,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_hungarian_armord_divisions
 		icon = GFX_focus_HUN_establish_the_mavag_army_division
-		
 		x = -1
 		y = 1
 		cost = 5
@@ -1097,7 +1248,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_hungary
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -1128,32 +1278,89 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Páncéloshadosztály"
 					division_names_group = HUN_ARM_01
-
 					regiments = {
-						medium_armor = { x = 0 y = 0 }
-						medium_armor = { x = 0 y = 1 }
-						medium_armor = { x = 0 y = 2 }
-						medium_armor = { x = 0 y = 3 }
-						medium_armor = { x = 1 y = 0 }
-						medium_armor = { x = 1 y = 1 }
-						medium_armor= { x = 1 y = 2 }
-						medium_armor = { x = 1 y = 3 }
-						motorized = { x = 2 y = 0 }
-						motorized = { x = 2 y = 1 }
-						motorized = { x = 2 y = 2 }
-						motorized = { x = 2 y = 3 }
-						motorized = { x = 3 y = 0 }
-						motorized = { x = 3 y = 1 }
-						motorized = { x = 3 y = 2 }
+						medium_armor = {
+							x = 0
+							y = 0
+						}
+						medium_armor = {
+							x = 0
+							y = 1
+						}
+						medium_armor = {
+							x = 0
+							y = 2
+						}
+						medium_armor = {
+							x = 0
+							y = 3
+						}
+						medium_armor = {
+							x = 1
+							y = 0
+						}
+						medium_armor = {
+							x = 1
+							y = 1
+						}
+						medium_armor = {
+							x = 1
+							y = 2
+						}
+						medium_armor = {
+							x = 1
+							y = 3
+						}
+						motorized = {
+							x = 2
+							y = 0
+						}
+						motorized = {
+							x = 2
+							y = 1
+						}
+						motorized = {
+							x = 2
+							y = 2
+						}
+						motorized = {
+							x = 2
+							y = 3
+						}
+						motorized = {
+							x = 3
+							y = 0
+						}
+						motorized = {
+							x = 3
+							y = 1
+						}
+						motorized = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
-						mot_recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						anti_air = { x = 0 y = 2}
+						mot_recon = {
+							x = 0
+							y = 0
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
+						anti_air = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"1. Páncéloshadosztály\" division_template = \"Páncéloshadosztály\" start_experience_factor = 0.3 start_equipment_factor = 1.1"
@@ -1169,7 +1376,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_focus_generic_horse_studs
 		cost = 5
 		relative_position_id = AXI_hungarian_armord_divisions
-		
 		prerequisite = {
 			focus = AXI_hungarian_armord_divisions
 		}
@@ -1177,25 +1383,55 @@ shared_focus = INDUSTRY_air_base_network
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = AXI_hungarian_cavalry_units_tt
-			hidden_effect ={
+			hidden_effect = {
 				division_template = {
 					name = "Cavalry Division"
 					division_names_group = HUN_CAV_01
-		
 					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 0 y = 2 }
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						cavalry = { x = 1 y = 2 }
-						cavalry = { x = 2 y = 0 }
-						cavalry = { x = 2 y = 1 }
-						cavalry = { x = 2 y = 2 }
+						cavalry = {
+							x = 0
+							y = 0
+						}
+						cavalry = {
+							x = 0
+							y = 1
+						}
+						cavalry = {
+							x = 0
+							y = 2
+						}
+						cavalry = {
+							x = 1
+							y = 0
+						}
+						cavalry = {
+							x = 1
+							y = 1
+						}
+						cavalry = {
+							x = 1
+							y = 2
+						}
+						cavalry = {
+							x = 2
+							y = 0
+						}
+						cavalry = {
+							x = 2
+							y = 1
+						}
+						cavalry = {
+							x = 2
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 }
 					create_unit = {
 						division = "division_template = \"Cavalry Division\" start_experience_factor = 0.75 start_equipment_factor = 1.0"
@@ -1209,7 +1445,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_hungarian_industry
 		icon = GFX_focus_generic_industry_3
-		
 		x = 1
 		y = 1
 		cost = 5
@@ -1217,7 +1452,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_hungary
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -1228,7 +1462,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_hungarian_panthers
 		icon = GFX_goal_generic_army_tanks
-		
 		cost = 5
 		relative_position_id = AXI_hungarian_industry
 		prerequisite = {
@@ -1238,7 +1471,6 @@ shared_focus = INDUSTRY_air_base_network
 		y = 1
 		completion_reward = {
 			add_ideas = AXI_hungarian_panthers
-			#add_ideas = shared_spg_nerf
 			add_tech_bonus = {
 				name = AXI_hungarian_panthers
 				category = armor
@@ -1251,7 +1483,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_the_regent_admiral
 		icon = GFX_focus_hun_assassinate_horthy
-		
 		cost = 8
 		relative_position_id = AXI_hungarian_panthers
 		prerequisite = {
@@ -1274,32 +1505,27 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_miklos_horthy = {
-					promote_leader = yes
-					add_country_leader_role = {
+					[TAG]_miklos_horthy = {
 						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { regent_admiral }
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { regent_admiral }
+							}
 						}
 					}
-				}
-				
-
 				}
 				TAG = "[THIS.GetTag]"
 			}
 			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_hungary
-			}
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_romania
 		icon = GFX_focus_CIC_romanian_land_forces
-		
 		cost = 5
 		relative_position_id = AXI_hr_start
 		prerequisite = {
@@ -1310,13 +1536,13 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		x = 3
 		y = 1
-
 		ai_will_do = {
 			factor = 1.2
 		}
-
 		available = {
-						NOT={has_global_flag = AXI_romania_banned}
+			NOT = {
+				has_global_flag = AXI_romania_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -1336,8 +1562,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 2 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 2
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -1353,13 +1580,11 @@ shared_focus = INDUSTRY_air_base_network
 			army_experience = 100
 			navy_experience = 100
 			air_experience = 100
-			
 		}
 	}
 	focus = {
 		id = AXI_romanian_artillery
 		icon = GFX_goal_generic_army_artillery2
-		
 		cost = 5
 		relative_position_id = AXI_romania
 		prerequisite = {
@@ -1388,7 +1613,6 @@ shared_focus = INDUSTRY_air_base_network
 		icon = GFX_goal_generic_fortify_city
 		cost = 5
 		relative_position_id = AXI_romanian_artillery
-		
 		prerequisite = {
 			focus = AXI_romanian_artillery
 		}
@@ -1397,12 +1621,26 @@ shared_focus = INDUSTRY_air_base_network
 		completion_reward = {
 			custom_effect_tooltip = AXI_seige_warfare_info_tt
 			if = {
-				limit = {NOT = {has_tech = basic_fortification_tech}}
-				set_technology = { basic_fortification_tech = 1 popup = no}
+				limit = {
+					NOT = {
+						has_tech = basic_fortification_tech
+					}
+				}
+				set_technology = {
+					basic_fortification_tech = 1
+					popup = no
+				}
 			}
 			if = {
-				limit = {NOT = {has_tech = land_fort_tech_1 }}
-				set_technology = { land_fort_tech_1 = 1 popup = no}
+				limit = {
+					NOT = {
+						has_tech = land_fort_tech_1
+					}
+				}
+				set_technology = {
+					land_fort_tech_1 = 1
+					popup = no
+				}
 			}
 			every_army_leader = {
 				limit = {
@@ -1420,7 +1658,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_romanian_infantry
 		icon = GFX_focus_SOV_mobilization_plan
-		
 		cost = 5
 		relative_position_id = AXI_romania
 		prerequisite = {
@@ -1434,26 +1671,65 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Divizia de Infanterie"
 					division_names_group = ROM_INF_01
-
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
-						artillery_brigade = { x = 2 y = 2 }
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						artillery_brigade = {
+							x = 2
+							y = 1
+						}
+						artillery_brigade = {
+							x = 2
+							y = 2
+						}
 					}
 					support = {
-						anti_tank = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						engineer = { x = 0 y = 1 }
+						anti_tank = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Divizia de Infanterie\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 						count = 4
@@ -1466,7 +1742,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_tacam
 		icon = GFX_focus_generic_army_tanks2
-		
 		cost = 5
 		relative_position_id = AXI_romanian_infantry
 		prerequisite = {
@@ -1495,34 +1770,84 @@ shared_focus = INDUSTRY_air_base_network
 					tank_nsb_armor_upgrade = 3
 				}
 			}
-			
 			division_template = {
-				name = "Tank Destroyer Division" 				# 1st Armoured Division, 7th Armoured 'Desert
+				name = "Tank Destroyer Division"
 				division_names_group = ROM_ARM_01
-
 				regiments = {
-					light_tank_destroyer_brigade = { x = 0 y = 0 }
-					light_tank_destroyer_brigade = { x = 0 y = 1 }
-					light_tank_destroyer_brigade = { x = 0 y = 2 }
-					light_tank_destroyer_brigade = { x = 0 y = 3 }
-					light_tank_destroyer_brigade = { x = 1 y = 0 }
-					light_tank_destroyer_brigade = { x = 1 y = 1 }
-					light_tank_destroyer_brigade = { x = 1 y = 2 }
-					light_tank_destroyer_brigade = { x = 1 y = 3 }
-					motorized = { x = 2 y = 0 }
-					motorized = { x = 2 y = 1 }
-					motorized = { x = 2 y = 2 }
-					motorized = { x = 2 y = 3 }
-					motorized = { x = 3 y = 0 }
-					motorized = { x = 3 y = 1 }
-					motorized = { x = 3 y = 2 }
+					light_tank_destroyer_brigade = {
+						x = 0
+						y = 0
+					}
+					light_tank_destroyer_brigade = {
+						x = 0
+						y = 1
+					}
+					light_tank_destroyer_brigade = {
+						x = 0
+						y = 2
+					}
+					light_tank_destroyer_brigade = {
+						x = 0
+						y = 3
+					}
+					light_tank_destroyer_brigade = {
+						x = 1
+						y = 0
+					}
+					light_tank_destroyer_brigade = {
+						x = 1
+						y = 1
+					}
+					light_tank_destroyer_brigade = {
+						x = 1
+						y = 2
+					}
+					light_tank_destroyer_brigade = {
+						x = 1
+						y = 3
+					}
+					motorized = {
+						x = 2
+						y = 0
+					}
+					motorized = {
+						x = 2
+						y = 1
+					}
+					motorized = {
+						x = 2
+						y = 2
+					}
+					motorized = {
+						x = 2
+						y = 3
+					}
+					motorized = {
+						x = 3
+						y = 0
+					}
+					motorized = {
+						x = 3
+						y = 1
+					}
+					motorized = {
+						x = 3
+						y = 2
+					}
 				}
 				support = {
-					mot_recon = { x = 0 y = 0 }
+					mot_recon = {
+						x = 0
+						y = 0
+					}
 				}
 			}
 			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
+				limit = {
+					ROOT = {
+						has_full_control_of_state = PREV
+					}
+				}
 				create_unit = {
 					division = "division_template = \"Tank Destroyer Division\" start_experience_factor = 0.3 start_equipment_factor = 1.1 force_equipment_variants = { light_tank_destroyer_chassis_2 = { owner = ROOT version_name = \"TACAM R-2\" } }"
 					owner = ROOT
@@ -1534,7 +1859,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_romanian_oil
 		icon = GFX_goal_generic_oil_refinery
-		
 		cost = 5
 		relative_position_id = AXI_romania
 		prerequisite = {
@@ -1559,7 +1883,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_from_the_carpathians
 		icon = GFX_goal_generic_position_armies
-		
 		cost = 5
 		relative_position_id = AXI_romanian_oil
 		prerequisite = {
@@ -1587,7 +1910,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_r_7
 		icon = GFX_focus_rom_preserve_romania
-		
 		cost = 8
 		prerequisite = {
 			focus = AXI_siege_warfare
@@ -1601,7 +1923,6 @@ shared_focus = INDUSTRY_air_base_network
 		relative_position_id = AXI_siege_warfare
 		x = 1
 		y = 1
-		
 		completion_reward = {
 			add_mastery = {
 				amount = 50
@@ -1611,32 +1932,27 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_ion_antonescu = {
-					promote_leader = yes
-					add_country_leader_role = {
+					[TAG]_ion_antonescu = {
 						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { conducator }
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { conducator }
+							}
 						}
 					}
-				}
-				
-
 				}
 				TAG = "[THIS.GetTag]"
 			}
 			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_romania
-			}
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_for_the_homeland
 		icon = GFX_goal_generic_defence
-		
 		cost = 10
 		prerequisite = {
 			focus = AXI_the_regent_admiral
@@ -1648,42 +1964,37 @@ shared_focus = INDUSTRY_air_base_network
 		relative_position_id = AXI_the_regent_admiral
 		x = 3
 		y = 1
-		
 		completion_reward = {
 			custom_effect_tooltip = AXI_for_the_homeland_tt
 		}
 	}
-	
 	focus = {
 		id = AXI_anti_soviet_cooperation
 		icon = GFX_focus_attack_soviet
-		
 		cost = 5
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_hungary
 			focus = AXI_romania
 		}
 		relative_position_id = AXI_hr_start
 		x = 0
 		y = 2
-
 		ai_will_do = {
 			factor = 0.8
 		}
-
 		completion_reward = {
 			add_ideas = AXI_anti_soviet_idea
 			if = {
-	            limit = {
-	              NOT = {
-	                has_tech = mechanised_infantry
-	              }
-	            }
-	            set_technology = {
-	              mechanised_infantry = 1
-	            }
-          	}
-          	add_equipment_to_stockpile = {
+				limit = {
+					NOT = {
+						has_tech = mechanised_infantry
+					}
+				}
+				set_technology = {
+					mechanised_infantry = 1
+				}
+			}
+			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 500
 				producer = ROOT
@@ -1698,19 +2009,16 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_adopt_german_designs
 		icon = GFX_focus_GER_adopt_new_panzer_doctrine_historical
-		
 		cost = 5
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_anti_soviet_cooperation
 		}
 		relative_position_id = AXI_anti_soviet_cooperation
 		x = 0
 		y = 1
-
 		ai_will_do = {
 			factor = 0.8
 		}
-
 		completion_reward = {
 			add_ideas = AXI_german_research_teams
 			set_technology = {
@@ -1749,7 +2057,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_italian_naval_support
 		icon = GFX_goal_generic_navy_battleship
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -1757,7 +2064,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_adopt_german_designs
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -1765,10 +2071,6 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_italian_naval_support
 			custom_effect_tooltip = AXI_italian_naval_support_tt
 			hidden_effect = {
-				#########
-				# SHIPS #
-				#########
-				### Battleship Variants
 				create_equipment_variant = {
 					name = "Littorio Class"
 					type = ship_hull_heavy_2
@@ -1788,7 +2090,6 @@ shared_focus = INDUSTRY_air_base_network
 						rear_1_custom_slot = ship_heavy_battery_2
 					}
 				}
-				### Heavy Cruiser Variants
 				create_equipment_variant = {
 					name = "San Giorgio Class"
 					type = ship_hull_cruiser_coastal_defense_ship
@@ -1847,7 +2148,6 @@ shared_focus = INDUSTRY_air_base_network
 					}
 					obsolete = yes
 				}
-				### Light Cruiser Variants
 				create_equipment_variant = {
 					name = "Taranto Class"
 					type = ship_hull_cruiser_1
@@ -1884,9 +2184,8 @@ shared_focus = INDUSTRY_air_base_network
 					}
 					obsolete = yes
 				}
-				### Destroyer Variants
 				create_equipment_variant = {
-					name = "Navigatori Class"			#Represents the following WWI/1920s Heavy DDs: Mirabello, (Aquila,) Leone, Navigatori
+					name = "Navigatori Class"
 					type = ship_hull_light_1
 					name_group = ITA_DD_HISTORICAL
 					parent_version = 0
@@ -1903,7 +2202,7 @@ shared_focus = INDUSTRY_air_base_network
 					obsolete = yes
 				}
 				create_equipment_variant = {
-					name = "Maestrale Class" 			#Represents the following WWI/1920s DDs: Freccia, Foglore, Mastrale, Oriani, Spica (and subclasses)
+					name = "Maestrale Class"
 					type = ship_hull_light_1
 					name_group = ITA_DD_HISTORICAL
 					parent_version = 0
@@ -1918,8 +2217,6 @@ shared_focus = INDUSTRY_air_base_network
 						rear_1_custom_slot = ship_depth_charge_1
 					}
 				}
-				
-				### Submarine Variants
 				create_equipment_variant = {
 					name = "Bandiera Class"
 					type = ship_hull_submarine_1
@@ -1944,9 +2241,8 @@ shared_focus = INDUSTRY_air_base_network
 					}
 					obsolete = yes
 				}
-				### Destroyer Variants
 				create_equipment_variant = {
-					name = "Soldati Class" 				# represents Soldati and Pegaso classes
+					name = "Soldati Class"
 					type = ship_hull_light_2
 					name_group = ITA_DD_HISTORICAL
 					parent_version = 0
@@ -1961,73 +2257,215 @@ shared_focus = INDUSTRY_air_base_network
 						rear_1_custom_slot = ship_depth_charge_1
 					}
 				}
-
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Sirena Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Sirena Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Sirena Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Navigatori Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Navigatori Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Navigatori Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Navigatori Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Navigatori Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Maestrale Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Maestrale Class" creator = ROOT } 
-
-				hidden_effect = { set_technology = { coastal_defense_ships = 1 popup = no}}
-				create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "San Giorgio Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_coastal_defense_ship equipment_variant = "San Giorgio Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Trento Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Trento Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Taranto Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Taranto Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Taranto Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Giussano Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Giussano Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Giussano Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_heavy_2 equipment_variant = "Littorio Class" creator = ROOT }
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Soldati Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Navigatori Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Navigatori Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Navigatori Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Navigatori Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Navigatori Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Maestrale Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Maestrale Class"
+					creator = ROOT
+				}
+				hidden_effect = {
+					set_technology = {
+						coastal_defense_ships = 1
+						popup = no
+					}
+				}
+				create_ship = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					equipment_variant = "San Giorgio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_coastal_defense_ship
+					equipment_variant = "San Giorgio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Trento Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Trento Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Taranto Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Taranto Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Taranto Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Giussano Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Giussano Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Giussano Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_heavy_2
+					equipment_variant = "Littorio Class"
+					creator = ROOT
+				}
 			}
 		}
 	}
-
-	### Germany ###
 	focus = {
 		id = AXI_wehrmacht
 		icon = GFX_focus_CIC_wehrmacht
-		
 		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = AXI_hr_start
-		x = 11
-		y = 3
+		relative_position_id = IND_ZALUPA
+		x = 0
+		y = -16
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -2054,7 +2492,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_afrika_korps
 		icon = GFX_focus_CIC_panzer_west
-		
 		relative_position_id = AXI_wehrmacht
 		x = -3
 		y = 1
@@ -2069,7 +2506,9 @@ shared_focus = INDUSTRY_air_base_network
 			factor = 1.2
 		}
 		available = {
-						NOT={has_global_flag = AXI_afrika_korps_banned}
+			NOT = {
+				has_global_flag = AXI_afrika_korps_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -2089,8 +2528,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 1 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 1
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -2106,15 +2546,12 @@ shared_focus = INDUSTRY_air_base_network
 			army_experience = 100
 			navy_experience = 100
 			air_experience = 100
-
 			add_ideas = shared_free_tank_template
 		}
 	}
-	
 	focus = {
 		id = AXI_5th_light_division
 		icon = GFX_focus_ger_oppose_hitler
-		
 		x = -1
 		y = 1
 		cost = 5
@@ -2122,7 +2559,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_afrika_korps
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -2132,22 +2568,49 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Leichte-Division"
 					division_names_group = GER_LTARM_01
-
 					regiments = {
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						mot_artillery_brigade = { x = 1 y = 3}
+						motorized = {
+							x = 0
+							y = 0
+						}
+						motorized = {
+							x = 0
+							y = 1
+						}
+						motorized = {
+							x = 0
+							y = 2
+						}
+						motorized = {
+							x = 1
+							y = 0
+						}
+						motorized = {
+							x = 1
+							y = 1
+						}
+						motorized = {
+							x = 1
+							y = 2
+						}
+						mot_artillery_brigade = {
+							x = 1
+							y = 3
+						}
 					}
 					support = {
-						mot_recon = { x = 0 y = 0 }
+						mot_recon = {
+							x = 0
+							y = 0
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "division_template = \"Leichte-Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
@@ -2156,13 +2619,11 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 			}
-
 		}
 	}
 	focus = {
 		id = AXI_15th_panser_division
 		icon = GFX_focus_generic_heavy_tank
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -2170,7 +2631,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_5th_light_division
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -2207,50 +2667,114 @@ shared_focus = INDUSTRY_air_base_network
 			}
 			custom_effect_tooltip = AXI_15th_panser_division_units_tt
 			if = {
-	            limit = {
+				limit = {
 					NOT = {
 						has_tech = mechanised_infantry
 					}
-	            }
-	            set_technology = {
+				}
+				set_technology = {
 					mechanised_infantry = 1
-	            }
+				}
 			}
 			hidden_effect = {
-				set_technology = { tech_signal_company = 1 popup = no }
-				
+				set_technology = {
+					tech_signal_company = 1
+					popup = no
+				}
 				division_template = {
 					name = "Panzer-Division"
 					division_names_group = GER_Arm_01
-
 					regiments = {
-						heavy_armor = { x = 0 y = 0 }
-						heavy_armor = { x = 0 y = 1 }
-						heavy_armor = { x = 0 y = 2 }
-						heavy_armor = { x = 0 y = 3 }
-						heavy_armor = { x = 0 y = 4 }
-						heavy_armor = { x = 1 y = 0 }
-						heavy_armor = { x = 1 y = 1 }
-						heavy_armor = { x = 1 y = 2 }
-						heavy_armor = { x = 1 y = 3 }
-						mechanized = { x = 2 y = 0 }
-						mechanized = { x = 2 y = 1 }
-						mechanized = { x = 2 y = 2 }
-						mechanized = { x = 2 y = 3 }
-						mechanized = { x = 3 y = 0 }
-						mechanized = { x = 3 y = 1 }
-						mechanized = { x = 3 y = 2 }
+						heavy_armor = {
+							x = 0
+							y = 0
+						}
+						heavy_armor = {
+							x = 0
+							y = 1
+						}
+						heavy_armor = {
+							x = 0
+							y = 2
+						}
+						heavy_armor = {
+							x = 0
+							y = 3
+						}
+						heavy_armor = {
+							x = 0
+							y = 4
+						}
+						heavy_armor = {
+							x = 1
+							y = 0
+						}
+						heavy_armor = {
+							x = 1
+							y = 1
+						}
+						heavy_armor = {
+							x = 1
+							y = 2
+						}
+						heavy_armor = {
+							x = 1
+							y = 3
+						}
+						mechanized = {
+							x = 2
+							y = 0
+						}
+						mechanized = {
+							x = 2
+							y = 1
+						}
+						mechanized = {
+							x = 2
+							y = 2
+						}
+						mechanized = {
+							x = 2
+							y = 3
+						}
+						mechanized = {
+							x = 3
+							y = 0
+						}
+						mechanized = {
+							x = 3
+							y = 1
+						}
+						mechanized = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
-						anti_air = { x = 0 y = 0 }
-						signal_company = { x = 0 y = 1}
-						engineer = { x = 0 y = 2}
-						logistics_company = { x = 0 y = 3}
-
+						anti_air = {
+							x = 0
+							y = 0
+						}
+						signal_company = {
+							x = 0
+							y = 1
+						}
+						engineer = {
+							x = 0
+							y = 2
+						}
+						logistics_company = {
+							x = 0
+							y = 3
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"10. Panzer-Division\" division_template = \"Panzer-Division\" start_experience_factor = 0.75 start_equipment_factor = 1.1 force_equipment_variants = { heavy_tank_chassis_2 = { owner = ROOT version_name = \"Panzer VI Tiger Ausf. E\" } }"
@@ -2264,7 +2788,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_blocking_force
 		icon = GFX_focus_FIN_weapon_caches
-		
 		x = -3
 		y = 1
 		cost = 5
@@ -2272,7 +2795,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_afrika_korps
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -2284,13 +2806,11 @@ shared_focus = INDUSTRY_air_base_network
 				category = engineers_tech
 			}
 			add_ideas = AXI_blocking_force
-
 		}
 	}
 	focus = {
 		id = AXI_wehrmacht_einheitskanister
 		icon = GFX_goal_tfv_saf_support_ossebrandwag
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -2298,7 +2818,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_blocking_force
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -2306,28 +2825,24 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_wehrmacht_einheitskanister
 		}
 	}
-	
-	
 	focus = {
 		id = AXI_last_of_the_luftwaffe
 		icon = GFX_focus_CIC_last_of_the_luftwaffe
-		
 		x = 1
 		y = 1
 		relative_position_id = AXI_afrika_korps
 		prerequisite = {
 			focus = AXI_afrika_korps
 		}
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			set_variable_to_random = {
-    		var = random_num
-    		max = 999
-    		integer = yes
+				var = random_num
+				max = 999
+				integer = yes
 			}
 			meta_effect = {
 				text = {
@@ -2336,22 +2851,21 @@ shared_focus = INDUSTRY_air_base_network
 						type = small_plane_airframe_2
 						parent_version = 0
 						modules = {
-						fixed_main_weapon_slot = light_mg_2x
-						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-						fixed_auxiliary_weapon_slot_2 = aircraft_cannon_1_2x
-						engine_type_slot = engine_3_1x
-						special_type_slot_1 = armor_plate_small
-						special_type_slot_2 = empty
-						special_type_slot_3 = empty
+							fixed_main_weapon_slot = light_mg_2x
+							fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+							fixed_auxiliary_weapon_slot_2 = aircraft_cannon_1_2x
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = armor_plate_small
+							special_type_slot_2 = empty
+							special_type_slot_3 = empty
 						}
-			}
-			
-			add_equipment_to_stockpile = {
-				type = small_plane_airframe_2
-				producer = ROOT
-				amount = 100
-				variant_name = "Focke-Wulf 190-[TAG]"
-			}
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_2
+						producer = ROOT
+						amount = 100
+						variant_name = "Focke-Wulf 190-[TAG]"
+					}
 				}
 				TAG = "[?random_num]"
 			}
@@ -2361,7 +2875,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_nibelungenwerk
 		icon = GFX_focus_generic_mass_production
-		
 		x = 0
 		y = 1
 		relative_position_id = AXI_last_of_the_luftwaffe
@@ -2374,13 +2887,11 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			add_ideas = AXI_nibelungenwerk_idea
-			#add_ideas = shared_spg_nerf
 		}
 	}
 	focus = {
 		id = AXI_the_desert_fox
 		icon = GFX_focus_GER_afrikakorps
-		
 		x = 3
 		y = 1
 		cost = 8
@@ -2406,37 +2917,34 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_erwin_rommel = {
-				promote_leader = yes
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = fascism_ideology
-						expire = "1965.1.1.1"
-						traits = { desert_fox }
+					[TAG]_erwin_rommel = {
+						promote_leader = yes
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { desert_fox }
+							}
+						}
 					}
 				}
-				}
-				
-
-				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_5th_panzer_army
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_wehrmacht_4th_army
 		icon = GFX_focus_CIC_4th_army
 		relative_position_id = AXI_wehrmacht
-		
 		x = 3
 		y = 1
 		available = {
-						NOT={has_global_flag = AXI_wehrmacht_4th_army_banned}
+			NOT = {
+				has_global_flag = AXI_wehrmacht_4th_army_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -2466,8 +2974,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 2 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 2
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -2488,7 +2997,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_12th_volksgrenadier_division
 		icon = GFX_goal_generic_army_motorized
-		
 		relative_position_id = AXI_wehrmacht_4th_army
 		x = -1
 		y = 1
@@ -2505,29 +3013,73 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Panzer-Grenadier-Division"
 					division_names_group = GER_ALTINF_01
-
 					regiments = {
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 0 y = 3 }
-						motorized = { x = 0 y = 4 }
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						motorized = { x = 1 y = 3 }
-						mot_artillery_brigade = { x = 2 y = 0 }
-						mot_artillery_brigade = { x = 2 y = 1 }
-						
+						motorized = {
+							x = 0
+							y = 0
+						}
+						motorized = {
+							x = 0
+							y = 1
+						}
+						motorized = {
+							x = 0
+							y = 2
+						}
+						motorized = {
+							x = 0
+							y = 3
+						}
+						motorized = {
+							x = 0
+							y = 4
+						}
+						motorized = {
+							x = 1
+							y = 0
+						}
+						motorized = {
+							x = 1
+							y = 1
+						}
+						motorized = {
+							x = 1
+							y = 2
+						}
+						motorized = {
+							x = 1
+							y = 3
+						}
+						mot_artillery_brigade = {
+							x = 2
+							y = 0
+						}
+						mot_artillery_brigade = {
+							x = 2
+							y = 1
+						}
 					}
 					support = {
-						anti_air = { x = 0 y = 0 }
-						anti_tank = {x = 0 y = 1}
-						artillery = { x = 0 y = 2}
+						anti_air = {
+							x = 0
+							y = 0
+						}
+						anti_tank = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"15. Panzer-Grenadier-Division\" division_template = \"Panzer-Grenadier-Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
@@ -2546,7 +3098,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_7th_panzer_division
 		icon = GFX_goal_generic_army_tanks
-		
 		relative_position_id = AXI_12th_volksgrenadier_division
 		x = 0
 		y = 1
@@ -2564,16 +3115,16 @@ shared_focus = INDUSTRY_air_base_network
 					name = "Panzer II Ausf. A"
 					type = light_tank_chassis_2
 					parent_version = 0
-					modules={
-						main_armament_slot=tank_auto_cannon_2
-						engine_type_slot=tank_gasoline_engine
-						special_type_slot_1=tank_radio_2
-						special_type_slot_2=additional_machine_guns
-						special_type_slot_3=smoke_launchers
-						special_type_slot_4=smoke_launchers
-						turret_type_slot=tank_light_two_man_tank_turret
-						suspension_type_slot=tank_christie_suspension
-						armor_type_slot=tank_riveted_armor
+					modules = {
+						main_armament_slot = tank_auto_cannon_2
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = smoke_launchers
+						special_type_slot_4 = smoke_launchers
+						turret_type_slot = tank_light_two_man_tank_turret
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_riveted_armor
 					}
 					upgrades = {
 						tank_nsb_engine_upgrade = 12
@@ -2584,40 +3135,101 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Panzer Division"
 					division_names_group = GER_Arm_01
-
 					regiments = {
-						light_armor = { x = 0 y = 0 }
-						light_armor = { x = 0 y = 1 }
-						light_armor = { x = 0 y = 2 }
-						light_armor = { x = 0 y = 3 }
-						light_armor = { x = 0 y = 4 }
-						light_armor = { x = 1 y = 0 }
-						light_armor = { x = 1 y = 1 }
-						light_armor = { x = 1 y = 2 }
-
-
-						motorized = { x = 2 y = 0 }
-						motorized = { x = 2 y = 1 }
-						motorized = { x = 2 y = 2 }
-						motorized = { x = 2 y = 3 }
-						motorized = { x = 2 y = 4 }
-						motorized = { x = 3 y = 0 }
-						motorized = { x = 3 y = 1 }
-						motorized = { x = 3 y = 2 }
-
-
+						light_armor = {
+							x = 0
+							y = 0
+						}
+						light_armor = {
+							x = 0
+							y = 1
+						}
+						light_armor = {
+							x = 0
+							y = 2
+						}
+						light_armor = {
+							x = 0
+							y = 3
+						}
+						light_armor = {
+							x = 0
+							y = 4
+						}
+						light_armor = {
+							x = 1
+							y = 0
+						}
+						light_armor = {
+							x = 1
+							y = 1
+						}
+						light_armor = {
+							x = 1
+							y = 2
+						}
+						motorized = {
+							x = 2
+							y = 0
+						}
+						motorized = {
+							x = 2
+							y = 1
+						}
+						motorized = {
+							x = 2
+							y = 2
+						}
+						motorized = {
+							x = 2
+							y = 3
+						}
+						motorized = {
+							x = 2
+							y = 4
+						}
+						motorized = {
+							x = 3
+							y = 0
+						}
+						motorized = {
+							x = 3
+							y = 1
+						}
+						motorized = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
-						anti_air = { x = 0 y = 0 }
-						anti_tank = { x = 0 y = 1 }
-						engineer = { x = 0 y = 2 }
-						light_tank_recon = { x = 0 y = 3 }						
-						artillery = { x = 0 y = 4 }
-
+						anti_air = {
+							x = 0
+							y = 0
+						}
+						anti_tank = {
+							x = 0
+							y = 1
+						}
+						engineer = {
+							x = 0
+							y = 2
+						}
+						light_tank_recon = {
+							x = 0
+							y = 3
+						}
+						artillery = {
+							x = 0
+							y = 4
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"7. Panzer-Division\" division_template = \"Panzer Division\" start_experience_factor = 0.75 start_equipment_factor = 1.1 force_equipment_variants = { light_tank_chassis_2 = { owner = ROOT version_name = \"Panzer II Ausf. A\" } }"
@@ -2633,11 +3245,9 @@ shared_focus = INDUSTRY_air_base_network
 			}
 		}
 	}
-	
 	focus = {
 		id = AXI_supplies_from_the_sky
 		icon = GFX_focus_generic_long_range_aircraft
-		
 		x = 1
 		y = 1
 		cost = 5
@@ -2645,7 +3255,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_wehrmacht_4th_army
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -2670,7 +3279,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_jericho_horns
 		icon = GFX_goal_generic_CAS
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -2678,55 +3286,47 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_supplies_from_the_sky
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			
 			custom_effect_tooltip = AXI_jericko_tt
-			add_ideas=AXI_jericho_horns_idea
+			add_ideas = AXI_jericho_horns_idea
 			hidden_effect = {
-			set_variable_to_random = {
-    		var = random_num
-    		max = 999
-    		integer = yes
-			}		
-			meta_effect = {
-				text = {
-					
-			create_equipment_variant = {
-			name = "Ju 87-[TAG]"
-			type = small_plane_cas_airframe_1
-			modules = {
-				fixed_main_weapon_slot = bomb_locks
-				fixed_auxiliary_weapon_slot_1 = bomb_locks
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = lmg_defense_turret
-				special_type_slot_2 = dive_brakes_small
-			}
-			icon = "GFX_GER_CAS1_medium"
-		}
-			add_equipment_to_stockpile = {
-				type = small_plane_cas_airframe_1
-				producer = ROOT
-				amount = 100
-				variant_name = "Ju 87-[TAG]"
-			}
+				set_variable_to_random = {
+					var = random_num
+					max = 999
+					integer = yes
 				}
-				TAG = "[?random_num]"
+				meta_effect = {
+					text = {
+						create_equipment_variant = {
+							name = "Ju 87-[TAG]"
+							type = small_plane_cas_airframe_1
+							modules = {
+								fixed_main_weapon_slot = bomb_locks
+								fixed_auxiliary_weapon_slot_1 = bomb_locks
+								engine_type_slot = engine_2_1x
+								special_type_slot_1 = lmg_defense_turret
+								special_type_slot_2 = dive_brakes_small
+							}
+							icon = "GFX_GER_CAS1_medium"
+						}
+						add_equipment_to_stockpile = {
+							type = small_plane_cas_airframe_1
+							producer = ROOT
+							amount = 100
+							variant_name = "Ju 87-[TAG]"
+						}
+					}
+					TAG = "[?random_num]"
+				}
 			}
-
-
-
-
 		}
-	}
 	}
 	focus = {
 		id = AXI_mp40
 		icon = GFX_focus_CIC_mp40
-		
 		relative_position_id = AXI_wehrmacht_4th_army
 		x = 3
 		y = 1
@@ -2744,7 +3344,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_singing_dora
 		icon = GFX_focus_generic_railway_gun
-		
 		relative_position_id = AXI_mp40
 		x = 0
 		y = 1
@@ -2775,7 +3374,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_appoint_the_clever_hans
 		icon = GFX_focus_ger_oppose_hitler
-		
 		relative_position_id = AXI_jericho_horns
 		x = -1
 		y = 1
@@ -2801,44 +3399,37 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_von_kluge = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { clever_hans }
+					[TAG]_von_kluge = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { clever_hans }
+							}
 						}
 					}
-				}				
-				
-
 				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_ger_4th_army
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_adopt_panzer_iv_h
 		icon = GFX_focus_GER_adopt_new_panzer_doctrine_historical
-		
 		cost = 5
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_afrika_korps
 			focus = AXI_wehrmacht_4th_army
 		}
 		relative_position_id = AXI_wehrmacht
 		x = 0
 		y = 2
-
 		ai_will_do = {
 			factor = 0.8
 		}
-
 		completion_reward = {
 			set_technology = {
 				improved_medium_tank_chassis = 1
@@ -2876,7 +3467,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_anti_tank_tactics
 		icon = GFX_goal_generic_army_artillery2
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -2884,20 +3474,19 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_adopt_panzer_iv_h
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
-					type = anti_tank_equipment
-					producer = AXI
-					amount = 500
+				type = anti_tank_equipment
+				producer = AXI
+				amount = 500
 			}
 			add_equipment_to_stockpile = {
-					type = anti_air_equipment
-					producer = AXI
-					amount = 250
+				type = anti_air_equipment
+				producer = AXI
+				amount = 250
 			}
 			add_tech_bonus = {
 				name = AXI_anti_tank_tactics
@@ -2911,13 +3500,11 @@ shared_focus = INDUSTRY_air_base_network
 				uses = 2
 				category = cat_anti_air
 			}
-
 		}
 	}
 	focus = {
 		id = AXI_surface_raiders
 		icon = GFX_focus_GER_high_seas_fleet
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -2925,59 +3512,159 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_anti_tank_tactics
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
 		completion_reward = {
 			custom_effect_tooltip = AXI_surface_raiders_tt
-			hidden_effect = { 
-				
-
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934 Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934A Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934A Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934A Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1934A Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1936 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1936 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1936 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Zerstörer 1936 Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Type 24 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Type 24 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Type 24 Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Type 24 Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Emden Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Leipzig Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Königsberg Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Königsberg Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_heavy_2 equipment_variant = "Scharnhorst Class" creator = ROOT }
-				create_ship = { type = ship_hull_heavy_2 equipment_variant = "Bismarck Class" creator = ROOT name = "Bismarck" }
-
+			hidden_effect = {
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934A Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934A Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934A Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1934A Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1936 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1936 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1936 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Zerstörer 1936 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Type 24 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Type 24 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Type 24 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Type 24 Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Emden Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Leipzig Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Königsberg Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Königsberg Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_heavy_2
+					equipment_variant = "Scharnhorst Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_heavy_2
+					equipment_variant = "Bismarck Class"
+					creator = ROOT
+					name = "Bismarck"
+				}
 			}
 		}
 	}
 	focus = {
 		id = AXI_sonnenblume
 		icon = GFX_focus_ger_reichskommisariats
-		
 		relative_position_id = AXI_wehrmacht
 		x = 0
 		y = 5
@@ -2996,22 +3683,16 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_sonnenblume
 		}
 	}
-	
-
-	### END OF OKW - START OF OKH
-
-	### OKH ###
 	focus = {
 		id = AXI_okh
 		icon = GFX_focus_ger_reichskommisariats
-		
 		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		relative_position_id = AXI_wehrmacht
-		x = 14
-		y = 0
+		x = 0
+		y = 6
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -3038,7 +3719,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_luftwaffe_ground_forces
 		icon = GFX_focus_CIC_luftwaffe
-		
 		relative_position_id = AXI_okh
 		x = -3
 		y = 1
@@ -3053,7 +3733,9 @@ shared_focus = INDUSTRY_air_base_network
 			factor = 1.2
 		}
 		available = {
-						NOT={has_global_flag = AXI_luftwaffe_ground_forces_banned}
+			NOT = {
+				has_global_flag = AXI_luftwaffe_ground_forces_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -3073,8 +3755,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 3 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 3
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -3092,11 +3775,9 @@ shared_focus = INDUSTRY_air_base_network
 			air_experience = 100
 		}
 	}
-	
 	focus = {
 		id = AXI_1st_parachute_division
 		icon = GFX_focus_generic_paratrooper
-		
 		x = -3
 		y = 1
 		cost = 5
@@ -3104,7 +3785,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_luftwaffe_ground_forces
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -3123,33 +3803,72 @@ shared_focus = INDUSTRY_air_base_network
 						}
 					}
 					set_technology = {
-						paratroopers = 1 
+						paratroopers = 1
 						popup = no
 					}
 				}
 				division_template = {
 					name = "Paratrooper Division"
 					division_names_group = GER_PAR_01
-
 					regiments = {
-						paratrooper = { x = 0 y = 0 }
-						paratrooper = { x = 0 y = 1 }
-						paratrooper = { x = 0 y = 2 }
-						paratrooper = { x = 1 y = 0 }
-						paratrooper = { x = 1 y = 1 }
-						paratrooper = { x = 1 y = 2 }
-						paratrooper = { x = 2 y = 0 }
-						paratrooper = { x = 2 y = 1 }
-						paratrooper = { x = 2 y = 2 }
+						paratrooper = {
+							x = 0
+							y = 0
+						}
+						paratrooper = {
+							x = 0
+							y = 1
+						}
+						paratrooper = {
+							x = 0
+							y = 2
+						}
+						paratrooper = {
+							x = 1
+							y = 0
+						}
+						paratrooper = {
+							x = 1
+							y = 1
+						}
+						paratrooper = {
+							x = 1
+							y = 2
+						}
+						paratrooper = {
+							x = 2
+							y = 0
+						}
+						paratrooper = {
+							x = 2
+							y = 1
+						}
+						paratrooper = {
+							x = 2
+							y = 2
+						}
 					}
 					support = {
-						anti_tank = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						engineer = { x = 0 y = 2 }
+						anti_tank = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
+						engineer = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Paratrooper Division\" start_experience_factor = 0.75 start_equipment_factor = 1.0"
 						count = 2
@@ -3162,7 +3881,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_zerstorergeschwader
 		icon = GFX_goal_expand_the_luftwaffe
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -3170,7 +3888,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_1st_parachute_division
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -3178,43 +3895,40 @@ shared_focus = INDUSTRY_air_base_network
 			custom_effect_tooltip = AXI_zerstorergeschwader_tt
 			hidden_effect = {
 				set_variable_to_random = {
-				var = random_num
-				max = 999
-				integer = yes
-				}		
+					var = random_num
+					max = 999
+					integer = yes
+				}
 				meta_effect = {
 					text = {
-					create_equipment_variant = {
-						name = "Bf 110-[TAG]"
-						type = medium_plane_fighter_airframe_2
-						modules={
-							fixed_main_weapon_slot=aircraft_cannon_1_2x
-							fixed_auxiliary_weapon_slot_1=aircraft_cannon_1_2x
-							engine_type_slot=engine_3_2x
-							special_type_slot_1=hmg_defense_turret_2x
-							fixed_auxiliary_weapon_slot_2=heavy_mg_4x
-							special_type_slot_3=self_sealing_fuel_tanks_medium
-							fixed_auxiliary_weapon_slot_3=heavy_mg_2x
+						create_equipment_variant = {
+							name = "Bf 110-[TAG]"
+							type = medium_plane_fighter_airframe_2
+							modules = {
+								fixed_main_weapon_slot = aircraft_cannon_1_2x
+								fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+								engine_type_slot = engine_3_2x
+								special_type_slot_1 = hmg_defense_turret_2x
+								fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+								special_type_slot_3 = self_sealing_fuel_tanks_medium
+								fixed_auxiliary_weapon_slot_3 = heavy_mg_2x
+							}
 						}
-					}
-			
-					add_equipment_to_stockpile = {
-						type = medium_plane_fighter_airframe_2
-						producer = ROOT
-						amount = 100
-						variant_name = "Bf 110-[TAG]"
-					}
+						add_equipment_to_stockpile = {
+							type = medium_plane_fighter_airframe_2
+							producer = ROOT
+							amount = 100
+							variant_name = "Bf 110-[TAG]"
+						}
 					}
 					TAG = "[?random_num]"
 				}
 			}
-		}	
+		}
 	}
-
 	focus = {
 		id = AXI_luftwaffe_field_divisions
 		icon = GFX_goal_generic_axis_build_infantry
-		
 		x = -1
 		y = 1
 		cost = 5
@@ -3222,7 +3936,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_luftwaffe_ground_forces
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -3232,25 +3945,61 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Luftwaffe Field Division"
 					division_names_group = GER_INF_01
-
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						anti_air_brigade = { x = 2 y = 1 }
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						anti_air_brigade = {
+							x = 2
+							y = 1
+						}
 					}
 					support = {
-						anti_air = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						engineer = { x = 0 y = 2 }
+						anti_air = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
+						engineer = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Luftwaffe Field Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 						count = 5
@@ -3263,7 +4012,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_the_fg42
 		icon = GFX_goal_generic_small_arms
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -3271,7 +4019,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_luftwaffe_field_divisions
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -3279,18 +4026,15 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_the_fg42
 		}
 	}
-	
 	focus = {
 		id = AXI_technisches_amt
 		icon = GFX_goal_generic_air_production
-		
 		x = 1
 		y = 1
 		relative_position_id = AXI_luftwaffe_ground_forces
 		prerequisite = {
 			focus = AXI_luftwaffe_ground_forces
 		}
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -3302,7 +4046,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_amerikabomber
 		icon = GFX_focus_GER_amerikabomber
-		
 		x = 0
 		y = 1
 		relative_position_id = AXI_technisches_amt
@@ -3316,17 +4059,16 @@ shared_focus = INDUSTRY_air_base_network
 		completion_reward = {
 			add_ideas = AXI_amerikabomber
 			custom_effect_tooltip = AXI_amerikabomber_tt
-
 			hidden_effect = {
 				set_variable_to_random = {
-				var = random_num
-				max = 999
-				integer = yes
-				}		
+					var = random_num
+					max = 999
+					integer = yes
+				}
 				meta_effect = {
 					text = {
 						create_equipment_variant = {
-							name = "He 177 Greif-[TAG]" #
+							name = "He 177 Greif-[TAG]"
 							type = large_plane_airframe_1
 							modules = {
 								fixed_main_weapon_slot = large_bomb_bay
@@ -3352,7 +4094,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_the_teacher
 		icon = GFX_focus_RAJ_seek_help_from_germany
-		
 		x = 3
 		y = 1
 		cost = 8
@@ -3378,37 +4119,34 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_august_schulleiter = { #PLACEHOLDER
-				promote_leader = yes
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = fascism_ideology
-						expire = "1965.1.1.1"
-						traits = { the_teacher }
+					[TAG]_august_schulleiter = {
+						promote_leader = yes
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { the_teacher }
+							}
+						}
 					}
 				}
-				}
-				
-
-				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_5th_panzer_army
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_9th_army_wehrmacht
 		icon = GFX_focus_CIC_9th_army
 		relative_position_id = AXI_okh
-		
 		x = 3
 		y = 1
 		available = {
-						NOT={has_global_flag = AXI_9th_army_wehrmacht_banned}
+			NOT = {
+				has_global_flag = AXI_9th_army_wehrmacht_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -3438,8 +4176,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 4 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 4
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -3460,7 +4199,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_ostlegionen
 		icon = GFX_focus_GER_army
-		
 		relative_position_id = AXI_9th_army_wehrmacht
 		x = -1
 		y = 1
@@ -3481,22 +4219,45 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Reservist Division"
 					division_names_group = GER_INF_01
-
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
 					}
 					support = {
-						artillery = { x = 0 y = 0 }
+						artillery = {
+							x = 0
+							y = 0
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Reservist Division\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
 						count = 5
@@ -3506,19 +4267,36 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Penal Division"
 					division_names_group = GER_INF_01
-
 					regiments = {
-						penal_battalion = { x = 0 y = 0 }
-						penal_battalion = { x = 0 y = 1 }
-						penal_battalion = { x = 0 y = 2 }
-						penal_battalion = { x = 1 y = 0 }
-						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = {
+							x = 0
+							y = 0
+						}
+						penal_battalion = {
+							x = 0
+							y = 1
+						}
+						penal_battalion = {
+							x = 0
+							y = 2
+						}
+						penal_battalion = {
+							x = 1
+							y = 0
+						}
+						penal_battalion = {
+							x = 1
+							y = 1
+						}
 					}
-					support = {
-					}
+					support = {}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					create_unit = {
 						division = "division_template = \"Penal Division\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						count = 6
@@ -3531,7 +4309,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_bellowing_cows
 		icon = GFX_focus_rocketry
-		
 		relative_position_id = AXI_ostlegionen
 		x = 0
 		y = 1
@@ -3544,7 +4321,6 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = AXI_bellowing_cows_tt
-			
 			if = {
 				limit = {
 					NOT = {
@@ -3552,7 +4328,7 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 				set_technology = {
-					motorized_rocket_unit=1
+					motorized_rocket_unit = 1
 				}
 			}
 			if = {
@@ -3562,11 +4338,11 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 				set_technology = {
-					rocket_artillery=1
+					rocket_artillery = 1
 				}
 			}
 			custom_effect_tooltip = AXI_bellowing_cows_units_tt
-			hidden_effect = { 
+			hidden_effect = {
 				set_technology = {
 					CIC_bellowing_cows = 1
 					popup = no
@@ -3574,27 +4350,76 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Motorized Rocket Corps"
 					regiments = {
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 0 y = 3 }						
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						motorized_rocket_brigade = { x = 2 y = 0 }
-						motorized_rocket_brigade = { x = 2 y = 1 }
-						motorized_rocket_brigade = { x = 2 y = 2 }
-						motorized_rocket_brigade = { x = 3 y = 0 }
-						motorized_rocket_brigade = { x = 3 y = 1 }
-						motorized_rocket_brigade = { x = 3 y = 2 }						
+						motorized = {
+							x = 0
+							y = 0
+						}
+						motorized = {
+							x = 0
+							y = 1
+						}
+						motorized = {
+							x = 0
+							y = 2
+						}
+						motorized = {
+							x = 0
+							y = 3
+						}
+						motorized = {
+							x = 1
+							y = 0
+						}
+						motorized = {
+							x = 1
+							y = 1
+						}
+						motorized = {
+							x = 1
+							y = 2
+						}
+						motorized_rocket_brigade = {
+							x = 2
+							y = 0
+						}
+						motorized_rocket_brigade = {
+							x = 2
+							y = 1
+						}
+						motorized_rocket_brigade = {
+							x = 2
+							y = 2
+						}
+						motorized_rocket_brigade = {
+							x = 3
+							y = 0
+						}
+						motorized_rocket_brigade = {
+							x = 3
+							y = 1
+						}
+						motorized_rocket_brigade = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
-						mot_recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
+						mot_recon = {
+							x = 0
+							y = 0
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 907 }
 					create_unit = {
 						division = "name = \"8th Mechanized Corps\" division_template = \"Motorized Rocket Corps\" start_experience_factor = 0.3 start_equipment_factor = 1.1"
@@ -3602,15 +4427,12 @@ shared_focus = INDUSTRY_air_base_network
 						count = 3
 					}
 				}
-			
 			}
 		}
 	}
-	
 	focus = {
 		id = AXI_lessons_of_kursk
 		icon = GFX_goal_generic_build_tank
-		
 		x = 1
 		y = 1
 		cost = 5
@@ -3618,7 +4440,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_9th_army_wehrmacht
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -3634,7 +4455,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_grenadier_upgrade_package
 		icon = GFX_goal_generic_construction2
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -3642,7 +4462,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_lessons_of_kursk
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -3668,7 +4487,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_opel
 		icon = GFX_goal_generic_army_motorized
-		
 		relative_position_id = AXI_9th_army_wehrmacht
 		x = 3
 		y = 1
@@ -3691,7 +4509,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_veterans_of_the_western_front
 		icon = GFX_focus_GER_demonstration_of_military_achievements
-		
 		relative_position_id = AXI_opel
 		x = 0
 		y = 1
@@ -3714,7 +4531,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_the_wolf
 		icon = GFX_focus_GER_hegemony_of_the_ss
-		
 		relative_position_id = AXI_grenadier_upgrade_package
 		x = -1
 		y = 1
@@ -3740,37 +4556,35 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_rolf_huber = {
-					promote_leader = yes
-					add_country_leader_role = {
+					[TAG]_rolf_huber = {
 						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { the_wolf }
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { the_wolf }
+							}
 						}
 					}
-				}
-				
-
 				}
 				TAG = "[THIS.GetTag]"
 			}
 			custom_effect_tooltip = AXI_der_wolf_tt
 			hidden_effect = {
-				set_technology = { CIC_der_wolf = 1 popup = no }
+				set_technology = {
+					CIC_der_wolf = 1
+					popup = no
+				}
 			}
 			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_ger_4th_army
-			}
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_mefo
 		icon = GFX_focus_GER_vereinigte_stahlwerke
-		
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_luftwaffe_ground_forces
 			focus = AXI_9th_army_wehrmacht
 		}
@@ -3778,7 +4592,6 @@ shared_focus = INDUSTRY_air_base_network
 		x = 3
 		y = 1
 		cost = 5
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -3789,15 +4602,13 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_mauser
 		icon = GFX_goal_generic_production
-		
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_mefo
 		}
 		relative_position_id = AXI_mefo
 		x = 0
 		y = 1
 		cost = 5
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -3808,15 +4619,13 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_silent_hunters
 		icon = GFX_focus_BRA_german_submarine_development
-		
-		prerequisite ={
+		prerequisite = {
 			focus = AXI_mauser
 		}
 		relative_position_id = AXI_mauser
 		x = 0
 		y = 1
 		cost = 5
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -3825,7 +4634,9 @@ shared_focus = INDUSTRY_air_base_network
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = { has_completed_focus = AXI_wehrmacht }
+						NOT = {
+							has_completed_focus = AXI_wehrmacht
+						}
 					}
 					create_equipment_variant = {
 						name = "Type VII Class"
@@ -3839,38 +4650,137 @@ shared_focus = INDUSTRY_air_base_network
 						}
 					}
 				}
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_2 equipment_variant = "Type VII Class" creator = ROOT }
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_2
+					equipment_variant = "Type VII Class"
+					creator = ROOT
+				}
 			}
 		}
 	}
 	focus = {
 		id = AXI_case_by_case
 		icon = GFX_focus_GER_appease_the_wehrmacht
-		
 		relative_position_id = AXI_okh
 		x = 0
 		y = 5
@@ -3889,19 +4799,16 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_case_by_case
 		}
 	}
-
-	### END OF GERMANY - START OF ITALY
 	focus = {
 		id = AXI_royal_italian
 		icon = GFX_focus_befriend_italy
-		
 		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		relative_position_id = AXI_okh
-		x = 11
-		y = -3
+		x = 14
+		y = 0
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -3924,39 +4831,10 @@ shared_focus = INDUSTRY_air_base_network
 				has_completed_focus = AXI_royal_italian
 			}
 		}
-
 	}
-	#focus = {
-	#	id = AXI_siege_the_allies
-	#	icon = GFX_goal_fortify_the_westwall
-	#	x = 0
-	#	y = 1
-	#	cost = 5
-	#	relative_position_id = AXI_royal_italian
-	#	prerequisite = {
-	#		focus = AXI_royal_italian
-#		}
-##
-#		ai_will_do = {
-#			factor = 1
-#		}
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				name = land_doc_bonus
-#				cost_reduction = 0.5
-#				uses = 2
-#				category = cat_superior_firepower
-#			}
-#			army_experience = 100
-#			navy_experience = 100
-#			air_experience = 100
-#
-#		}
-#	}
 	focus = {
 		id = AXI_army_of_north_africa
 		icon = GFX_focus_CIC_1st_army
-		
 		x = -3
 		y = 1
 		cost = 5
@@ -3971,7 +4849,9 @@ shared_focus = INDUSTRY_air_base_network
 			factor = 1.2
 		}
 		available = {
-						NOT={has_global_flag = AXI_army_of_north_africa_banned}
+			NOT = {
+				has_global_flag = AXI_army_of_north_africa_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -3991,8 +4871,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 2 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 2
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -4013,7 +4894,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_32nd_tank_infantry_regiment
 		icon = GFX_goal_generic_army_tanks
-		
 		x = -3
 		y = 1
 		cost = 5
@@ -4021,7 +4901,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_army_of_north_africa
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -4042,7 +4921,6 @@ shared_focus = INDUSTRY_air_base_network
 						special_type_slot_2 = tank_radio_1
 						special_type_slot_3 = additional_machine_guns
 						special_type_slot_4 = additional_machine_guns
-						
 					}
 					upgrades = {
 						tank_nsb_engine_upgrade = 2
@@ -4050,41 +4928,100 @@ shared_focus = INDUSTRY_air_base_network
 					}
 					icon = "GFX_ITA_basic_medium_tank_medium"
 				}
-
 				division_template = {
 					name = "Divisione Corazzata"
 					division_names_group = ITA_ARM_01
-
 					regiments = {
-						light_armor = { x = 0 y = 0 }
-						light_armor = { x = 0 y = 1 }
-						light_armor = { x = 0 y = 2 }
-						light_armor = { x = 0 y = 3 }
-						light_armor = { x = 0 y = 4 }
-						light_armor = { x = 1 y = 0 }
-						light_armor = { x = 1 y = 1 }
-						light_armor = { x = 1 y = 2 }
-
-
-						motorized = { x = 2 y = 0 }
-						motorized = { x = 2 y = 1 }
-						motorized = { x = 2 y = 2 }
-						motorized = { x = 2 y = 3 }
-						motorized = { x = 2 y = 4 }
-						motorized = { x = 3 y = 0 }
-						motorized = { x = 3 y = 1 }
-						motorized = { x = 3 y = 2 }
-
+						light_armor = {
+							x = 0
+							y = 0
+						}
+						light_armor = {
+							x = 0
+							y = 1
+						}
+						light_armor = {
+							x = 0
+							y = 2
+						}
+						light_armor = {
+							x = 0
+							y = 3
+						}
+						light_armor = {
+							x = 0
+							y = 4
+						}
+						light_armor = {
+							x = 1
+							y = 0
+						}
+						light_armor = {
+							x = 1
+							y = 1
+						}
+						light_armor = {
+							x = 1
+							y = 2
+						}
+						motorized = {
+							x = 2
+							y = 0
+						}
+						motorized = {
+							x = 2
+							y = 1
+						}
+						motorized = {
+							x = 2
+							y = 2
+						}
+						motorized = {
+							x = 2
+							y = 3
+						}
+						motorized = {
+							x = 2
+							y = 4
+						}
+						motorized = {
+							x = 3
+							y = 0
+						}
+						motorized = {
+							x = 3
+							y = 1
+						}
+						motorized = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
-						mot_recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-						anti_tank = { x = 0 y = 3 }
+						mot_recon = {
+							x = 0
+							y = 0
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
+						anti_tank = {
+							x = 0
+							y = 3
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"132ª Divisione Corazzata 'Ariete'\" division_template = \"Divisione Corazzata\" start_experience_factor = 0.3 start_equipment_factor = 1.1 force_equipment_variants = { light_tank_chassis_2 = { owner = ROOT version_name = \"M11/39\" } }"
@@ -4103,7 +5040,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_132nd_artillery_regiment
 		icon = GFX_focus_ITA_bersaglieri
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -4111,7 +5047,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_32nd_tank_infantry_regiment
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -4120,7 +5055,7 @@ shared_focus = INDUSTRY_air_base_network
 			hidden_effect = {
 				if = {
 					limit = {
-						 NOT = {
+						NOT = {
 							has_tech = tech_mountaineers
 						}
 					}
@@ -4132,28 +5067,73 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Divisione di Fanteria"
 					division_names_group = ITA_INF_01
-
 					regiments = {
-						mountaineers = { x = 0 y = 0 }
-						mountaineers = { x = 0 y = 1 }
-						mountaineers = { x = 0 y = 2 }
-						mountaineers = { x = 0 y = 3 }
-						mountaineers = { x = 0 y = 4 }
-						mountaineers = { x = 1 y = 0 }
-						mountaineers = { x = 1 y = 1 }
-						mountaineers = { x = 1 y = 2 }
-						mountaineers = { x = 1 y = 3 }
-						artillery_brigade = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
+						mountaineers = {
+							x = 0
+							y = 0
+						}
+						mountaineers = {
+							x = 0
+							y = 1
+						}
+						mountaineers = {
+							x = 0
+							y = 2
+						}
+						mountaineers = {
+							x = 0
+							y = 3
+						}
+						mountaineers = {
+							x = 0
+							y = 4
+						}
+						mountaineers = {
+							x = 1
+							y = 0
+						}
+						mountaineers = {
+							x = 1
+							y = 1
+						}
+						mountaineers = {
+							x = 1
+							y = 2
+						}
+						mountaineers = {
+							x = 1
+							y = 3
+						}
+						artillery_brigade = {
+							x = 2
+							y = 0
+						}
+						artillery_brigade = {
+							x = 2
+							y = 1
+						}
 					}
 					support = {
-						recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
+						recon = {
+							x = 0
+							y = 0
+						}
+						engineer = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "division_template = \"Divisione di Fanteria\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { medium_tank_chassis_1 = { owner = ROOT version_name = \"M11/39\" } }"
@@ -4167,7 +5147,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_tankettes
 		icon = GFX_focus_NZL_bob_semple_tank
-		
 		cost = 5
 		x = 1
 		y = 1
@@ -4177,13 +5156,11 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			add_ideas = AXI_tankettes_idea
-			#add_ideas = shared_spg_nerf
 		}
 	}
 	focus = {
 		id = AXI_special_forces_training
 		icon = GFX_goal_generic_special_forces
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -4191,7 +5168,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_tankettes
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -4202,7 +5178,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_aces_of_the_sands
 		icon = GFX_goal_generic_air_fighter
-		
 		x = -1
 		y = 1
 		cost = 5
@@ -4210,51 +5185,46 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_army_of_north_africa
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		custom_effect_tooltip = AXI_italian_planes_tt
+			custom_effect_tooltip = AXI_italian_planes_tt
 			hidden_effect = {
-			set_variable_to_random = {
-    		var = random_num
-    		max = 999
-    		integer = yes
-			}		
-			meta_effect = {
-				text = {
-					
-			create_equipment_variant = {
-			name = "Re.2000 - [TAG]" #
-			type = small_plane_airframe_2
-			modules = {
-				fixed_main_weapon_slot = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_1 = light_mg_4x
-				fixed_auxiliary_weapon_slot_2 = empty
-				engine_type_slot = engine_3_1x
-				special_type_slot_1 = empty
-			}
-		}
-			
-			add_equipment_to_stockpile = {
-				type = small_plane_airframe_2
-				producer = ROOT
-				amount = 150
-				variant_name = "Re.2000 - [TAG]"
-			}
+				set_variable_to_random = {
+					var = random_num
+					max = 999
+					integer = yes
 				}
-				TAG = "[?random_num]"
+				meta_effect = {
+					text = {
+						create_equipment_variant = {
+							name = "Re.2000 - [TAG]"
+							type = small_plane_airframe_2
+							modules = {
+								fixed_main_weapon_slot = heavy_mg_4x
+								fixed_auxiliary_weapon_slot_1 = light_mg_4x
+								fixed_auxiliary_weapon_slot_2 = empty
+								engine_type_slot = engine_3_1x
+								special_type_slot_1 = empty
+							}
+						}
+						add_equipment_to_stockpile = {
+							type = small_plane_airframe_2
+							producer = ROOT
+							amount = 150
+							variant_name = "Re.2000 - [TAG]"
+						}
+					}
+					TAG = "[?random_num]"
+				}
 			}
-		}
-		add_ideas = AXI_aces_of_the_sands_idea
+			add_ideas = AXI_aces_of_the_sands_idea
 		}
 	}
-	
 	focus = {
 		id = AXI_aeronautica_machta
 		icon = GFX_goal_generic_air_production
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -4262,30 +5232,29 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_aces_of_the_sands
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		air_experience = 50
-		add_ideas = AXI_aeronautica_machta_idea
-		custom_effect_tooltip = AXI_aeronautica_machta_tt
-		hidden_effect = {
-			add_tech_bonus = {
-				bonus = 0.4
-				uses = 30
-				category = light_air
-				category = medium_air
-				category = heavy_air
-				category = light_fighter
-				category = cat_heavy_fighter
-				category = tactical_bomber
-				category = cat_strategic_bomber
-				category = air_equipment
-				category = plane_modules_tech
-				category = cat_air_guns
-				category = cat_air_engine
-				category = cat_air_bombs
+			air_experience = 50
+			add_ideas = AXI_aeronautica_machta_idea
+			custom_effect_tooltip = AXI_aeronautica_machta_tt
+			hidden_effect = {
+				add_tech_bonus = {
+					bonus = 0.4
+					uses = 30
+					category = light_air
+					category = medium_air
+					category = heavy_air
+					category = light_fighter
+					category = cat_heavy_fighter
+					category = tactical_bomber
+					category = cat_strategic_bomber
+					category = air_equipment
+					category = plane_modules_tech
+					category = cat_air_guns
+					category = cat_air_engine
+					category = cat_air_bombs
 				}
 			}
 		}
@@ -4293,7 +5262,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_supreme_commander
 		icon = GFX_focus_ITA_imperial_recognition
-		
 		x = 3
 		y = 1
 		cost = 8
@@ -4307,7 +5275,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_132nd_artillery_regiment
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -4320,32 +5287,27 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_giovanni_messe = {
-					promote_leader = yes
-					add_country_leader_role = {
+					[TAG]_giovanni_messe = {
 						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { governatori_generali }
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { governatori_generali }
+							}
 						}
 					}
 				}
-				
-
-				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_italian_1st_army
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_by_blood_alone
 		icon = GFX_focus_ITA_italian_hegemony
-		
 		x = 0
 		y = 5
 		cost = 10
@@ -4357,7 +5319,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_canned_rations
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -4368,7 +5329,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_the_breakout_fleet
 		icon = GFX_focus_ITA_milizia_marittima_di_artiglieria
-		
 		x = 0
 		y = 2
 		cost = 5
@@ -4377,52 +5337,119 @@ shared_focus = INDUSTRY_air_base_network
 			focus = AXI_army_of_north_africa
 			focus = AXI_army_of_the_po
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			custom_effect_tooltip = AXI_the_breakout_fleet_tt
 			hidden_effect = {
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Bandiera Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Sirena Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Sirena Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Sirena Class" creator = ROOT }
-
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Bandiera Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+					creator = ROOT
+				}
 				for_loop_effect = {
 					end = 11
-					create_ship = { type = ship_hull_light_2 equipment_variant = "Soldati Class" creator = ROOT }
+					create_ship = {
+						type = ship_hull_light_2
+						equipment_variant = "Soldati Class"
+						creator = ROOT
+					}
 				}
 				for_loop_effect = {
 					end = 7
-					create_ship = { type = ship_hull_light_1 equipment_variant = "Navigatori Class" creator = ROOT }
+					create_ship = {
+						type = ship_hull_light_1
+						equipment_variant = "Navigatori Class"
+						creator = ROOT
+					}
 				}
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Maestrale Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Trento Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Zara Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Giussano Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Giussano Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Giussano Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_heavy_1 equipment_variant = "Caio Duilio Class" creator = ROOT }
-				create_ship = { type = ship_hull_heavy_1 equipment_variant = "Caio Duilio Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_heavy_2 equipment_variant = "Littorio Class" creator = ROOT }
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Maestrale Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Trento Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Zara Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Giussano Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Giussano Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Giussano Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_heavy_1
+					equipment_variant = "Caio Duilio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_heavy_1
+					equipment_variant = "Caio Duilio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_heavy_2
+					equipment_variant = "Littorio Class"
+					creator = ROOT
+				}
 			}
 		}
 	}
 	focus = {
 		id = AXI_intergrated_axis_command
 		icon = GFX_focus_chi_mission_to_germany
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -4430,7 +5457,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_the_breakout_fleet
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -4439,11 +5465,9 @@ shared_focus = INDUSTRY_air_base_network
 			custom_effect_tooltip = AXI_intergrated_axis_command_tt
 		}
 	}
-	
 	focus = {
 		id = AXI_canned_rations
 		icon = GFX_goal_generic_consumer_goods
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -4451,7 +5475,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_intergrated_axis_command
 		}
-
 		ai_will_do = {
 			factor = 0.8
 		}
@@ -4462,7 +5485,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_army_of_the_po
 		icon = GFX_focus_CIC_army_po
-		
 		cost = 5
 		relative_position_id = AXI_royal_italian
 		x = 3
@@ -4477,7 +5499,9 @@ shared_focus = INDUSTRY_air_base_network
 			factor = 1.2
 		}
 		available = {
-						NOT={has_global_flag = AXI_army_of_the_po_banned}
+			NOT = {
+				has_global_flag = AXI_army_of_the_po_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -4497,8 +5521,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 1 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 1
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -4520,7 +5545,6 @@ shared_focus = INDUSTRY_air_base_network
 		id = AXI_101st_motorized
 		icon = GFX_goal_generic_army_motorized
 		cost = 5
-		
 		relative_position_id = AXI_army_of_the_po
 		x = -1
 		y = 1
@@ -4531,36 +5555,75 @@ shared_focus = INDUSTRY_air_base_network
 			factor = 1
 		}
 		completion_reward = {
-			
 			custom_effect_tooltip = AXI_101st_motorized_tt
 			custom_effect_tooltip = AXI_101st_motorized_units_tt
 			hidden_effect = {
-				
-			set_technology = {ita_mod_cic=1 popup=no}
+				set_technology = {
+					ita_mod_cic = 1
+					popup = no
+				}
 				division_template = {
 					name = "Divisione Autotrasportabile"
 					division_names_group = ITA_MOT_01
-
 					regiments = {
-
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 0 y = 3 }
-						motorized = { x = 0 y = 4 }
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						motorized = { x = 1 y = 3 }
-						motorized = { x = 1 y = 4 }
+						motorized = {
+							x = 0
+							y = 0
+						}
+						motorized = {
+							x = 0
+							y = 1
+						}
+						motorized = {
+							x = 0
+							y = 2
+						}
+						motorized = {
+							x = 0
+							y = 3
+						}
+						motorized = {
+							x = 0
+							y = 4
+						}
+						motorized = {
+							x = 1
+							y = 0
+						}
+						motorized = {
+							x = 1
+							y = 1
+						}
+						motorized = {
+							x = 1
+							y = 2
+						}
+						motorized = {
+							x = 1
+							y = 3
+						}
+						motorized = {
+							x = 1
+							y = 4
+						}
 					}
-					support = {						
-						artillery = { x = 0 y = 0 }
-						mot_recon = { x = 0 y = 1 }
+					support = {
+						artillery = {
+							x = 0
+							y = 0
+						}
+						mot_recon = {
+							x = 0
+							y = 1
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"102. Divisione Motorizzata 'Trento'\" division_template = \"Divisione Autotrasportabile\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
@@ -4574,7 +5637,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_speedy_corps
 		icon = GFX_focus_generic_conspiracy
-		
 		cost = 5
 		relative_position_id = AXI_army_of_the_po
 		x = 1
@@ -4591,14 +5653,13 @@ shared_focus = INDUSTRY_air_base_network
 				producer = ROOT
 				amount = 1000
 			}
-			add_ideas =	AXI_fast_corps_idea
+			add_ideas = AXI_fast_corps_idea
 		}
 	}
 	focus = {
 		id = AXI_decima_flotilla
 		icon = GFX_goal_generic_navy_submarine
 		cost = 5
-		
 		relative_position_id = AXI_army_of_the_po
 		x = 3
 		y = 1
@@ -4612,24 +5673,19 @@ shared_focus = INDUSTRY_air_base_network
 			custom_effect_tooltip = AXI_decima_flotilla_tt
 			add_ideas = AXI_decima_flotilla_idea
 			hidden_effect = {
-
 				for_loop_effect = {
- 						end = 15
- 						create_ship = {
-							type = ship_hull_submarine_2
+					end = 15
+					create_ship = {
+						type = ship_hull_submarine_2
 						equipment_variant = "Calvi Class"
-						}
- 						}
+					}
+				}
 			}
-				
-				
-			
 		}
 	}
 	focus = {
 		id = AXI_colonial_garrison
 		icon = GFX_focus_ITA_a_colonial_empire
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -4637,7 +5693,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_decima_flotilla
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -4650,19 +5705,40 @@ shared_focus = INDUSTRY_air_base_network
 					override_model = ITA_irregular_infantry_alt_0_entity
 					template_counter = 66
 					force_allow_recruiting = yes
-
 					regiments = {
-						irregular_infantry = { x = 0 y = 0 }
-						irregular_infantry = { x = 0 y = 1 }
-						irregular_infantry = { x = 0 y = 2 }
-						irregular_infantry = { x = 1 y = 0 }
-						irregular_infantry = { x = 1 y = 1 }
-						irregular_infantry = { x = 1 y = 2 }
+						irregular_infantry = {
+							x = 0
+							y = 0
+						}
+						irregular_infantry = {
+							x = 0
+							y = 1
+						}
+						irregular_infantry = {
+							x = 0
+							y = 2
+						}
+						irregular_infantry = {
+							x = 1
+							y = 0
+						}
+						irregular_infantry = {
+							x = 1
+							y = 1
+						}
+						irregular_infantry = {
+							x = 1
+							y = 2
+						}
 					}
 					priority = 0
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "division_template = \"Banda Irregolare\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
@@ -4671,14 +5747,12 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 			}
-
 		}
 	}
 	focus = {
 		id = AXI_102nd_motorized
 		icon = GFX_focus_generic_truck
 		cost = 5
-		
 		relative_position_id = AXI_101st_motorized
 		x = 0
 		y = 1
@@ -4690,39 +5764,81 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = AXI_102nd_motorized_units_tt
-			
-			
 			hidden_effect = {
 				division_template = {
 					name = "Divisione Artiglieria Autotrasportabile"
 					division_names_group = ITA_MOT_01
-
 					regiments = {
-
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 0 y = 3 }
-						motorized = { x = 0 y = 4 }
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						motorized = { x = 1 y = 3 }
-						mot_artillery_brigade = { x = 2 y = 0 }
-						mot_artillery_brigade = { x = 2 y = 1 }
-						mot_artillery_brigade = { x = 2 y = 2 }
-						mot_artillery_brigade = { x = 2 y = 3 }
-						
-						
-
+						motorized = {
+							x = 0
+							y = 0
+						}
+						motorized = {
+							x = 0
+							y = 1
+						}
+						motorized = {
+							x = 0
+							y = 2
+						}
+						motorized = {
+							x = 0
+							y = 3
+						}
+						motorized = {
+							x = 0
+							y = 4
+						}
+						motorized = {
+							x = 1
+							y = 0
+						}
+						motorized = {
+							x = 1
+							y = 1
+						}
+						motorized = {
+							x = 1
+							y = 2
+						}
+						motorized = {
+							x = 1
+							y = 3
+						}
+						mot_artillery_brigade = {
+							x = 2
+							y = 0
+						}
+						mot_artillery_brigade = {
+							x = 2
+							y = 1
+						}
+						mot_artillery_brigade = {
+							x = 2
+							y = 2
+						}
+						mot_artillery_brigade = {
+							x = 2
+							y = 3
+						}
 					}
 					support = {
-						artillery = { x = 0 y = 0 }
-						mot_recon = { x = 0 y = 1 }
+						artillery = {
+							x = 0
+							y = 0
+						}
+						mot_recon = {
+							x = 0
+							y = 1
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"101. Divisione Motorizzata 'Trieste'\" division_template = \"Divisione Artiglieria Autotrasportabile\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
@@ -4737,7 +5853,6 @@ shared_focus = INDUSTRY_air_base_network
 		id = AXI_alfa_romero
 		icon = GFX_focus_ITA_redirect_alfa_romeo_production
 		cost = 5
-		
 		relative_position_id = AXI_speedy_corps
 		x = 0
 		y = 1
@@ -4759,7 +5874,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_supremo_graziana
 		icon = GFX_focus_ITA_cavalry_charge
-		
 		cost = 8
 		relative_position_id = AXI_alfa_romero
 		x = -1
@@ -4782,41 +5896,33 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_rodolfo_graziani = {
-				promote_leader = yes
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = fascism_ideology
-						expire = "1965.1.1.1"
-						traits = { the_pacifier }
+					[TAG]_rodolfo_graziani = {
+						promote_leader = yes
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { the_pacifier }
+							}
+						}
 					}
 				}
-				}
-				
-
-				}
 				TAG = "[THIS.GetTag]"
-			}		
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_army_of_the_po
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
-	
-	#END OF SHARED TREELET - START OF JAPAN
 	focus = {
 		id = AXI_IJA
 		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
-		
-		
 		cost = 5
 		relative_position_id = AXI_royal_italian
 		ai_will_do = {
 			factor = 100
 		}
-		x = -2
+		x = 0
 		y = -6
 		available = {
 			NOT = {
@@ -4841,37 +5947,9 @@ shared_focus = INDUSTRY_air_base_network
 			}
 		}
 	}
-	#focus = {
-	#	id = AXI_infiltration_assaults
-	#	icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
-	#	x = 0
-#		y = 1
-	#	cost = 5
-	#	relative_position_id = AXI_IJA
-	#	prerequisite = {
-	#		focus = AXI_IJA
-	#	}
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				name = land_doc_bonus
-#				cost_reduction = 0.5
-#				uses = 2
-#				category = cat_grand_battle_plan
-#			}
-#			army_experience = 100
-#			navy_experience = 100
-#			air_experience = 100
-#
-#		}
-#	}
 	focus = {
 		id = AXI_imperial_japanese_navy
 		icon = GFX_focus_CIC_IJN
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1.2
@@ -4886,7 +5964,9 @@ shared_focus = INDUSTRY_air_base_network
 			focus = AXI_IJ_army
 		}
 		available = {
-						NOT={has_global_flag = AXI_imperial_japanese_navy_banned}
+			NOT = {
+				has_global_flag = AXI_imperial_japanese_navy_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -4906,8 +5986,9 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 3 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 3
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -4923,13 +6004,11 @@ shared_focus = INDUSTRY_air_base_network
 			army_experience = 100
 			navy_experience = 100
 			air_experience = 100
-
 		}
 	}
 	focus = {
 		id = AXI_4th_snlf
 		icon = GFX_goal_generic_amphibious_assault
-		
 		x = -3
 		y = 1
 		cost = 5
@@ -4937,7 +6016,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_imperial_japanese_navy
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -4946,7 +6024,7 @@ shared_focus = INDUSTRY_air_base_network
 			hidden_effect = {
 				if = {
 					limit = {
-						 NOT = {
+						NOT = {
 							has_tech = marines
 						}
 					}
@@ -4958,25 +6036,61 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Yokosuka SNLF"
 					division_names_group = JAP_MAR_01
-
 					regiments = {
-						marine = { x = 0 y = 0 }
-						marine = { x = 0 y = 1 }
-						marine = { x = 0 y = 2 }
-						marine = { x = 1 y = 0 }
-						marine = { x = 1 y = 1 }
-						marine = { x = 1 y = 2 }
-						marine = { x = 2 y = 0 }
-						marine = { x = 2 y = 1 }
-						marine = { x = 2 y = 2 }
+						marine = {
+							x = 0
+							y = 0
+						}
+						marine = {
+							x = 0
+							y = 1
+						}
+						marine = {
+							x = 0
+							y = 2
+						}
+						marine = {
+							x = 1
+							y = 0
+						}
+						marine = {
+							x = 1
+							y = 1
+						}
+						marine = {
+							x = 1
+							y = 2
+						}
+						marine = {
+							x = 2
+							y = 0
+						}
+						marine = {
+							x = 2
+							y = 1
+						}
+						marine = {
+							x = 2
+							y = 2
+						}
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
+						engineer = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"4 Yokohama Rikusentai\" division_template = \"Yokosuka SNLF\" start_experience_factor = 0.9 start_equipment_factor = 1.0 "
@@ -4995,7 +6109,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_2nd_snlf
 		icon = GFX_focus_attack_japan
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -5003,7 +6116,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_4th_snlf
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -5013,28 +6125,73 @@ shared_focus = INDUSTRY_air_base_network
 				division_template = {
 					name = "Maizuru SNLF"
 					division_names_group = JAP_MAR_01
-
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
-						infantry = { x = 3 y = 0 }
-						infantry = { x = 3 y = 1 }
-						infantry = { x = 3 y = 2 }
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+						infantry = {
+							x = 3
+							y = 0
+						}
+						infantry = {
+							x = 3
+							y = 1
+						}
+						infantry = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
+						engineer = {
+							x = 0
+							y = 0
+						}
+						artillery = {
+							x = 0
+							y = 1
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
 					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"2 Maizaru Rikusentai\" division_template = \"Maizuru SNLF\" start_experience_factor = 0.9 start_equipment_factor = 1.0 "
@@ -5053,7 +6210,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_carriers_through_the_staits
 		icon = GFX_goal_generic_navy_carrier
-		
 		x = 0
 		y = 2
 		cost = 5
@@ -5062,7 +6218,6 @@ shared_focus = INDUSTRY_air_base_network
 			focus = AXI_imperial_japanese_navy
 			focus = AXI_IJ_army
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -5087,50 +6242,162 @@ shared_focus = INDUSTRY_air_base_network
 					amount = 50
 					variant_name = "Aichi D1A2"
 				}
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Tenryu Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Tenryu Class" creator = ROOT }
-				
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Kuma/Nagara Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Kaidai III Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Kaidai III Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Kaidai III Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Kaidai III Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Kaidai III Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Kagero Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Kagero Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Kagero Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Kagero Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Kagero Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Kagero Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Asashio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Asashio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Asashio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Asashio Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Fubuki Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Tenryu Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Tenryu Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Kuma/Nagara Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_carrier_1
+					equipment_variant = "Ryujo Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_carrier_1
+					equipment_variant = "Ryujo Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_carrier_1
+					equipment_variant = "Ryujo Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_carrier_1
+					equipment_variant = "Ryujo Class"
+					creator = ROOT
+				}
 			}
 		}
 	}
 	focus = {
 		id = AXI_banzai
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -5138,19 +6405,20 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_carriers_through_the_staits
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			add_ideas = AXI_banzai
-			set_technology = { CIC_banzai_charge = 1 popup = no }
+			set_technology = {
+				CIC_banzai_charge = 1
+				popup = no
+			}
 		}
 	}
 	focus = {
 		id = AXI_skimp_on_resources
 		icon = GFX_goal_generic_trade
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -5158,7 +6426,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_banzai
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -5166,12 +6433,9 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_skimp_on_resources
 		}
 	}
-	
-	
 	focus = {
 		id = AXI_IJ_army
 		icon = GFX_focus_CIC_IJA
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1.2
@@ -5185,7 +6449,9 @@ shared_focus = INDUSTRY_air_base_network
 		x = 3
 		y = 1
 		available = {
-						NOT={has_global_flag = AXI_IJ_army_banned}
+			NOT = {
+				has_global_flag = AXI_IJ_army_banned
+			}
 			if = {
 				limit = {
 					any_allied_country = {
@@ -5206,8 +6472,9 @@ shared_focus = INDUSTRY_air_base_network
 		relative_position_id = AXI_IJA
 		completion_reward = {
 			custom_effect_tooltip = new_generals_tt
-
-			set_variable = { var_doctrine = 4 } # AI DOCTRINE
+			set_variable = {
+				var_doctrine = 4
+			}
 			add_mastery_bonus = {
 				name = land_doc_bonus
 				bonus = 0.4
@@ -5223,13 +6490,11 @@ shared_focus = INDUSTRY_air_base_network
 			army_experience = 100
 			navy_experience = 100
 			air_experience = 100
-
 		}
 	}
 	focus = {
 		id = AXI_bicycle_messengers
 		icon = GFX_focus_generic_rubber
-		
 		x = 1
 		y = 1
 		cost = 5
@@ -5237,7 +6502,6 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_IJ_army
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -5245,31 +6509,63 @@ shared_focus = INDUSTRY_air_base_network
 			set_technology = {
 				bicycle_infantry = 1
 			}
-
 			custom_effect_tooltip = AXI_bicycle_messengers_units_tt
 			hidden_effect = {
 				division_template = {
 					name = "Bicycle Infantry"
 					division_names_group = JAP_INF_01
-
 					regiments = {
-						bicycle_battalion = { x = 0 y = 0 }
-						bicycle_battalion = { x = 0 y = 1 }
-						bicycle_battalion = { x = 0 y = 2 }
-						bicycle_battalion = { x = 1 y = 0 }
-						bicycle_battalion = { x = 1 y = 1 }
-						bicycle_battalion = { x = 1 y = 2 }
-						bicycle_battalion = { x = 2 y = 0 }
-						bicycle_battalion = { x = 2 y = 1 }
-						bicycle_battalion = { x = 2 y = 2 }
+						bicycle_battalion = {
+							x = 0
+							y = 0
+						}
+						bicycle_battalion = {
+							x = 0
+							y = 1
+						}
+						bicycle_battalion = {
+							x = 0
+							y = 2
+						}
+						bicycle_battalion = {
+							x = 1
+							y = 0
+						}
+						bicycle_battalion = {
+							x = 1
+							y = 1
+						}
+						bicycle_battalion = {
+							x = 1
+							y = 2
+						}
+						bicycle_battalion = {
+							x = 2
+							y = 0
+						}
+						bicycle_battalion = {
+							x = 2
+							y = 1
+						}
+						bicycle_battalion = {
+							x = 2
+							y = 2
+						}
 					}
 					support = {
-						recon = { x = 0 y = 0 }
+						recon = {
+							x = 0
+							y = 0
+						}
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64}
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
+					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "division_template = \"Bicycle Infantry\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { medium_tank_chassis_1 = { owner = ROOT version_name = \"M11/39\" } }"
 						owner = ROOT
@@ -5282,7 +6578,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_fund_the_katsu
 		icon = GFX_goal_generic_trade
-		
 		x = 1
 		y = 1
 		cost = 5
@@ -5290,13 +6585,16 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_imperial_japanese_navy
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			if = {
-				limit = {NOT = {has_tech = amphibious_mechanized_infantry }}
+				limit = {
+					NOT = {
+						has_tech = amphibious_mechanized_infantry
+					}
+				}
 				set_technology = {
 					amphibious_mechanized_infantry = 1
 				}
@@ -5308,7 +6606,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_naval_aviation
 		icon = GFX_focus_jap_zero
-		
 		x = 0
 		y = 1
 		cost = 5
@@ -5316,49 +6613,46 @@ shared_focus = INDUSTRY_air_base_network
 		prerequisite = {
 			focus = AXI_fund_the_katsu
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			navy_experience = 50
 			custom_effect_tooltip = AXI_naval_aviation_tt
-			hidden_effect={
+			hidden_effect = {
 				set_variable_to_random = {
 					var = random_num
 					max = 999
 					integer = yes
 				}
-			meta_effect = {
-				text = {
-
-			
-			create_equipment_variant = {
-				name = "B5N - [TAG]" #
-				type = cv_small_plane_naval_bomber_airframe_1
-				modules = {
-					fixed_main_weapon_slot = torpedo_mounting
-					fixed_auxiliary_weapon_slot_1 = bomb_locks
-					engine_type_slot = engine_2_1x
-					special_type_slot_1 = fuel_tanks_small
+				meta_effect = {
+					text = {
+						create_equipment_variant = {
+							name = "B5N - [TAG]"
+							type = cv_small_plane_naval_bomber_airframe_1
+							modules = {
+								fixed_main_weapon_slot = torpedo_mounting
+								fixed_auxiliary_weapon_slot_1 = bomb_locks
+								engine_type_slot = engine_2_1x
+								special_type_slot_1 = fuel_tanks_small
+							}
+							icon = "GFX_JAP_cv_naval_bomber1_medium"
+						}
+						add_equipment_to_stockpile = {
+							type = cv_small_plane_naval_bomber_airframe_1
+							producer = ROOT
+							amount = 150
+							variant_name = "B5N - [TAG]"
+						}
+					}
+					TAG = "[?random_num]"
 				}
-				icon = "GFX_JAP_cv_naval_bomber1_medium"
 			}
-			add_equipment_to_stockpile = {
-				type = cv_small_plane_naval_bomber_airframe_1
-				producer = ROOT
-				amount = 150
-				variant_name = "B5N - [TAG]"
-			}}
-				TAG = "[?random_num]"
-				
-			}}
 		}
 	}
 	focus = {
 		id = AXI_great_harmony
 		icon = GFX_focus_generic_navy_battleship2
-		
 		cost = 5
 		x = -1
 		y = 1
@@ -5385,20 +6679,37 @@ shared_focus = INDUSTRY_air_base_network
 					creator = ROOT
 					name = "Yamato"
 				}
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Tone Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Tone Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Myoko Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Myoko Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Kuma/Nagara Class" creator = ROOT }
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Tone Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Tone Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Myoko Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Myoko Class"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Kuma/Nagara Class"
+					creator = ROOT
+				}
 			}
 		}
 	}
 	focus = {
 		id = AXI_tokyo_express
 		icon = GFX_goal_generic_construct_naval_dockyard
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5418,7 +6729,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_yamamoto_supreme
 		icon = GFX_focus_jap_pacific_guardian
-		
 		x = 3
 		y = 1
 		cost = 8
@@ -5444,32 +6754,26 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_isoroku_yamamoto = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { naval_air_expert }
+					[TAG]_isoroku_yamamoto = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { naval_air_expert }
+							}
 						}
 					}
-				
-				}
-				
-
 				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_ijn
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
 	focus = {
 		id = AXI_18th_chrysanthemum_division
 		icon = GFX_focus_jap_manchurian_project
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5482,33 +6786,72 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			if = {
-                limit = {
-                    NOT = {
-                        has_tech = tech_field_hospital
-                    }
-                }
-                set_technology = {
-                    tech_field_hospital = 1
-                }
-            }	
+				limit = {
+					NOT = {
+						has_tech = tech_field_hospital
+					}
+				}
+				set_technology = {
+					tech_field_hospital = 1
+				}
+			}
 			custom_effect_tooltip = AXI_18th_chrysanthemum_division_units_tt
 			hidden_effect = {
 				division_template = {
 					name = "18th Chrysanthemum Division"
 					regiments = {
-						infantry = {x = 0 y = 0}
-						infantry = {x = 1 y = 0}
-						infantry = {x = 2 y = 0}
-						infantry = {x = 3 y = 0}
-						infantry = {x = 4 y = 0}
-						infantry = {x = 0 y = 1}
-						infantry = {x = 1 y = 1}
-						infantry = {x = 2 y = 1}
-						infantry = {x = 3 y = 1}
-						infantry = {x = 0 y = 2}
-						infantry = {x = 1 y = 2}
-						infantry = {x = 2 y = 2}
-						infantry = {x = 3 y = 2}
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 3
+							y = 0
+						}
+						infantry = {
+							x = 4
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 3
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+						infantry = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
 						field_hospital = {
@@ -5526,8 +6869,12 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64}
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
+					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"18th Chrysanthemum Division\" division_template = \"18th Chrysanthemum Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 						owner = ROOT
@@ -5545,7 +6892,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_62nd_stone_division
 		icon = GFX_goal_generic_defence
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5558,33 +6904,72 @@ shared_focus = INDUSTRY_air_base_network
 		}
 		completion_reward = {
 			if = {
-                limit = {
-                    NOT = {
-                        has_tech = tech_field_hospital2
-                    }
-                }
-                set_technology = {
-                    tech_field_hospital2 = 1
-                }
-            }
+				limit = {
+					NOT = {
+						has_tech = tech_field_hospital2
+					}
+				}
+				set_technology = {
+					tech_field_hospital2 = 1
+				}
+			}
 			custom_effect_tooltip = AXI_62nd_stone_division_units_tt
 			hidden_effect = {
 				division_template = {
 					name = "62nd Stone Division"
 					regiments = {
-						infantry = {x = 0 y = 0}
-						infantry = {x = 1 y = 0}
-						infantry = {x = 2 y = 0}
-						infantry = {x = 3 y = 0}
-						infantry = {x = 4 y = 0}
-						infantry = {x = 0 y = 1}
-						infantry = {x = 1 y = 1}
-						infantry = {x = 2 y = 1}
-						infantry = {x = 3 y = 1}
-						infantry = {x = 0 y = 2}
-						infantry = {x = 1 y = 2}
-						infantry = {x = 2 y = 2}
-						infantry = {x = 3 y = 2}
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 3
+							y = 0
+						}
+						infantry = {
+							x = 4
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 3
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+						infantry = {
+							x = 3
+							y = 2
+						}
 					}
 					support = {
 						field_hospital = {
@@ -5602,8 +6987,12 @@ shared_focus = INDUSTRY_air_base_network
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64}
+					limit = {
+						ROOT = {
+							has_full_control_of_state = PREV
+						}
+					}
+					prioritize = { 458 289 64 }
 					create_unit = {
 						division = "name = \"62nd Stone Division\" division_template = \"62nd Stone Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 						owner = ROOT
@@ -5621,7 +7010,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_warrior_spirit
 		icon = GFX_focus_AST_war_japan
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5640,7 +7028,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_arisaka
 		icon = GFX_goal_generic_military_sphere
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5654,13 +7041,17 @@ shared_focus = INDUSTRY_air_base_network
 		completion_reward = {
 			add_ideas = AXI_arisaka_idea
 			custom_effect_tooltip = arisaka_cic_tt
-			hidden_effect = { set_technology = { arisaka_cic = 1 popup=no} }
+			hidden_effect = {
+				set_technology = {
+					arisaka_cic = 1
+					popup = no
+				}
+			}
 		}
 	}
 	focus = {
 		id = AXI_spiritual_mobilization
 		icon = GFX_focus_jap_spiritual_mobilization
-		
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5678,7 +7069,6 @@ shared_focus = INDUSTRY_air_base_network
 	focus = {
 		id = AXI_terauchi_supreme
 		icon = GFX_focus_attack_japan
-		
 		cost = 8
 		ai_will_do = {
 			factor = 1
@@ -5704,33 +7094,26 @@ shared_focus = INDUSTRY_air_base_network
 			retire_country_leader = yes
 			meta_effect = {
 				text = {
-				[TAG]_hisaichi_terauchi= {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = fascism_ideology
-							expire = "1965.1.1.1"
-							traits = { count_general}
+					[TAG]_hisaichi_terauchi = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { count_general }
+							}
 						}
 					}
-				
-				}
-				
-
 				}
 				TAG = "[THIS.GetTag]"
-			}	
-			add_political_power = 150
-			hidden_effect = {
-				#set_cosmetic_tag = AXI_ija
 			}
+			add_political_power = 150
+			hidden_effect = {}
 		}
 	}
-
 	focus = {
 		id = AXI_samurai_of_the_sands
 		icon = GFX_focus_generic_japanese_imperial_glory
-		
 		x = 0
 		y = 5
 		cost = 10
@@ -5749,6 +7132,7 @@ shared_focus = INDUSTRY_air_base_network
 			add_ideas = AXI_samurai_of_the_sands
 		}
 	}
-	
-	
+	reset_on_civilwar = no
+	shared_focus = INDUSTRY_start
+	shared_focus = IND_ZALUPA
 }

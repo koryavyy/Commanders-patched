@@ -1,11 +1,9 @@
-l_russian:
- INDUSTRY_start_rapid_industralisation:0 "Начало ускоренной индустриализации"
+﻿l_russian:
  IND_A_industrial_base:0 "Расширение промышленной базы"
  IND_A_production_centers:0 "Производственные центры"
  IND_A_series_production:0 "Серийное производство"
  IND_A_factory_reorientation:0 "Переориентация мощностей"
  IND_A_deep_integration:0 "Глубокая промышленная интеграция"
- IND_B_military_orders:0 "Военные заказы"
  IND_B_war_industrial_base:0 "Военная промышленная база"
  IND_B_arms_priority:0 "Приоритет вооружений"
  IND_B_mass_armaments:0 "Массовое вооружение"
@@ -34,3 +32,5 @@ l_russian:
  IND_S_efficiency:0 "Промышленная эффективность"
  IND_S_efficiency_core:0 "Промышленная эффективность: предел возможностей"
  INDUSTRY_total_industrial_mobilisation:0 "Всеобщая промышленная мобилизация"
+ INDUSTRY_start:0 "Начало ускоренной индустриализации"
+ IND_ZALUPA:0 "Военные заказы"
