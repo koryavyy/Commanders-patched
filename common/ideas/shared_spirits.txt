@@ -302,5 +302,347 @@ ideas = {
 				always = yes
 			}
 		}
+
+# Tournament 3x3 industry expansion
+
+		tourn_a2 = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_a3 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_a4 = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.25
+			}
+		}
+
+		tourn_a5 = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+		tourn_b1 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_b2 = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		tourn_b3 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_b4 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_b5 = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.3
+			}
+		}
+
+		tourn_c2 = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+		tourn_c4 = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+		tourn_c5 = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+		tourn_d1 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_d2 = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_d3 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_d4 = {
+			picture = generic_flexible_foreign_policy
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_d5 = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		tourn_x1 = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_x2 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_x3 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_x4 = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.3
+			}
+		}
+
+		tourn_common = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		tourn_s1 = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+}
+		}
+
+		tourn_s1_core = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_s2 = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.4
+			}
+		}
+
+		tourn_s2_core = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.25
+}
+		}
+
+		tourn_s3 = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+		tourn_s3_core = {
+			picture = generic_improved_industries
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		tourn_s4 = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		tourn_s4_core = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		tourn_final = {
+			picture = generic_industrial_concern_1
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		tourn_fortification_program = {
+			picture = generic_fortification
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_bunker_factor = 0.30
+				production_speed_coastal_bunker_factor = 0.30
+			}
+		}
+
+		tourn_supply_infrastructure = {
+			picture = generic_railroad
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_supply_node_factor = 0.50
+				production_speed_railway_factor = 0.50
+			}
+		}
+
+		tourn_air_base_network = {
+			picture = generic_air
+			allowed = { always = yes }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_air_base_factor = 0.30
+			}
+		}
 	}
 }
