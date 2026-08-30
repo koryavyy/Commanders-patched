@@ -1186,7 +1186,7 @@ focus_tree = {
 	focus = {
 		id = ALI_commonwelth
 		icon = GFX_focus_AST_rats_tobruk
-		x = 15
+		x = 29
 		y = -32
 		cost = 5
 		allow_branch = {
@@ -2488,9 +2488,9 @@ focus_tree = {
 		id = ALI_french_forces
 		icon = GFX_focus_attack_france
 		x = 14
-		y = -17
+		y = -15
 		cost = 5
-		relative_position_id = IND_ZALUPA
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		ai_will_do = {
 			factor = 100
 		}
@@ -3710,9 +3710,9 @@ focus_tree = {
 		id = ALI_us_army
 		icon = GFX_goal_support_democracy
 		x = 0
-		y = -10
+		y = -8
 		cost = 5
-		relative_position_id = IND_ZALUPA
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		ai_will_do = {
 			factor = 100
 		}
@@ -6106,10 +6106,10 @@ focus_tree = {
 	focus = {
 		id = ALI_soviet_expeditionary_force
 		icon = GFX_goal_support_communism
-		x = 0
-		y = -17
+		x = -14
+		y = -15
 		cost = 5
-		relative_position_id = IND_ZALUPA
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		ai_will_do = {
 			factor = 100
 		}
@@ -7612,6 +7612,4 @@ focus_tree = {
 		}
 	}
 	reset_on_civilwar = no
-	shared_focus = INDUSTRY_start
-	shared_focus = IND_ZALUPA
 }

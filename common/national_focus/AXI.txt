@@ -62,7 +62,7 @@ focus_tree = {
 			factor = 100
 		}
 		x = 15
-		y = -31
+		y = -25
 		allow_branch = {
 			OR = {
 				NOT = {
@@ -996,9 +996,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = IND_ZALUPA
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		x = -14
-		y = -10
+		y = -15
 		allow_branch = {
 			OR = {
 				NOT = {
@@ -2463,9 +2463,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = IND_ZALUPA
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		x = 0
-		y = -16
+		y = -15
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -3690,9 +3690,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = AXI_wehrmacht
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		x = 0
-		y = 6
+		y = -8
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -4806,9 +4806,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = AXI_okh
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		x = 14
-		y = 0
+		y = -8
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -5918,12 +5918,12 @@ focus_tree = {
 		id = AXI_IJA
 		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
 		cost = 5
-		relative_position_id = AXI_royal_italian
+		relative_position_id = INDUSTRY_start_rapid_industralisation
 		ai_will_do = {
 			factor = 100
 		}
-		x = 0
-		y = -6
+		x = 14
+		y = -15
 		available = {
 			NOT = {
 				has_country_flag = completed_faction_focus
@@ -7133,6 +7133,4 @@ focus_tree = {
 		}
 	}
 	reset_on_civilwar = no
-	shared_focus = INDUSTRY_start
-	shared_focus = IND_ZALUPA
 }

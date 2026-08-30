@@ -32,5 +32,5 @@
  IND_S_efficiency:0 "Промышленная эффективность"
  IND_S_efficiency_core:0 "Промышленная эффективность: предел возможностей"
  INDUSTRY_total_industrial_mobilisation:0 "Всеобщая промышленная мобилизация"
- INDUSTRY_start:0 "Начало ускоренной индустриализации"
- IND_ZALUPA:0 "Военные заказы"
+ INDUSTRY_start_rapid_industralisation:0 "Начало ускоренной индустриализации"
+ IND_B_military_orders:0 "Военные заказы"
